@@ -1,4 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace AliensOldEnemies.ViewModel
 {
@@ -24,19 +26,53 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
+
+
         public string PageName
         {
             get
             {
-                return "Введение";
+                return CurrentPage.Title;
             }
         }
 
-        public string Introduction
+        public string Music
         {
             get
             {
-                return Texts.Introduction.ToString();
+                return CurrentPage.Music;
+            }
+        }
+
+        public string Description
+        {
+            get
+            {
+                return CurrentPage.Description;
+            }
+        }
+
+        public PageItem CurrentPage
+        {
+            private set { }
+            get
+            {
+                return this.Pages.FirstOrDefault(c => c.Id==this.CurrentPageId);
+            }
+        }
+
+        private string _currentPage;
+        public string CurrentPageId
+        {
+            get { 
+                return _currentPage;  
+            }
+            set { 
+                _currentPage = value;
+                RaisePropertyChanged("Title");
+                RaisePropertyChanged("Description");
+                RaisePropertyChanged("Music");
+                RaisePropertyChanged("CurrentPage");
             }
         }
 
@@ -52,8 +88,32 @@ namespace AliensOldEnemies.ViewModel
             else
             {
                 // Code runs "for real"
+                this.CurrentPageId = "/intro";
+                Pages = new ObservableCollection<PageItem>();
+                Pages.Add(new PageItem { 
+                    Title="Введение", 
+                    Description = Texts.Introduction, 
+                    Id = "/intro", 
+                    Music="/Music/Bent_and_Broken.mp3" });
+                Pages.Add(new PageItem
+                {
+                    Title = "Введение",
+                    Description = Texts.Missions,
+                    Id = "/intro2",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Начало",
+                    Description = Texts.Start,
+                    Id = "/start",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
             }
         }
+
+        public ObservableCollection<PageItem> Pages;
 
         ////public override void Cleanup()
         ////{
