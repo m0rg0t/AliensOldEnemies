@@ -20,7 +20,7 @@ namespace AliensOldEnemies.ViewModel
         {
             get
             {
-                return "MVVM LIGHT";
+                return "Чужие – старые враги";
             }
         }
 
@@ -28,15 +28,15 @@ namespace AliensOldEnemies.ViewModel
         {
             get
             {
-                return "My page:";
+                return "Введение";
             }
         }
 
-        public string Welcome
+        public string Introduction
         {
             get
             {
-                return "Welcome to MVVM Light";
+                return Texts.Introduction.ToString();
             }
         }
 

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Introduction" xml:space="preserve">
+    <value>&lt;p&gt;2154 год. Система Фарингейта. &lt;/p&gt;&lt;/br&gt;
+&lt;p&gt;Грузовой корабль серии МХ – «Бафуто» дрейфовал на орбите планеты Боргезе-9.&lt;/p&gt;
+&lt;p&gt;Вот уже два дня в бескрайние просторы космоса с корабля поступали сигналы SOS.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Система Фарингейта, Астероид G-7. Военно-патрульная база «Пегас».&lt;/p&gt;
+&lt;p&gt;В конференц-зале полковник Дж. Балтимор проводил брифинг перед группой бойцов:&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;«Пять часов назад мы получили сигнал SOS с грузового корабля серии МХ – «Бафуто».&lt;/p&gt;
+&lt;p&gt;Корабль находится на орбите планеты Боргезе-9 и принадлежит корпорации «СпейсКом». &lt;/p&gt;
+&lt;p&gt;По полученной нами обрывочной информации, корабль, по-видимому, атакован терраноидами. Часть систем корабля повреждена. Существует угроза проникновения тварей на другие корабли или на планету Боргезе-9.&lt;/p&gt;
+&lt;p&gt;Кроме этого у меня для вас две новости – одна плохая и одна хорошая.&lt;/p&gt;
+&lt;p&gt;Кх-м-м, кх-м – прокашлялся полковник.&lt;/p&gt;
+&lt;p&gt;«Начну как всегда с плохой новости – продолжил он - Компания «СпейКом» выделила небольшой бюджет для спасения их корабля и экипажа. В рамках этого бюджета мы и сможем набрать и экипировать спасательную группу. Сразу скажу, что бюджет совсем небольшой… Ох уж мне эти толстосумы! Мать их…!» – выругался полковник.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;- Хорошая новость в том, что хозяева «СпейсКома» назначили неплохое денежное вознаграждение в зависимости от степени выполнения порученных задач. Так что парни, вам есть, за что побороться в этой опасной Игре» – подмигнул нам полковник. &lt;/p&gt;
+&lt;p&gt;«Но прежде чем я оглашу финансовые бонусы за эту миссию, давайте ознакомимся с техническими деталями этой спасательной операции.&lt;/p&gt;</value>
+  </data>
+  <data name="Missions" xml:space="preserve">
+    <value>«Предполагаемый противник – нарочито холодным тоном продолжил полковник – Это терраноиды, известные в широких военных кругах по кличке «Чужие». 
+Терраноиды подразделяются на несколько видов – «яйцо» с зародышем внутри, членистоногий Краб, Чужой-солдат, Чужой-офицер, Мать-Королева. Терраноиды мутируют из одной форму в другую именно в этой последовательности. 
+Они используют людей или как живой корм. Или как инкубатор для откладывания внутрь человеческого тела небольших спор-зародышей Чужих.
+Твари крайне агрессивны и сильны в ближнем бою. Могут плеваться кислотой, которая способна прожигать любой материал. Так что подгузники вас ребята не спасут от этих тварей… Хе-хе…» – пошутил полковник. 
+На его шутку никто из присутствующих бойцов не отозвался. В зале повисло недоброе предчувствие.
+
+Чувствуя, что его шутка не смогла поднять боевого настроения, полковник решил побыстрее прейти к «хорошей новости».
+«Итак! – более радостным тоном заявил полковник – «Вот перечень миссий, которые поручены нашей группе спасения:
+
+•	Миссия №1 – эвакуировать всех живых членов экипажа (5 тыс. кредиток за каждого спасенного живого человека; 10 тыс. за спасение капитана корабля)
+•	Миссия №2 – найти и эвакуировать дипломата Артура Харрисона (20 тыс. кредиток)
+•	Миссия №3 – сохранить целым корабль (50 тыс. кредиток)
+•	Миссия №4 – убить Королеву Чужих (20 тыс. кредиток)
+•	Миссия №5 – выяснить, откуда на корабле появились Чужие (5 тыс. кредиток)
+•	Миссия №6 – захватить живым хотя бы одного Чужого (10 тыс. кредиток)
+•	Миссия №7 – забрать «черный ящик»- гало-диск самописец из Центрального компьютера в Рубке корабля (5 тыс. кредиток)
+•	Миссия №8 – найти сейф и забрать оттуда деньги компании «СпейсКом» - (10 тыс. кредиток)
+
+«По-моему неплохие денежки? А?! – соблазнительно улыбаясь, пояснил полковник – Эх жаль, что я уже не в тех годах. А то бы с радостью возглавил бы вашу команду, ребята!» – снова попробовал поднять настроение полковник.</value>
+  </data>
+</root>
