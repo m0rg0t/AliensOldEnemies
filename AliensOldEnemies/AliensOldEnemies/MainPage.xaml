@@ -52,8 +52,8 @@
 	</Grid>
     
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton x:Name="next" IconUri="/Images/appbar.next.rest.png" Text="Далее"></shell:ApplicationBarIconButton>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Mode="Minimized">
+            <!--<shell:ApplicationBarIconButton x:Name="next" IconUri="/Images/appbar.next.rest.png" Text="Далее"></shell:ApplicationBarIconButton>-->
             
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem x:Name="status" Text="Статус"></shell:ApplicationBarMenuItem>
