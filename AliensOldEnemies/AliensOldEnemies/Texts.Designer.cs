@@ -61,11 +61,13 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;Темно. В тусклом свете аварийного освещения был виден большой квадратный ангар с высоким потолком.  Вдоль стены штабелями стоят несколько больших контейнеров.  В дальнем углу ангара находится автопогрузчик.&lt;/p&gt;
+        ///   Looks up a localized string similar to &lt;img src=&quot;/Images/angar.jpg&quot;/&gt;
+        ///&lt;br&gt;
+        ///&lt;p&gt;Темно. В тусклом свете аварийного освещения был виден большой квадратный ангар с высоким потолком.  Вдоль стены штабелями стоят несколько больших контейнеров.  В дальнем углу ангара находится автопогрузчик.&lt;/p&gt;
         ///&lt;p&gt;В боковой стене дверь,  ведущая в
         ///соседний Технический отсек.&lt;/p&gt;
         ///&lt;p&gt;Никого из обслуживающего персонала корабля не видно.  Хотя согласно правилам,  прибывших пассажиров должны
-        ///встречать–  инженер технической службы и офицер безопасности.  Жарко.  Температура внутри корабля явно выше нормы.&lt; [rest of string was truncated]&quot;;.
+        ///встречать–  инженер технической службы и офицер безопасности.  Жарко.  Темпер [rest of string was truncated]&quot;;.
         /// </summary>
         public static string a1 {
             get {
@@ -75,8 +77,8 @@ namespace AliensOldEnemies {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&apos;/6&apos;&gt;Использовать автопогрузчик, чтобы снять верхние контейнеры вниз и осмотреть их (вам (-1) Время) – требуется умение-техник. - 6&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/1_time_-1&quot;&gt;Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&apos;/6_time_-1_technik&apos;&gt;Использовать автопогрузчик, чтобы снять верхние контейнеры вниз и осмотреть их (вам (-1) Время) – требуется умение-техник. - 6&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&apos;/13&apos;&gt;Идти в Технический отсек - 13&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;.
         /// </summary>
         public static string a1_select {
@@ -115,7 +117,9 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;p&gt;Вокруг вдоль стен стальные стеллажи с ящиками и запчастями. В этом отсеке занимаются починкой агрегатов и механизмов.  Возле дальней стены находится забаррикадированная дверь, ведущая в соседний отсек Пищеблока.  Слева под потолком виден выход воздуховода.&lt;/p&gt;.
+        ///   Looks up a localized string similar to &lt;img src=&quot;/Images/techroom.jpg&quot;/&gt;
+        ///&lt;br&gt;
+        ///&lt;p&gt;Вокруг вдоль стен стальные стеллажи с ящиками и запчастями. В этом отсеке занимаются починкой агрегатов и механизмов.  Возле дальней стены находится забаррикадированная дверь, ведущая в соседний отсек Пищеблока.  Слева под потолком виден выход воздуховода.&lt;/p&gt;.
         /// </summary>
         public static string a13 {
             get {
@@ -125,12 +129,12 @@ namespace AliensOldEnemies {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/13&quot;&gt;Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/13_time_-1&quot;&gt;Остаться в отсеке (вам (-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&quot;/17&quot;&gt;Идти в отсек Пищеблока- 17&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/18&quot;&gt;Лезть в воздуховод – до отсека  Лазарет(-2 Времени) - 18&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/19&quot;&gt;Лезть в воздуховод – до отсека Каюты(-4 Времени) – 19&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/20&quot;&gt;Лезть в воздуховод – до Инженерного отсека(-6 Времени) – 20&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Идти в отсек Ангара- 1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/18_time_-2&quot;&gt;Лезть в воздуховод – до отсека  Лазарет (-2 Времени) - 18&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_time_-4&quot;&gt;Лезть в воздуховод – до отсека Каюты (-4 Времени) – 19&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/20_time_-6&quot;&gt;Лезть в воздуховод – до Инженерного отсека(-6 Времени) – 20&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Идти в отсек Ангара - 1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
         ///&lt;br&gt;.
         /// </summary>
         public static string a13_select {
@@ -143,8 +147,7 @@ namespace AliensOldEnemies {
         ///   Looks up a localized string similar to &lt;b&gt;Технический отсек- Событие:&lt;/b&gt;&lt;br&gt;
         ///&lt;p&gt;Среди прочего мусора вы находите безжизненное серое тело Чужого-краба.  Его трупик
         ///выглядит окаменевшим.&lt;/p&gt;
-        ///&lt;a href=&quot;/39&quot;&gt;Если у вас в команде есть биолог, идите на - 39&lt;/a&gt;&lt;br&gt;
-        ///&lt;a href=&quot;/13&quot;&gt;Если нет биолога, вернитесь на – 13&lt;/a&gt;.
+        ///.
         /// </summary>
         public static string a14 {
             get {
@@ -155,7 +158,7 @@ namespace AliensOldEnemies {
         /// <summary>
         ///   Looks up a localized string similar to &lt;b&gt;Технический отсек- Событие:&lt;/b&gt;&lt;br&gt;
         ///&lt;p&gt;Кажется,  температура на корабле повысилась.  Становится жарковато.  Всем членам вашей
-        ///команды(-1) Жизнь.&lt;/p&gt;
+        ///команды (-1) Жизнь.&lt;/p&gt;
         ///&lt;a href=&quot;/13&quot;&gt;С системами корабля явно что-то не в порядке. – 13&lt;/a&gt;.
         /// </summary>
         public static string a15 {
@@ -176,6 +179,56 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;В этом отсеке хранятся пищевые запасы экипажа,  и находится общая столовая.  Вокруг валяются перевернутые столы и стулья,  зловонные остатки еды и мусор.  Вы видите несколько растерзанных до неузнаваемости человеческих тел.
+        ///Отсюда двери ведут в Коридор«С», в Лазарет и в Технический отсек.&lt;/p&gt;&lt;br&gt;.
+        /// </summary>
+        public static string a17 {
+            get {
+                return ResourceManager.GetString("a17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/17_time_-1&quot;&gt;Остаться в этом отсеке- (вам (-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&apos;/13&apos;&gt;Идти в Технический отсек – 13&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&apos;/60&apos;&gt;Идти в Коридор «С» – 60&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&apos;/18&apos;&gt;Идти в Лазарет - 18&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a17_select {
+            get {
+                return ResourceManager.GetString("a17_select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Горит тусклое аварийное освещение. Под потолком есть входное отверстие воздуховода.  В отсеке лазарета несколько полупрозрачных переборок.  За переборками койки для пациентов. Несколько шкафов у стен. Везде беспорядок.&lt;/p&gt;
+        ///&lt;p&gt;В углу стоит большой стационарный рентген-аппарат.&lt;/p&gt;
+        ///&lt;p&gt;Рядом операционный стол с роботом-доктором для оказания первой помощи, - но он сломан.&lt;/p&gt;
+        ///&lt;p&gt;Стол робота-доктора в одном месте насквозь прожжен.  На краях дыры застыл пузырями керамопластик.  Пол тоже прожжен насквозь.  П [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a18 {
+            get {
+                return ResourceManager.GetString("a18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;li&gt;&lt;a href=&quot;/33&quot;&gt;Идти в отсек Грузовой Лифт – 33&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/17&quot;&gt;Идти в отсек Пищеблока – 17&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/13_time-2&quot;&gt;Лезть по воздуховоду в Технический отсек (-2  Времени) – 13&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/20_time-5&quot;&gt;Лезть по воздуховоду в Инженерный отсек (-5 Времени) – 20&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_time-3&quot;&gt;Лезть по воздуховоду в отсек Кают (-3 Времени) - 19&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a18_select {
+            get {
+                return ResourceManager.GetString("a18_select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Вы почувствовали,  что температура воздуха в отсеке повышается.  Приборы на вашем бронекостюме показывают,  что температура на корабле явно выше нормы.  Всем членам вашей команды (-1)  Жизнь.  Причина такой жары пока неизвестна.  Если температура будет повышаться и дальше,  то это может грозить вашей жизни и жизни
         ///экипажа.&lt;/p&gt;
         ///&lt;br&gt;
@@ -184,6 +237,64 @@ namespace AliensOldEnemies {
         public static string a2 {
             get {
                 return ResourceManager.GetString("a2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Лазарет – Вы замечаете на полу кровавый след, который ведет к одному из железных шкафов возле стены. Двери шкафа прикрыты.&lt;/p&gt;
+        ///&lt;br&gt;
+        ///&lt;b&gt;Ваши действия?&lt;/b&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/24&quot;&gt;Расстрелять шкаф с расстояния – 24&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/25&quot;&gt;Подойти и открыть шкаф – 25&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a21 {
+            get {
+                return ResourceManager.GetString("a21", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Лазарет– Вы замечаете на одной из коек неподвижно лежащую молодую женщину. Ее
+        ///лицо бледно-серого цвета.  Кажется,  она не дышит.  Пульс не прощупывается.  У нее на
+        ///бэйдже написано– Сюзанна Мур(навигатор).&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/27_time-1&quot;&gt;В лазарете есть стационарный рентген-аппарат, и вы можете проверить наличие внутри
+        ///тела этой женщины – зародыша Чужого(-1  Время) – 27;&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/18&quot;&gt;Если не хотите тратить на это время, – вернитесь на – 18&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a22 {
+            get {
+                return ResourceManager.GetString("a22", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Лазарет– Вдруг вы слышите как кто-то, громыхая, лезет по воздухопроводу к выходу в
+        ///отсек лазарета.  Слышен приближающийся грохот металлической обшивки воздуховода.
+        ///Черная блестящая фигура Чужого уже начала высовываться из отверстия…!!&lt;/p&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/29&quot;&gt;Стрелять в Чужого – 29&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/30&quot;&gt;Не стрелять и ждать – 30&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/31&quot;&gt;Отступить в отсек Пищеблок – 31&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/32&quot;&gt;Отступить в отсек Лифт – 32&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a23 {
+            get {
+                return ResourceManager.GetString("a23", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;&lt;a href=&quot;/18&quot;&gt;Мертвый доктор – Нет зародыша Чужого – 18&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a26 {
+            get {
+                return ResourceManager.GetString("a26", resourceCulture);
             }
         }
         
@@ -205,12 +316,35 @@ namespace AliensOldEnemies {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Человек упал подкошенный вашим метким выстрелом. Вы осмотрели его труп. На
-        ///куртке комбинезона вы видите бэйдж с надписью– Мак Коллинз(техник).&lt;/p&gt;&lt;br&gt;
-        ///&lt;a href=&apos;/1&apos;&gt;Обыскав его тело, вы находите одну чип-плату. - 1&lt;/a&gt;.
+        ///куртке комбинезона вы видите бэйдж с надписью– Мак Коллинз (техник).&lt;/p&gt;&lt;br&gt;
+        ///&lt;a href=&apos;/1_chipplata&apos;&gt;Обыскав его тело, вы находите одну чип-плату. - 1&lt;/a&gt;.
         /// </summary>
         public static string a4 {
             get {
                 return ResourceManager.GetString("a4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Пищеблок – Из-за угла на вас выскочил какой-то мужчина с большим кухонным тесаком в
+        ///руке. С безумными глазами и криками он бросился на вас.&lt;/p&gt;&lt;br&gt;
+        ///&lt;p&gt;Ваши действия?&lt;/p&gt;
+        ///&lt;p&gt;Пищеблок – Из-за угла на вас выскочил какой-то мужчина с большим кухонным тесаком в
+        ///руке. С безумными глазами и криками он бросился на вас.&lt;/p&gt;&lt;br&gt;
+        ///&lt;p&gt;Ваши действия?&lt;/p&gt;.
+        /// </summary>
+        public static string a41 {
+            get {
+                return ResourceManager.GetString("a41", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;В его теле есть зародыш Чужого.&lt;/p&gt;&lt;br&gt;.
+        /// </summary>
+        public static string a47 {
+            get {
+                return ResourceManager.GetString("a47", resourceCulture);
             }
         }
         
@@ -233,12 +367,12 @@ namespace AliensOldEnemies {
         ///   Looks up a localized string similar to &lt;p&gt;Какие вопросы вы хотите задать Мак Коллинзу? (за каждый вопрос вам(-1) Время)&lt;/p&gt;
         ///&lt;br&gt;
         ///&lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/8&quot;&gt;Где находится дипломат Артур Харрисон? – 8&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/9&quot;&gt;Как проходит система воздуховодов на корабле? - 9&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/10&quot;&gt;Почему на корабле высокая температура? – 10&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/11&quot;&gt;Что происходит на корабле? – 11&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/12&quot;&gt;Откуда могли взяться на корабле Чужие? – 12&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Больше вопросов нет- 1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br&gt;.
+        ///&lt;li&gt;&lt;a href=&quot;/8_time_-1&quot;&gt;Где находится дипломат Артур Харрисон? – 8&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/9_time_-1&quot;&gt;Как проходит система воздуховодов на корабле? - 9&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/10_time_-1&quot;&gt;Почему на корабле высокая температура? – 10&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/11_time_-1&quot;&gt;Что происходит на корабле? – 11&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/12_time_-1&quot;&gt;Откуда могли взяться на корабле Чужие? – 12&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Больше [rest of string was truncated]&quot;;.
         /// </summary>
         public static string a7 {
             get {

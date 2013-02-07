@@ -14,6 +14,66 @@ namespace AliensOldEnemies
         private void HTMLViewer_HyperlinkClick(object sender, MSPToolkit.Controls.HyperlinkClickEventArgs e)
         {
             string item = e.NavigationUri.OriginalString.ToString();
+
+            if (item.Contains("_time_-1")) {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-1","");
+            };
+            if (item.Contains("_time_-2"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 2;
+                item = item.Replace("_time_-2", "");
+            };
+            if (item.Contains("_time_-3"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-3", "");
+            };
+            if (item.Contains("_time_-4"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-4", "");
+            };
+            if (item.Contains("_time_-5"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-5", "");
+            };
+            if (item.Contains("_time_-6"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-6", "");
+            };
+            if (item.Contains("_time_-7"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-7", "");
+            };
+            if (item.Contains("_time_-8"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
+                item = item.Replace("_time_-8", "");
+            };
+
+            if (item.Contains("_life_-1"))
+            {
+                ViewModelLocator.StatusStatic.ChangeLifes(-1);
+                item = item.Replace("_life_-1", "");
+            };
+            if (item.Contains("_life_+1"))
+            {
+                ViewModelLocator.StatusStatic.ChangeLifes(+1);
+                item = item.Replace("_life_+1", "");
+            };
+
+            if (item.Contains("_chipplata"))
+            {
+                ViewModelLocator.StatusStatic.InvItems.Add("чип-плата");
+                item = item.Replace("_chipplata", "");
+            };
+
+            
+
             ViewModelLocator.MainStatic.CurrentPageId = item;
         }
     }

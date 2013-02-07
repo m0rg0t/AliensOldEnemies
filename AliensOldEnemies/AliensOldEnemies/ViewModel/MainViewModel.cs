@@ -27,7 +27,18 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
-
+        private string _bgImage = "/images/The_Darkness_of_Space_by_qaz2008.jpg";
+        public string BgImage {
+            get
+            {
+                return _bgImage;
+            }
+            set
+            {
+                _bgImage = value;
+                RaisePropertyChanged("BgImage");
+            }
+    }
 
         public string PageName
         {
@@ -59,7 +70,7 @@ namespace AliensOldEnemies.ViewModel
             {
                 try
                 {
-                    return CurrentPage.Description + PathsSelect(CurrentPageId);
+                    return CurrentPage.Description + PathsSelect(CurrentPageId)+"<br><br>";
                 }
                 catch { return ""; };
             }
@@ -251,18 +262,117 @@ namespace AliensOldEnemies.ViewModel
                     Id = "/16",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пищеблок",
+                    Description = Texts.a17,
+                    Id = "/17",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Лазарет",
+                    Description = Texts.a18,
+                    Id = "/18",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Кровавый след",
+                    Description = Texts.a21,
+                    Id = "/21",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Сюзанна Мур",
+                    Description = Texts.a22,
+                    Id = "/22",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = Texts.a22,
+                    Id = "/23",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пусто",
+                    Description = Texts.a26,
+                    Id = "/26",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пищеблок",
+                    Description = Texts.a41,
+                    Id = "/41",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Зародыш",
+                    Description = Texts.a47,
+                    Id = "/47",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
             }
         }
 
-        public int Time = 40;
-
         public string PathsSelect(string page) {
             switch (page) {
+                case "47": return a47();
+                case "41": return a41();
+                case "/14": return a14();
+                case "/a2": ViewModelLocator.StatusStatic.ChangeLifes(-1); return "";
+                case "/a15": ViewModelLocator.StatusStatic.ChangeLifes(-1); return "";
                 case "/1": return angar();
                 case "/6": return a6();
                 case "/13": return techroom();
+                case "/17": return a17();
+                case "/18": return a18();
                 default: return "";
             }
+        }
+
+        public string a14()
+        {
+            if (ViewModelLocator.StatusStatic.FindAbility("биолог")) {
+                return "<a href=\"/39\">Если у вас в команде есть биолог, идите на - 39</a>";
+            }
+            else {
+                return "<a href=\"/13\">Если нет биолога, вернитесь на – 13</a>";
+            };
+        }
+
+        public string a47()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("биолог") && ViewModelLocator.StatusStatic.FindInvItem("лазерный резак") && ViewModelLocator.StatusStatic.FindInvItem("био-контейнер"))
+            {
+                outstr = outstr + "<p>У вас есть биолог + лазерный резак +  био-контейнер, вам удается поместить зародыш Чужого в контейнер. Выполнение Миссии №6.</p><br>";
+            };
+            return outstr + "<br><a href=\"/43\">Вернитесь на – 43</a>";
+        }
+
+        public string a41()
+        {
+            string outstr = "<ul><li><a href=\"/44\">Стрелять в него – 44</a></li><li><a href=\"/45\">Не стрелять в него – 45</a></li>";
+            if (ViewModelLocator.StatusStatic.FindAbility("психолог"))
+            {
+                return "<li><a href=\"/46\">Если у вас в команде есть Психолог– 46</a></li>";
+            };
+            return outstr+"</ul>";
         }
 
         public string a6()
@@ -273,11 +383,15 @@ namespace AliensOldEnemies.ViewModel
             outevent+="<p>Вы завели автопогрузчик и сняли несколько контейнеров с верхнего ряда.  Вы открыли эти контейнеры.</p><br><p>Бросьте кубик – Вы нашли там: ";
             switch (randomNumber)
             {
-                case 1: outevent+="боезапас(+3)."; break;
-                case 2: outevent+="чип-плату."; break;
-                case 3: outevent+="один баллон с кислородом."; break;
-                case 4: outevent+="пять комплектов скафандров(для перемещения в космосе – требуется наличие хотя бы одного бойца с Умением-навигатор)."; break;
-                case 5: outevent+="один баллон пено-керамо-спрея."; break;
+                case 1: outevent += "боезапас(+3)."; ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 3; break;
+                case 2: outevent += "чип-плату."; ViewModelLocator.StatusStatic.InvItems.Add("чип-плата"); break;
+                case 3: outevent += "один баллон с кислородом."; ViewModelLocator.StatusStatic.InvItems.Add("балон с кислородом"); break;
+                case 4: outevent+="пять комплектов скафандров(для перемещения в космосе – требуется наличие хотя бы одного бойца с Умением-навигатор).";
+                    ViewModelLocator.StatusStatic.InvItems.Add("пять комплектов скафандров(для перемещения в космосе)");
+                    break;
+                case 5: outevent+="один баллон пено-керамо-спрея.";
+                    ViewModelLocator.StatusStatic.InvItems.Add("баллон пено-керамо-спрея");
+                    break;
                 case 6: outevent+="ничего полезного."; break;
                 default: break;
             };
@@ -300,11 +414,21 @@ namespace AliensOldEnemies.ViewModel
                     int randomItem = random.Next(1, 7);
                     switch (randomItem)
                     {
-                        case 1: outevent += "био-контейнер."; break;
-                        case 2: outevent += "чип-плата."; break;
-                        case 3: outevent += "кислородный баллон."; break;
-                        case 4: outevent += "лазерный резак."; break;
-                        case 5: outevent += "универсальный ремонтный комплект."; break;
+                        case 1: outevent += "био-контейнер.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("био-контейнер");
+                            break;
+                        case 2: outevent += "чип-плата.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("чип-плата");
+                            break;
+                        case 3: outevent += "кислородный баллон.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("кислородный баллон");
+                            break;
+                        case 4: outevent += "лазерный резак.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("лазерный резак");
+                            break;
+                        case 5: outevent += "универсальный ремонтный комплект.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("универсальный ремонтный комплект");
+                            break;
                         case 6: outevent += "ничего."; break;
                         default: outevent += "ничего."; break;
                     };
@@ -331,9 +455,15 @@ namespace AliensOldEnemies.ViewModel
                     int randomItem = random.Next(1, 7);
                     switch (randomItem)
                     {
-                        case 1: outevent += "сварочный аппарат."; break;
-                        case 2: outevent += "чип-плата."; break;
-                        case 3: outevent += "боезапас(+1)."; break;
+                        case 1: outevent += "сварочный аппарат.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("сварочный аппарат");
+                            break;
+                        case 2: outevent += "чип-плата.";
+                            ViewModelLocator.StatusStatic.InvItems.Add("чип-плата");
+                            break;
+                        case 3: outevent += "боезапас(+1).";
+                            ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 1;
+                            break;
                         default: outevent += "ничего."; break;
                     };
                     break;
@@ -347,6 +477,103 @@ namespace AliensOldEnemies.ViewModel
 
             return outevent+"<br>";
         }
+
+        private string a17()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "<a href='/41'>Событие только для первого посещения – 41</a>"; break;
+                case 2: outevent += "<a href='/42'>Событие только для первого посещения – 42</a>"; break;
+                case 3: outevent += "<a href='/43'>Событие многоразовое – 43</a>"; break;
+                case 4:
+                    outevent += "Вы осмотрели отсек на наличие предметов: ";
+                    int randomItem = random.Next(1, 7);
+                    switch (randomItem)
+                    {
+                        case 1: outevent += "пенно-керамо-спрей";
+                            ViewModelLocator.StatusStatic.InvItems.Add("пенно-керамо-спрей");
+                            break;
+                        case 2: outevent += "шоккер";
+                            ViewModelLocator.StatusStatic.InvItems.Add("шоккер");
+                            break;
+                        case 3: outevent += "чип-ключ от отсека Генератора";
+                            ViewModelLocator.StatusStatic.InvItems.Add("чип-ключ от отсека Генератора");
+                            break;
+                        case 4: outevent += "аптечка";
+                            ViewModelLocator.StatusStatic.InvItems.Add("аптечка");
+                            break;
+                        case 5: outevent += "боезапас(+1)";
+                            ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 1;
+                            break;
+                        default: outevent += "ничего."; break;
+                    };
+                    break;
+                case 5: outevent += "Нападение врага - Чужой-солдат – атакует спереди – вы атакуете первым."; break;
+                case 6: outevent += "Нападение врага - Чужой-краб – атакует сзади – вы стреляете первым."; break;
+            };
+
+            outevent += "<br><b>Ваше решение?</b><br>";
+            outevent += Texts.a17_select;
+
+            return outevent + "<br>";
+        }
+
+
+        private string a18()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "<a href='/21'>Событие только для первого посещения – 21</a>"; break;
+                case 2: outevent += "<a href='/22'>Событие только для первого посещения – 22</a>"; break;
+                case 3: outevent += "<a href='/23'>Событие только для первого посещения – 23</a>"; break;
+                case 4:
+                    outevent += "Вы мельком осмотрели отсек в поисках полезных предметов: ";
+                    int randomItem = random.Next(1, 7);
+                    switch (randomItem)
+                    {
+                        case 1: outevent += "аптечка";
+                            ViewModelLocator.StatusStatic.InvItems.Add("аптечка");
+                            break;
+                        case 2: outevent += "хирургический лазерный резак";
+                            ViewModelLocator.StatusStatic.InvItems.Add("лазерный резак");
+                            break;
+                        case 3: outevent += "кислородный балон";
+                            ViewModelLocator.StatusStatic.InvItems.Add("кислородный балон");
+                            break;
+                        case 4: outevent += "таблетки \"Антишок\"";
+                            ViewModelLocator.StatusStatic.InvItems.Add("таблетки \"Антишок\"");
+                            break;
+                        case 5: outevent += "таблетки \"Антишок\"";
+                            ViewModelLocator.StatusStatic.InvItems.Add("таблетки \"Антишок\"");
+                            break;
+                        case 6: outevent += "переносной рентген-аппарат";
+                            ViewModelLocator.StatusStatic.InvItems.Add("переносной рентген-аппарат");
+                            break;
+                        default: outevent += "ничего."; break;
+                    };
+                    break;
+                case 5: outevent += "Нападение врага - Чужой-краб – атакует сзади – атакует первым."; break;
+                case 6: outevent += "Ничего."; break;
+            };
+
+            outevent += "<br><b>Ваше решение?</b><br>";
+            outevent += "<ul><li><a href=\"/18_time-1\">Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.</a></li>";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") && ViewModelLocator.StatusStatic.FindInvItem("чип-плата")) {
+                ViewModelLocator.StatusStatic.DeleteInvItem("чип-плата");
+                outevent += "<li><a href=\"/18_life+1\">У вас есть предмет - чип-плата и умение техник, то вы можете починить робота-доктора и восстановить здоровье своим раненым бойцам. Каждому бойцу можно восстановить максимум (+1) Жизнь.</a></li>";
+            };
+            outevent += Texts.a18_select;
+
+            return outevent + "<br>";
+        }
+
+
 
         public ObservableCollection<PageItem> Pages;
 

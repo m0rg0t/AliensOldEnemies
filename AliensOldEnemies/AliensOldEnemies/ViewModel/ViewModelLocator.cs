@@ -56,6 +56,7 @@ namespace AliensOldEnemies.ViewModel
     public class ViewModelLocator
     {
         private static MainViewModel _main;
+        private static StatusViewModel _status;
 
         /// <summary>
         /// Initializes a new instance of the ViewModelLocator class.
@@ -90,6 +91,19 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
+        public static StatusViewModel StatusStatic
+        {
+            get
+            {
+                if (_status == null)
+                {
+                    CreateStatus();
+                }
+
+                return _status;
+            }
+        }
+
         /// <summary>
         /// Gets the Main property.
         /// </summary>
@@ -101,6 +115,17 @@ namespace AliensOldEnemies.ViewModel
             get
             {
                 return MainStatic;
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+            "CA1822:MarkMembersAsStatic",
+            Justification = "This non-static member is needed for data binding purposes.")]
+        public StatusViewModel Status
+        {
+            get
+            {
+                return StatusStatic;
             }
         }
 
@@ -121,6 +146,14 @@ namespace AliensOldEnemies.ViewModel
             if (_main == null)
             {
                 _main = new MainViewModel();
+            }
+        }
+
+        public static void CreateStatus()
+        {
+            if (_status == null)
+            {
+                _status = new StatusViewModel();
             }
         }
 

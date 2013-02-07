@@ -56,8 +56,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Laurent Bugnion (GalaSoft)\Mvvm Light Toolkit\Binaries\WP71\GalaSoft.MvvmLight.Extras.WP71.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Phone.Controls, Version=7.0.0.0, Culture=neutral, PublicKeyToken=24eec0d8c86cda1e, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Phone.Controls.Toolkit">
+      <HintPath>..\..\..\donor\wp7-donor\packages\WPtoolkit.4.2012.10.30\lib\sl4-windowsphone71\Microsoft.Phone.Controls.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="MSPToolkit">
       <HintPath>..\packages\MSPToolkit.1.7.26.1\lib\sl4-wp71\MSPToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Phone.Controls">
+      <HintPath>..\..\..\donor\wp7-donor\Donor\libs\Phone.Controls.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Interactivity">
       <SpecificVersion>False</SpecificVersion>
@@ -71,6 +78,9 @@
     <Reference Include="System.Net" />
     <Reference Include="System.Xml" />
     <Reference Include="mscorlib.extensions" />
+    <Reference Include="Telerik.Windows.Controls.DataVisualization">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Telerik\RadControls for Windows Phone 7 Q3 2012\Binaries\WindowsPhone\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -97,6 +107,7 @@
     </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\PageItem.cs" />
+    <Compile Include="ViewModel\PersonItem.cs" />
     <Compile Include="ViewModel\SettingsViewModel.cs" />
     <Compile Include="ViewModel\StatusViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
@@ -135,13 +146,29 @@
     <Content Include="Background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Images\angar.jpg" />
     <Content Include="Images\appbar.next.rest.png" />
+    <Content Include="Images\Dok.jpg" />
+    <Content Include="Images\Golem.jpg" />
+    <Content Include="Images\Kriogen.jpg" />
+    <Content Include="Images\Lola.jpg" />
+    <Content Include="Images\MadMax.jpg" />
+    <Content Include="Images\Malish.jpg" />
+    <Content Include="Images\Silikon.jpg" />
+    <Content Include="Images\Sviatosha.jpg" />
+    <Content Include="Images\Tamagochi.jpg" />
+    <Content Include="Images\techroom.jpg" />
+    <Content Include="Images\The_Darkness_of_Space_by_qaz2008.jpg" />
+    <Content Include="Images\Vasabi.jpg" />
+    <Content Include="Images\Zanoza.jpg" />
+    <Content Include="Images\Zivoder.jpg" />
     <Content Include="Music\Bent_and_Broken.mp3" />
     <Content Include="SplashScreenImage.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controls\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +176,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Texts.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

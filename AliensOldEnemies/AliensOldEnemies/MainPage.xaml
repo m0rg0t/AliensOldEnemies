@@ -6,6 +6,9 @@
                             xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
                             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
                             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+                            xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+                            xmlns:gauges="clr-namespace:Telerik.Windows.Controls;assembly=Telerik.Windows.Controls.DataVisualization"
                             FontFamily="{StaticResource PhoneFontFamilyNormal}"
                             FontSize="{StaticResource PhoneFontSizeNormal}"
                             Foreground="{StaticResource PhoneForegroundBrush}"
@@ -18,15 +21,121 @@
                             DataContext="{Binding Main, Source={StaticResource Locator}}">
 
 	<!--LayoutRoot contains the root grid where all other page content is placed-->
-	<Grid x:Name="LayoutRoot"
-	      Background="Transparent">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
-			<RowDefinition Height="*" />
-		</Grid.RowDefinitions>
+	<Grid x:Name="LayoutRoot">
+            <!--<Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>-->
+
+        <controls:Panorama>
+            <controls:Panorama.Title>
+                    <TextBlock x:Name="ApplicationTitle"
+			           Text="{Binding ApplicationTitle}"                      
+			           Style="{StaticResource PhoneTextNormalStyle}" Margin="12,80,12,0" />
+            </controls:Panorama.Title>
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="/images/The_Darkness_of_Space_by_qaz2008.jpg" Stretch="None" />
+            </controls:Panorama.Background>
+            <!--Первый элемент Panorama-->
+            <controls:PanoramaItem>
+                <controls:PanoramaItem.Header>
+                    <TextBlock x:Name="PageTitle"
+			           Text="{Binding PageName}"
+			           Margin="-3,-8,0,0"
+			           Style="{StaticResource PhoneTextTitle2Style}" />
+                </controls:PanoramaItem.Header>
+                <Grid>
+                    <MediaElement Source="/Music/Bent_and_Broken.mp3" AutoPlay="True" />
+                    <!-- {Binding Music} -->
+
+                    <!--ContentPanel - place additional content here-->
+                    <Grid x:Name="ContentGrid" Grid.Row="1">
+                        <msp:HTMLViewer Html="{Binding Description}" HyperlinkClick="HTMLViewer_HyperlinkClick"></msp:HTMLViewer>
+                    </Grid>
+                </Grid>
+            </controls:PanoramaItem>
+            <!--Второй элемент Panorama-->
+            <controls:PanoramaItem>
+                <controls:PanoramaItem.Header>
+                    <TextBlock
+			           Text="Команда"                        
+			           Margin="-3,-8,0,0"/>			           
+                </controls:PanoramaItem.Header>
+                <Grid>
+                    <ScrollViewer>
+                    <StackPanel>
+                            <ListBox 
+                                ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                ItemsSource="{Binding AllCrew}"
+                                DataContext="{Binding Status, Source={StaticResource Locator}}"
+                                Name="SelectedCrew">
+                                <ListBox.ItemsPanel>
+                                    <ItemsPanelTemplate>
+                                        <toolkit:WrapPanel ItemHeight="180" ItemWidth="180"/>
+                                    </ItemsPanelTemplate>
+                                </ListBox.ItemsPanel>
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="10">
+                                            <TextBlock Text="{Binding Name}" TextWrapping="Wrap"/>
+                                            <Image Source="{Binding Image}"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+            <controls:PanoramaItem>
+                <controls:PanoramaItem.Header>
+                    <TextBlock
+			           Text="Статус"                        
+			           Margin="-3,-8,0,0"/>
+                </controls:PanoramaItem.Header>
+                <Grid>
+                    <ScrollViewer>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Время: "/>
+                                <TextBlock 
+                                DataContext="{Binding Status, Source={StaticResource Locator}}"
+                                Text="{Binding Time}"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Боезапас: "/>
+                                <TextBlock 
+                                DataContext="{Binding Status, Source={StaticResource Locator}}"
+                                Text="{Binding Ammo}"/>
+                            </StackPanel>
+
+                            <ListBox 
+                                ScrollViewer.VerticalScrollBarVisibility="Disabled"
+                                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                ItemsSource="{Binding InvItems}"
+                                DataContext="{Binding Status, Source={StaticResource Locator}}"
+                                Name="Inv">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="10">
+                                            <TextBlock Text="{Binding}" TextWrapping="Wrap"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+
+
+        
 
 		<!--TitlePanel contains the name of the application and page title-->
-		<StackPanel x:Name="TitlePanel"
+		<!--<StackPanel x:Name="TitlePanel"
 		            Grid.Row="0"
 		            Margin="24,24,0,12">
 			<TextBlock x:Name="ApplicationTitle"
@@ -36,19 +145,9 @@
 			           Text="{Binding PageName}"
 			           Margin="-3,-8,0,0"
 			           Style="{StaticResource PhoneTextTitle1Style}" />
-		</StackPanel>
+		</StackPanel>-->
 
-        <MediaElement Source="{Binding Music}" AutoPlay="True" />
 
-		<!--ContentPanel - place additional content here-->
-		<Grid x:Name="ContentGrid"
-		      Grid.Row="1">
-
-            <!--<ScrollViewer Height="600" VerticalContentAlignment="Stretch" VerticalAlignment="Top">-->
-            <msp:HTMLViewer Html="{Binding Description}" HyperlinkClick="HTMLViewer_HyperlinkClick"></msp:HTMLViewer>
-            <!--</ScrollViewer>-->
-
-        </Grid>
 	</Grid>
     
     <phone:PhoneApplicationPage.ApplicationBar>
