@@ -377,9 +377,97 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Пусто",
+                    Description = Texts.a31,
+                    Id = "/31",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Лифт",
+                    Description = Texts.a32,
+                    Id = "/32",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Не заражен",
+                    Description = Texts.a34,
+                    Id = "/34",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "События",
+                    Description = Texts.a35,
+                    Id = "/35",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a36,
+                    Id = "/36",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Температура",
+                    Description = Texts.a37,
+                    Id = "/37",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Исток",
+                    Description = Texts.a38,
+                    Id = "/38",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Осмотр",
+                    Description = Texts.a39,
+                    Id = "/39",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Пищеблок",
                     Description = Texts.a41,
                     Id = "/41",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пищеблок",
+                    Description = Texts.a42,
+                    Id = "/42",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Авария",
+                    Description = Texts.a43,
+                    Id = "/43",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = Texts.a44,
+                    Id = "/44",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -390,7 +478,121 @@ namespace AliensOldEnemies.ViewModel
                     Id = "/47",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Вопросы",
+                    Description = Texts.a48,
+                    Id = "/48",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Атака",
+                    Description = Texts.a49,
+                    Id = "/49",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a50,
+                    Id = "/50",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Исток",
+                    Description = Texts.a51,
+                    Id = "/51",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пациентка",
+                    Description = Texts.a52,
+                    Id = "/52",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = Texts.a57,
+                    Id = "/57",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пусто",
+                    Description = Texts.a73,
+                    Id = "/73",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Начало нападения",
+                    Description = Texts.a74,
+                    Id = "/74",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Пусто",
+                    Description = Texts.a76,
+                    Id = "/76",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неудача",
+                    Description = Texts.a83,
+                    Id = "/83",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Каюты – событие",
+                    Description = Texts.a84,
+                    Id = "/84",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "К пробоине",
+                    Description = Texts.a289,
+                    Id = "/289",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неудача",
+                    Description = Texts.a291,
+                    Id = "/291",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неудача",
+                    Description = Texts.a292,
+                    Id = "/292",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+                
             }
+
         }
 
         public string PathsSelect(string page) {
@@ -411,8 +613,23 @@ namespace AliensOldEnemies.ViewModel
                 case "/27": return a27();
                 case "/28": return a28();
                 case "/29": return a29();
+                case "/32": return a32();
                 default: return "";
             }
+        }
+
+        public string a32()
+        {
+            string outevent = "";
+            if (ViewModelLocator.StatusStatic.FindInvItem("чип-ключ от отсека грузового лифта"))
+            {
+                outevent += "<a href=\"33\">У вас есть чип-ключ от отсека Грузового лифта – переходите на – 33</a>";
+            }
+            else
+            {
+                outevent += "<a href=\"23\">У вас нет чип-ключа – вернитесь на – 23</a>";
+            };
+            return outevent;
         }
 
         public string a29() {
