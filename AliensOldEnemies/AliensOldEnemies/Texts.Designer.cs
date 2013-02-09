@@ -168,6 +168,17 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;На ваши крики тварь не среагировала и ударила свою жертву. Острые как лезвия когти
+        ///разорвали плечо несчастного. Он закричал и упал на пол. Еще секунда и тварь убьет его.&lt;br&gt;
+        ///&lt;a href=&quot;/250&quot;&gt;Вернитесь на – 155&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a158 {
+            get {
+                return ResourceManager.GetString("a158", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;b&gt;Технический отсек- Событие:&lt;/b&gt;&lt;br&gt;
         ///&lt;p&gt;Внезапно по коммуникационному селектору корабля вы слышите &lt;br&gt;– &lt;i&gt;«Помогите! Кто меня слышит?!  Говорит &lt;b&gt;Роберт Фул&lt;/b&gt;. Я обнаружил источник появления этих тварей –  это находится в отсеке Утилизации.  Черт!!  Что это?!  О боже!  Это невозможно!!»&lt;/i&gt; -  вы слышите несколько выстрелов,  скрежет,  визг и человеческие крики.&lt;/p&gt;
         ///&lt;a href=&quot;/13&quot;&gt;Все.  Связь оборвалась. Тишина. - 13&lt;/a&gt;.
@@ -175,6 +186,39 @@ namespace AliensOldEnemies {
         public static string a16 {
             get {
                 return ResourceManager.GetString("a16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Код системы – 471?&lt;br&gt;
+        ///Кажется, здесь нет никакой логики. Или есть? Кажется, нет…&lt;br&gt;
+        ///Выберите из списка число, которое вы хотите ввести на панели:&lt;/p&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/180&quot;&gt;1 – 180&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/181&quot;&gt;2 – 181&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/182&quot;&gt;3 – 182&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/183&quot;&gt;4 – 183&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/184&quot;&gt;5 – 184&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/185&quot;&gt;6 – 185&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/186&quot;&gt;7 – 186&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/187&quot;&gt;8 – 187&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/188&quot;&gt;9 – 188&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a160 {
+            get {
+                return ResourceManager.GetString("a160", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Правильная последняя цифра кода это - 5.
+        ///Вы отключили системы безопасности в Рубке корабля.
+        ///&lt;br&gt;&lt;a href=&quot;/150&quot;&gt;Вернитесь на – 150&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a165 {
+            get {
+                return ResourceManager.GetString("a165", resourceCulture);
             }
         }
         
@@ -363,6 +407,195 @@ namespace AliensOldEnemies {
         public static string a26 {
             get {
                 return ResourceManager.GetString("a26", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Никого не нужно ликвидировать.&lt;br&gt;&lt;a href=&quot;/256&quot;&gt;Андроид
+        ///для выживания не требует кислорода. - 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a260 {
+            get {
+                return ResourceManager.GetString("a260", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – Никого не нужно ликвидировать.&lt;br&gt;&lt;a href=&quot;/251&quot;&gt;Андроид
+        ///для выживания не требует кислорода. &lt;br&gt;Переходите к следующему вопросу – 251&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a262 {
+            get {
+                return ResourceManager.GetString("a262", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – Это самый гуманный и оптимальный вариант.
+        ///Даже если женщину придется полностью превратить в «сексуальную рабыню» - это тем
+        ///не менее позволит сохранить стабильность до конца рейса.&lt;br&gt;&lt;a href=&quot;/252&quot;&gt;Ответьте теперь на следующий
+        ///вопрос – 252&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a263 {
+            get {
+                return ResourceManager.GetString("a263", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Это самая «взрывоопасная» ситуация, когда
+        ///женщина начинает выбирать себе сексуального партнера, когда она захочет. &lt;br&gt;&lt;a href=&quot;/256&quot;&gt;Если она вообще захочет… - 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a264 {
+            get {
+                return ResourceManager.GetString("a264", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Этот вариант не гарантирует стабильности в
+        ///мужском экипаже. Это порождает вопиющее неравенство в распределении сексуальных
+        ///(женских) ресурсов экипажа. &lt;br&gt;&lt;a href=&quot;/256&quot;&gt;Одному мужчине достанется все! Другим ничего. Это очень
+        ///быстро приведет к «крови». – 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a265 {
+            get {
+                return ResourceManager.GetString("a265", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Это вариант был бы вполне приемлемым,
+        ///если бы люди владели бы высоким уровнем Воли. Увы, это не так. Инстинкты пока
+        ///сильнее разума. Рано или поздно кто-то из мужчин нарушит свое слово и вступит в
+        ///сексуальный контакт с женщиной. И это сразу же разрушит стабильность среди экипажа.
+        ///&lt;br&gt;&lt;a href=&quot;/256&quot;&gt;После первого нарушения договоренности, ни в какие повторные договоренности уже
+        ///никто не будет верить. – 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a266 {
+            get {
+                return ResourceManager.GetString("a266", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – Если вы поддержите заговорщиков, то вы
+        ///нарушите Правило субординации и Закон. Но если вы поддержите капитана, то его
+        ///репрессии будут продолжаться. Эту ситуацию уже никак нельзя подправить и удержать
+        ///под контролем. «Нарыв созрел» и нужны кардинальные и решительные действия. 
+        ///&lt;br&gt;&lt;a href=&quot;/270&quot;&gt;Ради спасения корабля и цели рейса - 270&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a267 {
+            get {
+                return ResourceManager.GetString("a267", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Если вы поддержите капитана, то вы
+        ///соблюдете Правила и Закон, но террор и унижения будут продолжаться на корабле и
+        ///дальше. Ситуация будет катастрофически развиваться и дальше и рано или поздно
+        ///затронет всех членов экипажа. 
+        ///&lt;br&gt;&lt;a href=&quot;/256&quot;&gt;В том числе и тех, кто сейчас держится «нейтралитета» и
+        ///тех, кто сегодня еще поддерживают капитана. – 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a268 {
+            get {
+                return ResourceManager.GetString("a268", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ВЫ УСПЕШНО ПРОШЛИ ТЕСТ – ВЫ ДЕЙСТВИТЕЛЬНО ПРЕДСТАВИТЕЛЬ ЧЕЛОВЕЧЕСКОЙ РАССЫ – объявил вам компьютер корабля.&lt;/p&gt;
+        ///&lt;p&gt;А ТЕПЕРЬ ПОСЛЕДНИЙ РЕШАЮЩИЙ ТЕСТ!&lt;/p&gt;
+        ///&lt;br&gt;&lt;p&gt;На центральной панели появилось табло с цифрами:&lt;/p&gt;
+        ///&lt;p&gt;(2 238 565 х 41 100 866 = ?)&lt;/p&gt;&lt;br&gt;
+        ///&lt;p&gt;Умножьте эти две цифры в уме и наберите на панели правильный результат.
+        ///&lt;b&gt;На это вам дается только 5 секунд! Время пошло! 5-4-3-2-1-!!!&lt;/b&gt;&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/274&quot;&gt;Если вы не смогли решить эту задачу – 274&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/273&quot;&gt;Если в [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a270 {
+            get {
+                return ResourceManager.GetString("a270", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы решили эту задачу? Значит вы НЕ ЧЕЛОВЕК.&lt;br&gt;&lt;a href=&quot;/256&quot;&gt;Вы или андроид или чужеродное инопланетное существо. – 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a273 {
+            get {
+                return ResourceManager.GetString("a273", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы не решили эту задачу? Значит вы действительно ЧЕЛОВЕК, а не какой-то андроид или
+        ///чужеродное инопланетное существо. – Вы можете получить гало-диск «черного ящика»
+        ///корабля.&lt;br&gt;
+        ///Отметьте у себя на листике персонажа выполнение Миссии № 7.
+        ///&lt;br&gt;&lt;a href=&quot;/256&quot;&gt;Вернитесь на - 220&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a274 {
+            get {
+                return ResourceManager.GetString("a274", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – &lt;a href=&quot;/250&quot;&gt;Вы и ваш муж еще сможете родить другого
+        ///ребенка, и Род Человеческий продолжится. - 250&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a275 {
+            get {
+                return ResourceManager.GetString("a275", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – Это абсолютно глупый выбор и в результате
+        ///этого решения Род человеческий прервется на этих двух женщинах. Однако, этот ответ
+        ///ПРАВИЛЬНЫЙ, так как совершенно точно соответствует силе материнского инстинкта
+        ///человеческих женских особей.&lt;br&gt;&lt;a href=&quot;/260&quot;&gt;Этот глупый ответ подтверждает тот факт, что вы
+        ///ЧЕЛОВЕК - 250&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a276 {
+            get {
+                return ResourceManager.GetString("a276", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Если такое решение принимает женщина, то
+        ///муж никогда не согласится на самопожертвование своей жены.&lt;br&gt;&lt;a href=&quot;/256&quot;&gt;Это противоречит роли
+        ///МУЖЧИНЫ в человеческом обществе.– 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a277 {
+            get {
+                return ResourceManager.GetString("a277", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Удача! Бойцу удается зацепиться за край пробоины и не вылететь в открытый космос. Он
+        ///отталкивается от стенки и плавно летит назад к вашей группе. &lt;br&gt;&lt;a href=&quot;/130&quot;&gt;Вы можете снова
+        ///продолжить движение по отсеку – 130&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a285 {
+            get {
+                return ResourceManager.GetString("a285", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;&lt;a href=&quot;/130&quot;&gt;Вам не повезло и вы не нашли коммуникатор Джоаны плавающий где-то в этом отсеке
+        ///среди прочего мусора и осколков. - 130&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a288 {
+            get {
+                return ResourceManager.GetString("a288", resourceCulture);
             }
         }
         
@@ -762,6 +995,22 @@ namespace AliensOldEnemies {
         public static string a84 {
             get {
                 return ResourceManager.GetString("a84", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Вы находите среди обломков мебели – труп Чужого-солдата. Вокруг него большая часть
+        ///пола оказалась прожжена кислотой и под обшивкой пола видны испорченные во многих
+        ///местах трубопроводы систем корабля.&lt;/p&gt;
+        ///Вы вспоминаете, что прямо под этим отсеком на нижней палубе находится отсек
+        ///Реактора. Все проблемы с высокой температурой на корабле, по-видимому, из-за поломки
+        ///Реактора. Если быстро не устранить эту поломку, то корабль может взорваться.&lt;/p&gt;
+        ///&lt;p&gt;Вам приходит в голову безумная идея! Что если расстр [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a86 {
+            get {
+                return ResourceManager.GetString("a86", resourceCulture);
             }
         }
         

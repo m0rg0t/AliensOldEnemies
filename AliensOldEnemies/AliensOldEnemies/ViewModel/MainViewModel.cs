@@ -569,6 +569,182 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Каюты – событие",
+                    Description = Texts.a86,
+                    Id = "/86",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Ранение",
+                    Description = Texts.a158,
+                    Id = "/158",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Выбор",
+                    Description = Texts.a160,
+                    Id = "/160",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Отключено",
+                    Description = Texts.a165,
+                    Id = "/165",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a260,
+                    Id = "/257",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a260,
+                    Id = "/258",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a260,
+                    Id = "/259",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a260,
+                    Id = "/260",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a260,
+                    Id = "/261",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Верно",
+                    Description = Texts.a262,
+                    Id = "/262",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Верно",
+                    Description = Texts.a263,
+                    Id = "/263",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a264,
+                    Id = "/264",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a265,
+                    Id = "/265",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a266,
+                    Id = "/266",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Верно",
+                    Description = Texts.a267,
+                    Id = "/267",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a268,
+                    Id = "/268",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a268,
+                    Id = "/269",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Вы не человек",
+                    Description = Texts.a273,
+                    Id = "/273",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Вы человек",
+                    Description = Texts.a274,
+                    Id = "/274",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Верно",
+                    Description = Texts.a275,
+                    Id = "/275",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a277,
+                    Id = "/277",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Удача",
+                    Description = Texts.a285,
+                    Id = "/285",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "К пробоине",
                     Description = Texts.a289,
                     Id = "/289",
@@ -681,7 +857,7 @@ namespace AliensOldEnemies.ViewModel
         {
             string outevent = "";
             outevent += "<p>Вы обнаруживаете по рентген снимку, что женщина беременна (на 6-ом месяце). Человеческий зародыш живой. Значит и женщина жива. Но почему она в таком странном безжизненном состоянии – пока непонятно.</p><br>";
-            if (ViewModelLocator.StatusStatic.FindAbility("доктор") != null)
+            if (ViewModelLocator.StatusStatic.FindAbility("доктор"))
             {
                 outevent += "<a href=\"28\">У вас в команде есть персонаж с Умением - доктор, перейдите на - 28</a>";
             }
