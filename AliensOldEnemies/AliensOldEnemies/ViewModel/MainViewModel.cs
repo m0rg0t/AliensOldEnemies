@@ -281,6 +281,30 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Каюты",
+                    Description = Texts.a19,
+                    Id = "/19",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Инженерный отсек",
+                    Description = Texts.a20,
+                    Id = "/20",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Осмотр отсека",
+                    Description = "",
+                    Id = "/20_check",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Кровавый след",
                     Description = Texts.a21,
                     Id = "/21",
@@ -305,9 +329,49 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Труп",
+                    Description = Texts.a24,
+                    Id = "/24",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "доктор Ливенгауп",
+                    Description = Texts.a25,
+                    Id = "/25",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Пусто",
                     Description = Texts.a26,
                     Id = "/26",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Женщина",
+                    Description = "",
+                    Id = "/27",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Женщина",
+                    Description = "",
+                    Id = "/28",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Тауер",
+                    Description = "",
+                    Id = "/29",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -341,8 +405,149 @@ namespace AliensOldEnemies.ViewModel
                 case "/13": return techroom();
                 case "/17": return a17();
                 case "/18": return a18();
+                case "/19": return a19();
+                case "/20": return a20();
+                case "/20_check": return a20_check();
+                case "/27": return a27();
+                case "/28": return a28();
+                case "/29": return a29();
                 default: return "";
             }
+        }
+
+        public string a29() {
+            string outevent = "";
+            outevent += "<p>Вы расстреливаете темную зловещую фигуру Чужого и тело пару раз дернувшись - замирает (вам (-1) боеприпас). Вы подходите ближе и видите, что это совсем не Чужой, а здоровый лысый негр. Вы приняли его за тварь, потому что его тело было черным и блестело от пота как хитиновый панцирь Чужого. Вы вытаскиваете из воздуховода тело негра. На его бэйдже написано – Тауэр (техник).</p><br>";
+            ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo - 1;
+            outevent += "<p>Обыскав тело убитого, вы находите:";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+
+            switch (randomNumber)
+            {
+                case 1: outevent += "чип-ключ от отсека Реактора."; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-ключ от отсека реактора" }); break;
+                case 2: outevent += "Инструкция по ремонту Реактора (позволяет любому без умения Техник исправить реактор);"; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "инструкция по ремонту реактора" }); break;
+                case 3: outevent += "чип-плата"; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" }); break;
+                case 4: outevent += "чип-ключ в отсек Грузового Лифта";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-ключ в отсек грузового лифта" });
+                    break;
+                case 5: outevent += "ничего";
+                    break;
+                case 6: outevent += "<br>Информация на персональном коммуникаторе Билли Тауэра – <i>«… у меня есть неоспоримые доказательства того, что навигатор Сюзана Мур является давней любовницей нашего дипломата Артура Харрисона. Не случайно он в своих перелетах всегда использует наш корабль. Сюзанна беременна от него. … Я пригрозил Харрисону, что если он мне не заплатит 50 тыс. кредиток, я расскажу всем о его тайной связи, и на этом его карьера будет окончена. Харрисон обещал мне заплатить…но, я почему-то ему не верю».</i>";
+                    break;
+                default: break;
+            };
+            outevent += "</p>";
+
+            return outevent;
+        }
+
+        public string a28()
+        {
+            string outevent = "";
+            outevent += "<p>Вы обнаруживаете по рентген снимку, что женщина беременна (на 6-ом месяце). Человеческий зародыш живой. Значит и женщина жива. Но почему она в таком странном безжизненном состоянии – пока непонятно.</p><br>";
+            if (ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Живодер")!=null)
+            {
+                outevent += "<a href=\"125\">Перейдите на 125</a>";
+            }
+            else
+            {
+                outevent += "<br><b>Ваши действия?</b><br>";
+                outevent += "<ul><li><a href=\"18\">Оставить женщину в лазарете как есть – вернитесь на – 18</a></li>";
+                outevent += "<ul><li><a href=\"18\">Отправить одного из своих бойцов вместе с женщиной назад к шатлу. Уберите карточку одного бойца и карточку женщины из своей команды. Бросьте кубик за каждый отсек на пути вашего бойца к Ангару с шатлом – если хотя бы на одном из кубиков выпадет (5 или 6) – боец и женщина погибли по пути.</a></li>";
+                outevent += "</ul>";
+            };
+            return outevent;
+        }
+
+        public string a27()
+        {
+            string outevent = "";
+            outevent += "<p>Вы обнаруживаете по рентген снимку, что женщина беременна (на 6-ом месяце). Человеческий зародыш живой. Значит и женщина жива. Но почему она в таком странном безжизненном состоянии – пока непонятно.</p><br>";
+            if (ViewModelLocator.StatusStatic.FindAbility("доктор") != null)
+            {
+                outevent += "<a href=\"28\">У вас в команде есть персонаж с Умением - доктор, перейдите на - 28</a>";
+            }
+            else
+            {
+                outevent += "<a href=\"18\">Нет доктора, вернитесь на - 18</a>";
+
+            };
+            return outevent;
+        }
+
+        public string a20_check()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "";
+            outevent += "<p>Вы осмотрели отсек</p>: ";
+            switch (randomNumber)
+            {
+                case 1: outevent += "боекомплект(+2)."; ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 2; break;
+                case 2: outevent += "аптечка."; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "аптечка" }); break;
+                case 3: outevent += "чип-плата"; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" }); break;
+                case 5: outevent += "инструкция по отладке Реактора (заменяет Умение «техник» при ремонте Реактора);";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "инструкция по отладке реактора" });
+                    break;
+                case 4: outevent += "ремонтный комплект";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "ремонтный комплект" });
+                    break;
+                case 6: outevent += "чип-ключ от арсенала";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-ключ от арсенала" });
+                    break;
+                default: break;
+            };
+            outevent += "<br><a href='/20'>Вернитесь на - 20</a>";
+            return outevent + "<br>";
+        }
+
+        private string a20()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "<a href='/63'>Событие только для первого посещения - 63</a>"; break;
+                case 2: outevent += "<a href='/64'>Событие многоразовое - 64</a>"; break;
+                case 3: outevent += "<a href='/65'>Событие многоразовое - 65</a>"; break;
+                case 4: outevent += "<a href='/66'>Событие многоразовое - 66</a>"; break;
+                case 5: outevent += "Нападение врага – Чужой-офицер – атакует сзади – атакует первым"; break;
+                case 6: outevent += "Нападение врага - Чужой-солдат – атакует сверху – вы атакуете первым."; break;
+            };
+            outevent += "<br><b>Ваши дельнейшие действия?</b><br><ul>";
+            outevent += "<li><a href='/20_time-1'>Остаться в отсеке – (-1 Время) – бросайте снова кубик на Событие;</a></li>";
+            outevent += "<li><a href='/20_check'>Осмотреть отсек</a></li>";
+            if (ViewModelLocator.StatusStatic.FindInvItem("чип-ключ от арсенала"))
+            {
+                outevent += "<li><a href='/67'>Идти - в отсек Арсенала – 67</a></li>";
+            };
+            outevent += "<li><a href='/80'>Спустится на нижний уровень палубы в отсек Мастерских – 80</a></li>";
+            outevent += "<li><a href='/19_time-1'>Лезть в воздухопровод и ползти – до отсека Кают (-2 Времени) - 19</a></li>";
+            outevent += "<li><a href='/18_time-5'>Лезть в воздухопровод и ползти до отсека Лазарета (-5 Времени) - 18</a></li>";
+            outevent += "<li><a href='/13_time-7'>Лезть в воздухопровод и ползти до Технического отсека (-7 Времени) – 13</a></li></ul>";
+
+            return outevent + "<br>";
+        }
+
+        private string a19()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "<a href='/84'>Событие только для первого посещения – 84</a>"; break;
+                case 2: outevent += "<a href='/85'>Событие только для первого посещения – 85</a>"; break;
+                case 3: outevent += "<a href='/86'>Событие только для первого посещения – 86</a>"; break;
+                case 4: outevent += "<a href='/87'>Событие многоразовое – 87</a>"; break;
+                case 5: outevent += "Нападение врага - Чужой-офицер – атакует сзади – атакует первым."; break;
+                case 6: outevent += "Нападение врага - Чужой-солдат – атакует сверху – атакует первым."; break;
+            };
+            outevent += Texts.a19_select;
+
+            return outevent + "<br>";
         }
 
         public string a14()
@@ -398,6 +603,8 @@ namespace AliensOldEnemies.ViewModel
             outevent+="<br><a href='/1'>Вернитесь на - 1</a>";
             return outevent+"<br>";
         }
+
+
 
         private string techroom()
         {

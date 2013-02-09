@@ -229,6 +229,31 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вдоль стен тянутся двухъярусные койки и узкие шкафы. На полу перевернутые табуреты и разбросанные личные вещи экипажа. В углу отсека баррикада из мебели и шкафов.&lt;/p&gt;.
+        /// </summary>
+        public static string a19 {
+            get {
+                return ResourceManager.GetString("a19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;br&gt;&lt;b&gt;Ваши дальнейшие действия?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_time-1&quot;&gt;Остаться пока в отсеке – бросьте снова кубик события (-1 Время).&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/71&quot;&gt;Идти в отсек Арсенала - 71&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/60&quot;&gt;Идти в отсек Коридор «С» - 60&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/20_time-2&quot;&gt;Лезть в воздуховод и ползти до Инженерного отсека (-2 Времени) – 20&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/18_time-3&quot;&gt;Лезть в воздуховод и ползти до Лазарета (-3 Времени) – 18&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/13_time-5&quot;&gt;Лезть в воздуховод и ползти до [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a19_select {
+            get {
+                return ResourceManager.GetString("a19_select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Вы почувствовали,  что температура воздуха в отсеке повышается.  Приборы на вашем бронекостюме показывают,  что температура на корабле явно выше нормы.  Всем членам вашей команды (-1)  Жизнь.  Причина такой жары пока неизвестна.  Если температура будет повышаться и дальше,  то это может грозить вашей жизни и жизни
         ///экипажа.&lt;/p&gt;
         ///&lt;br&gt;
@@ -237,6 +262,15 @@ namespace AliensOldEnemies {
         public static string a2 {
             get {
                 return ResourceManager.GetString("a2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Это помещение используют как грузовой отсек. Здесь же находится пульт управления техническими системами корабля. Под потолком есть выход воздуховода.&lt;/p&gt;.
+        /// </summary>
+        public static string a20 {
+            get {
+                return ResourceManager.GetString("a20", resourceCulture);
             }
         }
         
@@ -261,7 +295,7 @@ namespace AliensOldEnemies {
         ///бэйдже написано– Сюзанна Мур(навигатор).&lt;/p&gt;
         ///&lt;ul&gt;
         ///&lt;li&gt;&lt;a href=&quot;/27_time-1&quot;&gt;В лазарете есть стационарный рентген-аппарат, и вы можете проверить наличие внутри
-        ///тела этой женщины – зародыша Чужого(-1  Время) – 27;&lt;/a&gt;&lt;/li&gt;
+        ///тела этой женщины – зародыша Чужого (-1  Время) – 27;&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&quot;/18&quot;&gt;Если не хотите тратить на это время, – вернитесь на – 18&lt;/a&gt;&lt;/li&gt;
         ///&lt;/ul&gt;.
         /// </summary>
@@ -286,6 +320,40 @@ namespace AliensOldEnemies {
         public static string a23 {
             get {
                 return ResourceManager.GetString("a23", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;От ваших пуль дверца шкафа быстро превращается в дырявое сито с рваными дырами. Из-
+        ///за двери вы слышите душераздирающие крики. Кто-то дергается там внутри. Шкаф
+        ///бешено сотрясается. Дверь открывается и из шкафа вываливается труп пожилого
+        ///мужчины. Он лежит на полу без движения и под ним быстро растекается лужа крови. Вы
+        ///видите, что одна его нога, выше колена, плотно перебинтована медицинским пластырем.
+        ///По-видимому, этот человек был ранее ранен, но смог сам оказать себе медицинскую
+        ///помощь.&lt;/p&gt;&lt;br&gt;
+        ///&lt;p [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a24 {
+            get {
+                return ResourceManager.GetString("a24", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы осторожно открываете шкаф и видите там спрятавшегося пожилого мужчину. Он до
+        ///смерти напуган. Одна его нога перебинтована.&lt;/p&gt;
+        ///&lt;i&gt;&lt;p&gt;«Вы,...вы…вы - кто?» – заикаясь спрашивает вас мужчина – «Вы из группы спасения?
+        ///Господи, неужели мне повезло! Нужно скорее убираться отсюда. Эти ужасные твари
+        ///всех убивают».&lt;/p&gt;&lt;/i&gt;
+        ///&lt;p&gt;Вы видите на бэйдже мужчины надпись – Ливенгауп (доктор).&lt;/p&gt;&lt;br&gt;
+        ///&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/74_time-1&quot;&gt;Опросить доктора (-1 Времени) – 74&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a25 {
+            get {
+                return ResourceManager.GetString("a25", resourceCulture);
             }
         }
         
