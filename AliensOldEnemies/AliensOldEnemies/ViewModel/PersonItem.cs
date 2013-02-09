@@ -69,6 +69,43 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
+        private bool _selected = false;
+        public bool Selected
+        {
+            get
+            {
+                return _selected;
+            }
+            set
+            {
+                if ((ViewModelLocator.StatusStatic.CountSelectedCrew() < 4) && (value==true))
+                {
+                    _selected = true;
+                } else {
+                    _selected = false;
+                };
+                RaisePropertyChanged("Selected");
+            }
+        }
+
+
+
+        public string AllAbilities
+        {
+            private set
+            {
+            }
+            get
+            {
+                string out_abl = "";
+                foreach (var item in Abilities)
+                {
+                    out_abl = item + ", ";
+                };
+                return out_abl.TrimEnd().TrimEnd(',');
+            }
+        }
+
         private string _image;
         public string Image
         {

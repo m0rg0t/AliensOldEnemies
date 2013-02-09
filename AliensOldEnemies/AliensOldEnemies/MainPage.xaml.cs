@@ -1,5 +1,6 @@
 ﻿using Microsoft.Phone.Controls;
 using AliensOldEnemies.ViewModel;
+using System.Windows;
 
 namespace AliensOldEnemies
 {
@@ -68,13 +69,25 @@ namespace AliensOldEnemies
 
             if (item.Contains("_chipplata"))
             {
-                ViewModelLocator.StatusStatic.InvItems.Add("чип-плата");
+                ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" });
                 item = item.Replace("_chipplata", "");
             };
 
             
 
             ViewModelLocator.MainStatic.CurrentPageId = item;
+        }
+
+        private void Inv_ItemTap(object sender, Telerik.Windows.Controls.ListBoxItemTapEventArgs e)
+        {
+            InvItem selected = (InvItem)this.Inv.SelectedItem;
+            switch (selected.Title)
+            {
+                case "аптечка":
+                    MessageBox.Show("Вы использовали аптечку.");
+                    break;
+                default: break;
+            }
         }
     }
 }

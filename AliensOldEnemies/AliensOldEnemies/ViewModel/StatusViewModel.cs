@@ -36,7 +36,7 @@ namespace AliensOldEnemies.ViewModel
             _ammo = 40;
 
             AllCrew = new ObservableCollection<PersonItem>();
-            InvItems = new ObservableCollection<string>();
+            InvItems = new ObservableCollection<InvItem>();
 
             AllCrew.Add(new PersonItem() { Name = "Силикон", Image = "/Images/Silikon.jpg" });
             AllCrew.Add(new PersonItem() { Name = "Живодер", Image = "/Images/Zivoder.jpg" });
@@ -69,6 +69,20 @@ namespace AliensOldEnemies.ViewModel
 
             RaisePropertyChanged("AllCrew");
             RaisePropertyChanged("Crew");
+
+            PossibleItems = new ObservableCollection<InvItem>();
+            PossibleItems.Add(new InvItem() { Title = "лазерный резак", Description = "(режет биомассу и пластик)" });
+            PossibleItems.Add(new InvItem() { Title = "портативный рентген-аппарат", Description = "(доктору виднее!)" });
+            PossibleItems.Add(new InvItem() { Title = "чип-плата", Description = "(для ремонта всяких систем)" });
+            PossibleItems.Add(new InvItem() { Title = "пенно-керамо-спрей", Description = "(для заделывания небольших пробоин в обшивке корабля; на случай диареи тоже сгодится)" });
+            PossibleItems.Add(new InvItem() { Title = "аптечка", Description = "(повышает Жизнь на (+1) – жаль потенцию не повышает)" });
+            PossibleItems.Add(new InvItem() { Title = "комплект из пяти скафандров", Description = "(для выхода в космос – а вы думали для чего?)" });
+            PossibleItems.Add(new InvItem() { Title = "портативный сварочный аппарат", Description = "(вдруг пригодится?)" });
+            PossibleItems.Add(new InvItem() { Title = "кислородный баллон", Description = "(это запас для скафандра – если кто захочет погулять подольше в открытом космосе)" });
+            PossibleItems.Add(new InvItem() { Title = "таблетки \"Антишок\"", Description = "для борьбы с паникой (своей или соседа)" });
+            PossibleItems.Add(new InvItem() { Title = "био-контейнер", Description = "для погружения в него образца Чужого (так сказать, «апартаменты с климат-контролем»)" });
+            PossibleItems.Add(new InvItem() { Title = "Шоккер", Description = "(на всякий случай)" });
+            RaisePropertyChanged("PossibleItems");
         }
 
         public void ChangeLifes(int life) {
@@ -94,12 +108,39 @@ namespace AliensOldEnemies.ViewModel
             return isFind;
         }
 
+        public int CountSelectedCrew() {
+            int count = 0;
+            foreach (var item in AllCrew)
+            {
+                if (item.Selected == true)
+                {
+                    count++;
+                };
+            }
+            RaisePropertyChanged("Crew");
+            return count;
+        }
+
+        public int CountSelectedPossibleItems()
+        {
+            int count = 0;
+            foreach (var item in PossibleItems)
+            {
+                if (item.Selected == true)
+                {
+                    count++;
+                };
+            }
+            RaisePropertyChanged("PossibleItems");
+            return count;
+        }
+
         public bool FindInvItem(string InvItem)
         {
             bool isFind = false;
-            foreach (string item in this.InvItems)
+            foreach (var item in this.InvItems)
             {
-                if (InvItem == item)
+                if (InvItem == item.Title)
                 {
                     isFind = true;
                 };
@@ -111,7 +152,7 @@ namespace AliensOldEnemies.ViewModel
         {
             try
             {
-                this.InvItems.Remove(this.InvItems.FirstOrDefault(c => c == InvItem));
+                this.InvItems.Remove(this.InvItems.FirstOrDefault(c => c.Title == InvItem));
             }
             catch { };
         }
@@ -121,17 +162,24 @@ namespace AliensOldEnemies.ViewModel
         {
             get
             {
-                return _crew;
+                ObservableCollection<PersonItem> selectedCrew = new ObservableCollection<PersonItem>();
+                foreach (var item in AllCrew) {
+                    if (item.Selected == true)
+                    {
+                        selectedCrew.Add(item);
+                    };
+                };
+                return selectedCrew;
             }
-            set
+            private set
             {
                 _crew = value;
                 RaisePropertyChanged("Crew");
             }
         }
 
-        private ObservableCollection<string> _invItems;
-        public ObservableCollection<string> InvItems
+        private ObservableCollection<InvItem> _invItems;
+        public ObservableCollection<InvItem> InvItems
         {
             get
             {
@@ -141,6 +189,20 @@ namespace AliensOldEnemies.ViewModel
             {
                 _invItems = value;
                 RaisePropertyChanged("InvItems");
+            }
+        }
+
+        private ObservableCollection<InvItem> _possibleItems;
+        public ObservableCollection<InvItem> PossibleItems
+        {
+            get
+            {
+                return _possibleItems;
+            }
+            set
+            {
+                _possibleItems = value;
+                RaisePropertyChanged("PossibleItems");
             }
         }
 

@@ -384,13 +384,13 @@ namespace AliensOldEnemies.ViewModel
             switch (randomNumber)
             {
                 case 1: outevent += "боезапас(+3)."; ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 3; break;
-                case 2: outevent += "чип-плату."; ViewModelLocator.StatusStatic.InvItems.Add("чип-плата"); break;
-                case 3: outevent += "один баллон с кислородом."; ViewModelLocator.StatusStatic.InvItems.Add("балон с кислородом"); break;
-                case 4: outevent+="пять комплектов скафандров(для перемещения в космосе – требуется наличие хотя бы одного бойца с Умением-навигатор).";
-                    ViewModelLocator.StatusStatic.InvItems.Add("пять комплектов скафандров(для перемещения в космосе)");
+                case 2: outevent += "чип-плату."; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" }); break;
+                case 3: outevent += "один баллон с кислородом."; ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title="балон с кислородом"}); break;
+                case 4: outevent+="пять комплектов скафандров (для перемещения в космосе – требуется наличие хотя бы одного бойца с Умением-навигатор).";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "комплект из пяти скафандров" });
                     break;
                 case 5: outevent+="один баллон пено-керамо-спрея.";
-                    ViewModelLocator.StatusStatic.InvItems.Add("баллон пено-керамо-спрея");
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "баллон пено-керамо-спрея" });
                     break;
                 case 6: outevent+="ничего полезного."; break;
                 default: break;
@@ -415,19 +415,19 @@ namespace AliensOldEnemies.ViewModel
                     switch (randomItem)
                     {
                         case 1: outevent += "био-контейнер.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("био-контейнер");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "био-контейнер" });
                             break;
                         case 2: outevent += "чип-плата.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("чип-плата");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" });
                             break;
                         case 3: outevent += "кислородный баллон.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("кислородный баллон");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "кислородный баллон" });
                             break;
                         case 4: outevent += "лазерный резак.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("лазерный резак");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "лазерный резак" });
                             break;
                         case 5: outevent += "универсальный ремонтный комплект.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("универсальный ремонтный комплект");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "универсальный ремонтный комплект" });
                             break;
                         case 6: outevent += "ничего."; break;
                         default: outevent += "ничего."; break;
@@ -456,10 +456,10 @@ namespace AliensOldEnemies.ViewModel
                     switch (randomItem)
                     {
                         case 1: outevent += "сварочный аппарат.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("сварочный аппарат");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "сварочный аппарат" });
                             break;
                         case 2: outevent += "чип-плата.";
-                            ViewModelLocator.StatusStatic.InvItems.Add("чип-плата");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" });
                             break;
                         case 3: outevent += "боезапас(+1).";
                             ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 1;
@@ -494,16 +494,16 @@ namespace AliensOldEnemies.ViewModel
                     switch (randomItem)
                     {
                         case 1: outevent += "пенно-керамо-спрей";
-                            ViewModelLocator.StatusStatic.InvItems.Add("пенно-керамо-спрей");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "пенно-керамо-спрей" });
                             break;
                         case 2: outevent += "шоккер";
-                            ViewModelLocator.StatusStatic.InvItems.Add("шоккер");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "шоккер" });
                             break;
                         case 3: outevent += "чип-ключ от отсека Генератора";
-                            ViewModelLocator.StatusStatic.InvItems.Add("чип-ключ от отсека Генератора");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-ключ от отсека Генератора" });
                             break;
                         case 4: outevent += "аптечка";
-                            ViewModelLocator.StatusStatic.InvItems.Add("аптечка");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "аптечка" });
                             break;
                         case 5: outevent += "боезапас(+1)";
                             ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 1;
@@ -538,22 +538,22 @@ namespace AliensOldEnemies.ViewModel
                     switch (randomItem)
                     {
                         case 1: outevent += "аптечка";
-                            ViewModelLocator.StatusStatic.InvItems.Add("аптечка");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "аптечка" });
                             break;
                         case 2: outevent += "хирургический лазерный резак";
-                            ViewModelLocator.StatusStatic.InvItems.Add("лазерный резак");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "лазерный резак" });
                             break;
                         case 3: outevent += "кислородный балон";
-                            ViewModelLocator.StatusStatic.InvItems.Add("кислородный балон");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "кислородный балон" });
                             break;
                         case 4: outevent += "таблетки \"Антишок\"";
-                            ViewModelLocator.StatusStatic.InvItems.Add("таблетки \"Антишок\"");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "таблетки \"Антишок\"" });
                             break;
                         case 5: outevent += "таблетки \"Антишок\"";
-                            ViewModelLocator.StatusStatic.InvItems.Add("таблетки \"Антишок\"");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title="таблетки \"Антишок\""});
                             break;
                         case 6: outevent += "переносной рентген-аппарат";
-                            ViewModelLocator.StatusStatic.InvItems.Add("переносной рентген-аппарат");
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title="переносной рентген-аппарат"});
                             break;
                         default: outevent += "ничего."; break;
                     };
