@@ -116,6 +116,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Texts.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModel\BattleViewModel.cs" />
     <Compile Include="ViewModel\InvItem.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\PageItem.cs" />

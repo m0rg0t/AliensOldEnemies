@@ -1,4 +1,5 @@
 ﻿using Microsoft.Phone.Controls;
+using AliensOldEnemies.ViewModel;
 
 namespace AliensOldEnemies
 {
@@ -13,6 +14,23 @@ namespace AliensOldEnemies
         public BattlePage()
         {
             InitializeComponent();
+        }
+
+        private void LayoutRoot_Loaded(object sender, System.Windows.RoutedEventArgs e)
+        {
+            ViewModelLocator.BattleStatic.BattleStart();
+            this.BattleReport.ItemsSource = ViewModelLocator.BattleStatic.BattleStatus;
+        }
+
+        private void ApplicationBarIconButton_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                NavigationService.GoBack();
+            }
+            catch
+            {
+            };
         }
     }
 }

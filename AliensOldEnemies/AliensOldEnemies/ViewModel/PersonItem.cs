@@ -45,6 +45,10 @@ namespace AliensOldEnemies.ViewModel
                 if (value <= MaxHealth)
                 {
                     _health = value;
+                    if (_health < 1)
+                    {
+                        this.Dead = true;
+                    };
                 };
             }
             get
@@ -52,9 +56,58 @@ namespace AliensOldEnemies.ViewModel
                 return _health;
             }
         }
-        public int MaxHealth = 5;
 
+        private bool _dead = false;
+        public bool Dead
+        {
+            get
+            {
+                return _dead;
+            }
+            set
+            {
+                _dead = value;
+                RaisePropertyChanged("Dead");
+            }
+        }
+
+        private bool _away = false;
+        public bool Away
+        {
+            get
+            {
+                return _away;
+            }
+            set
+            {
+                _away = value;
+                RaisePropertyChanged("Away");
+            }
+        }
+
+        private bool _panic = false;
+        public bool Panic
+        {
+            get
+            {
+                return _panic;
+            }
+            set
+            {
+                _panic = value;
+                RaisePropertyChanged("Panic");
+            }
+        }
+
+        public int MaxHealth = 5;
         public int Attack = 1;
+
+        public string attack1 = "";
+        public string attack2 = "";
+        public string attack3 = "";
+        public string attack4 = "";
+        public string attack5 = "";
+        public string attack6 = "";
 
         private ObservableCollection<string>  _abilities = new ObservableCollection<string>();
         public ObservableCollection<string> Abilities

@@ -19,6 +19,12 @@ namespace AliensOldEnemies.ViewModel
     /// </summary>
     public class StatusViewModel : ViewModelBase
     {
+        const string Kill = "Убил";
+        const string Hit = "Попал";
+        const string Miss = "Мимо";
+        const string Panic = "Паника";
+        const string Reload = "Перезарядить";
+
         /// <summary>
         /// Initializes a new instance of the StatusViewModel class.
         /// </summary>
@@ -38,18 +44,102 @@ namespace AliensOldEnemies.ViewModel
             AllCrew = new ObservableCollection<PersonItem>();
             InvItems = new ObservableCollection<InvItem>();
 
-            AllCrew.Add(new PersonItem() { Name = "Силикон", Image = "/Images/Silikon.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Живодер", Image = "/Images/Zivoder.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Святоша", Image = "/Images/Sviatosha.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Голем", Image = "/Images/Golem.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Тамагочи", Image = "/Images/Tamagochi.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Док", Image = "/Images/Dok.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Безумный Макс", Image = "/Images/MadMax.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Васаби", Image = "/Images/Vasabi.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Заноза", Image = "/Images/Zanoza.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Лола", Image = "/Images/Lola.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Криоген", Image = "/Images/Kriogen.jpg" });
-            AllCrew.Add(new PersonItem() { Name = "Малыш", Image = "/Images/Malish.jpg" });
+            AllCrew.Add(new PersonItem() { Name = "Силикон", Image = "/Images/Silikon.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Miss,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Живодер", Image = "/Images/Zivoder.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Hit,
+                                           attack5 = Miss,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Святоша", Image = "/Images/Sviatosha.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Miss,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Голем", Image = "/Images/Golem.jpg",
+                                           attack1 = Kill,
+                                           attack2 = Kill,
+                                           attack3 = Kill,
+                                           attack4 = Miss,
+                                           attack5 = Panic,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Тамагочи", Image = "/Images/Tamagochi.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Panic,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Док", Image = "/Images/Dok.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Panic,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Безумный Макс", Image = "/Images/MadMax.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Miss,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Васаби", Image = "/Images/Vasabi.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Miss,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Заноза", Image = "/Images/Zanoza.jpg",
+                                           attack1 = Kill,
+                                           attack2 = Kill,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Panic,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Лола", Image = "/Images/Lola.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Panic,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Криоген", Image = "/Images/Kriogen.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Miss,
+                                           attack6 = Reload
+            });
+            AllCrew.Add(new PersonItem() { Name = "Малыш", Image = "/Images/Malish.jpg",
+                                           attack1 = Hit,
+                                           attack2 = Hit,
+                                           attack3 = Hit,
+                                           attack4 = Miss,
+                                           attack5 = Panic,
+                                           attack6 = Reload
+            });
 
             AllCrew.FirstOrDefault(c => c.Name=="Силикон").Abilities.Add("программист");
             AllCrew.FirstOrDefault(c => c.Name == "Силикон").Abilities.Add("техник");
@@ -106,6 +196,18 @@ namespace AliensOldEnemies.ViewModel
                 };
             };            
             return isFind;
+        }
+
+        public bool CrewAlive()
+        {
+            bool isAlive = false;
+            foreach (var item in Crew)
+            {
+                if (item.Dead==false) {
+                    isAlive = true;
+                };
+            };
+            return isAlive;
         }
 
         public int CountSelectedCrew() {
