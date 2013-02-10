@@ -379,6 +379,14 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Тауер",
+                    Description = Texts.a30,
+                    Id = "/30",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Пусто",
                     Description = Texts.a31,
                     Id = "/31",
@@ -390,6 +398,14 @@ namespace AliensOldEnemies.ViewModel
                     Title = "Лифт",
                     Description = Texts.a32,
                     Id = "/32",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Грузовой лифт",
+                    Description = Texts.a33,
+                    Id = "/33",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -475,6 +491,22 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Сумасшедший",
+                    Description = "",
+                    Id = "/45",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Сумасшедший",
+                    Description = "",
+                    Id = "/46",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Зародыш",
                     Description = Texts.a47,
                     Id = "/47",
@@ -518,6 +550,22 @@ namespace AliensOldEnemies.ViewModel
                     Title = "Пациентка",
                     Description = Texts.a52,
                     Id = "/52",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = Texts.a53,
+                    Id = "/53",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Джоанна Вагнер",
+                    Description = Texts.a54,
+                    Id = "/54",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -818,8 +866,184 @@ namespace AliensOldEnemies.ViewModel
                 case "/32": return a32();
                 case "/60": return a60();
                 case "/139": return a139();
+                case "/30": return a30();
+                case "/33": return a33();
+                case "/45": return a45();
+                case "/46": return a46();
+                case "/53": return a53();
+                case "/54": return a54();
                 default: return "";
             }
+        }
+        public bool Mission6 = false;
+
+        public bool a54_vagner_saved = false;
+        public bool a54_vagner_send = false;
+        public string a54()
+        {
+            string outevent = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("биолог") && ViewModelLocator.StatusStatic.FindInvItem("шоккер") && ViewModelLocator.StatusStatic.FindInvItem("био-контейнер"))
+            {
+                Mission6 = true;
+                MessageBox.Show("Вы сняли с жертвы тело Чужого и поместили его в контейнер – выполнение Миссии №6");
+                outevent = "<ul>";
+                outevent += "<a href=\"17\"><li>Оставить ее в бессознательном состоянии в этом отсеке. – 17</a></li>";
+                outevent += "<a href=\"17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
+                outevent += "</ul>";
+            }
+            else
+            {
+                outevent = "<ul>";
+                outevent += "<a href=\"17\"><li>Расстрелять Чужого-краба вместе с женщиной – 17</a></li>";
+                outevent += "<a href=\"17\"><li>Оставить женщину и Чужого здесь – 17</a></li>";
+                if (ViewModelLocator.StatusStatic.FindAbility("биолог"))
+                {
+                    outevent += "<a href=\"55\"><li>Попытаться снять Чужого-краба с лица женщины – 55</a></li>";
+                };
+                outevent += "<a href=\"17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
+                outevent += "</ul>";
+            };
+            
+            return outevent;
+        }
+
+
+        public string a53()
+        {
+            string outevent = "";
+            ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+            {
+                Name = "Чужой-краб",
+                attack1 = Suck,
+                attack2 = Suck,
+                attack3 = Suck,
+                attack4 = Miss,
+                attack5 = Miss,
+                attack6 = RunAway,
+                Attack = 1,
+                Health = 1,
+                MaxHealth = 1,
+                AttackFirst = true
+            };
+            outevent += "<br><a href=\"/17\">Идите на 17</a>";
+            return outevent;
+        }
+
+
+        public bool a46_juzepe_saved = false;
+        public bool a46_juzepe_send = false;
+        public bool a46_juzepe_added = false;
+        public string a46()
+        {
+            string outevent = Texts.a46;
+            outevent += "<ul>";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
+            {
+                outevent += "<li><a href=\"47\">обследуйте мужчину на наличие в его теле Чужого – 47</a></li>";
+            };
+            if (ViewModelLocator.StatusStatic.FindInvItem("аптечка"))
+            {
+                outevent += "<li><a href=\"48_use_healthpack\">Приведите его в чувство (-1 аптечка) – 48</a></li>";
+            };
+            outevent += "<li><a href=\"17\">Оставить его здесь как есть – 17</a></li>";
+            outevent += "<li><a href=\"17_juzepe_send\">Отправить его в сопровождении с одним из своих людей в Ангар</a></li>";
+            outevent += "<li><a href=\"17_juzepe_add\">Присоединить его к своей команде – 17</a></li>";
+            outevent += "</ul>";
+            return outevent;
+        }
+
+
+        public string a45()
+        {
+            string outevent = "Сумасшедший с тесаком в руке подскакивает к вам и наносит удар. Деритесь! – атака спереди – он атакует первым.";
+            ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+            {
+                Name = "Сумасшедший",
+                attack1 = Hit,
+                attack2 = Hit,
+                attack3 = Miss,
+                attack4 = Miss,
+                attack5 = Miss,
+                attack6 = Miss,
+                Attack = 1,
+                Health = 1,
+                MaxHealth = 1,
+                AttackFirst = true
+            };
+            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            outevent += "<br><b>При обыске вы нашли у него:</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "аптечку";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "аптечка" });
+                    break;
+                case 2: 
+                    outevent += "таблетки \"Антишок\"";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "таблетки \"Антишок\"" });
+                    break;
+                case 3: outevent += "аэрозоль от тараканов";
+                    ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "аэрозоль от тараканов" });
+                    break;
+                default: outevent += "ничего";  break;
+            };
+            outevent += "<br><a href=\"/17\">Идите на 17</a>";
+            return outevent;
+        }
+
+        public string a33()
+        {
+            string outevent = "<ul>";
+            if (ViewModelLocator.StatusStatic.FindInvItem("чип-ключ от грузового отсека"))
+            {
+                outevent += "<li><a href=\"90\">Вы можете разблокировать дверь</a></li>";
+            };
+            outevent += "<li><a href=\"18\">в Лазарет – 18</a></li>";
+            outevent += "<li><a href=\"100\">в отсек Генератора – 100</a></li>";
+            outevent += "<li><a href=\"130\">в Коридор «Д» - 130</a></li>";
+            outevent += "<li><a href=\"120\">в Оранжерею – 120</a></li>";
+            outevent += "<li><a href=\"110\">в коридор «Е» - 110</a></li>";
+            outevent += "</ul>";
+            return outevent;
+        }
+
+        public bool a30_tauer = false;
+        public bool a30_tauer_saved = false;
+        public bool a30_tauer_send = false;
+        public bool a30_tauer_added = false;
+        public string a30()
+        {
+            string outevent = "<ul>";
+            if (ViewModelLocator.StatusStatic.FindInvItem("аптечка"))
+            {
+                outevent += "<li><a href=\"30_a30_tauer\">Перевязать Тауэра (вам -1 аптечка) – негру (+1) Жизнь.</a></li>";
+            };
+            if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
+            {
+                outevent += "<li><a href=\"34\">Проверить негра рентген-аппаратом на наличие в его теле зародыша Чужого – 34</a></li>";
+            };
+            outevent += "<li><a href=\"/35\">Расспросить негра о событиях на корабле – 35</a></li>";
+            outevent += "<li><a href=\"/36\">Спросить негра не видел ли он дипломата – 36</a></li>";
+            outevent += "<li><a href=\"/37\">Спросить негра о причине повышения температуры на корабле – 37</a></li>";
+            outevent += "<li><a href=\"/38\">Спросить негра знает ли он откуда могли появиться Чужие на корабле – 38</a></li>";
+            if (a30_tauer)
+            {
+                if (a30_tauer_saved == false)
+                {
+                    outevent += "<li><a href=\"/18_tauer_add\">Присоединить негра к своей команде</a></li>";
+                };
+                if (a30_tauer_send == false)
+                {
+                    outevent += "<li><a href=\"/18_tauer_send\">Отправить негра самому добираться до ангара, где он сможет спрятаться в вашем шатле</a></li>";
+                };
+            };
+            outevent += "<li><a href=\"/33\">Отправиться в отсек «Грузовой Лифт» - 33</a></li>";
+            outevent += "<li><a href=\"/17\">Отправится в отсек «Пищеблок» - 17</a></li>";
+            outevent += "</ul>";
+            return outevent;
         }
 
         public string a139()

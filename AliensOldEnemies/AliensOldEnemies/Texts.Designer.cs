@@ -677,6 +677,20 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;В последний момент перед нажатием на курок вы замечаете, что это не Чужой, а здоровый
+        ///лысый негр. Он весь мокрый от пота и его лицо блестит в сумраке аварийного освещения
+        ///отсека. Слава богу! Вы чуть было не застрелили члена экипажа. На его бэйдже написано –
+        ///&lt;b&gt;Тауэр (техник)&lt;/b&gt;. Негр ранен в плечо и истекает кровью. Если ему не оказать сейчас
+        ///медицинскую помощь – он скоро умрет от потери крови.&lt;br&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;br&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a30 {
+            get {
+                return ResourceManager.GetString("a30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;У доктора в теле нет зародыша Чужого.&lt;/p&gt;
         ///&lt;br&gt;
         ///&lt;a href=&quot;/25&quot;&gt;Вернитесь на - 25&lt;/a&gt;.
@@ -694,6 +708,27 @@ namespace AliensOldEnemies {
         public static string a32 {
             get {
                 return ResourceManager.GetString("a32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Грузовой Лифт - Запомните сейчас номер
+        ///этого параграфа (№33).&lt;br&gt;
+        ///Грузовой лифт заблокирован компьютером.
+        ///Для использования лифта и перехода на
+        ///нижний уровень палубы корабля на пульте
+        ///лифта нужно набрать код запуска лифта.
+        ///На пульте вы видите цифры: { 7 – 12 – 17 -
+        ///?? }.&lt;br&gt;
+        ///Нужно подобрать правильную недостающую
+        ///цифру. Если вы точно знаете эту
+        ///недостающую цифру, то прибавьте к ней +68
+        ///и получите число «параграфа», на который
+        ///вам сейчас нужно перейти.&lt;br&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a33 {
+            get {
+                return ResourceManager.GetString("a33", resourceCulture);
             }
         }
         
@@ -834,6 +869,18 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Ваш психолог кричит сумасшедшему – &lt;i&gt;«Осторожно сзади!!!»&lt;/i&gt; - Сумасшедший в страхе
+        ///оглядывается назад и вы, пользуясь моментом, ударом кулака вырубаете его. Он падает
+        ///без чувств. На его бэйдже написано – Джузеппе (повар)&lt;br&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a46 {
+            get {
+                return ResourceManager.GetString("a46", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;В его теле есть зародыш Чужого.&lt;/p&gt;&lt;br&gt;.
         /// </summary>
         public static string a47 {
@@ -927,6 +974,32 @@ namespace AliensOldEnemies {
         public static string a52 {
             get {
                 return ResourceManager.GetString("a52", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы расстреляли подозрительный шкаф для большей надежности длинными очередями
+        ///(вам -2 боезапаса).&lt;/br&gt;
+        ///Пули прошили дверь во многих местах. Если кто-то и прятался там, то он уже мертв.
+        ///Вы открываете дверь шкафа и видите там изрешеченное тело женщины. На ее лице сидит
+        ///Чужой-краб. Его маленькое серо-сизое тело пульсирует. Внезапно тварь бросается на вас
+        ///– Деритесь! Чужой-краб атакует спереди. Вы стреляете первым.&lt;/p&gt;.
+        /// </summary>
+        public static string a53 {
+            get {
+                return ResourceManager.GetString("a53", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы открыли шкаф морозильной камеры и видите там женщину, на лице которой сидит
+        ///серо-сизого цвета тварь – это Чужой-краб. Женщина в обмороке. Тело краба пульсирует.
+        ///На бэйдже у женщины написано – Джоанна Вагнер (доктор).&lt;br&gt;
+        ///&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a54 {
+            get {
+                return ResourceManager.GetString("a54", resourceCulture);
             }
         }
         
