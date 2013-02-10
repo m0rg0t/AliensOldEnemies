@@ -81,6 +81,9 @@
     <Reference Include="Telerik.Windows.Controls.DataVisualization">
       <HintPath>..\..\..\..\..\..\..\Program Files\Telerik\RadControls for Windows Phone 7 Q3 2012\Binaries\WindowsPhone\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Telerik\RadControls for Windows Phone 7 Q3 2012\Binaries\WindowsPhone\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
     <Reference Include="Telerik.Windows.Controls.Primitives, Version=2012.3.1311.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
     <Reference Include="Telerik.Windows.Core, Version=2012.3.1311.2040, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL" />
     <Reference Include="Telerik.Windows.Data">
@@ -184,6 +187,7 @@
     <Content Include="Images\Zanoza.jpg" />
     <Content Include="Images\Zivoder.jpg" />
     <Content Include="Music\Bent_and_Broken.mp3" />
+    <Content Include="Music\Full On.mp3" />
     <Content Include="SplashScreenImage.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

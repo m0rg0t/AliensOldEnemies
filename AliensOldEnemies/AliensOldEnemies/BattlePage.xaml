@@ -50,6 +50,7 @@
               Grid.Row="1"
               Margin="12,0,12,0">
             <StackPanel>
+                <MediaElement Source="/Music/Full On.mp3" AutoPlay="True" />
                 <TextBlock Text="Статус битвы:" TextWrapping="Wrap"/>
                 <telerikPrimitives:RadDataBoundListBox x:Name="BattleReport" 
                                                    ItemsSource="{Binding Path=BattleStatus}"

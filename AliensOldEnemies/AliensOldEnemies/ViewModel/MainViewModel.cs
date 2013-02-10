@@ -531,6 +531,14 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "КОРИДОР «С»",
+                    Description = Texts.a60,
+                    Id = "/60",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Пусто",
                     Description = Texts.a73,
                     Id = "/73",
@@ -574,6 +582,22 @@ namespace AliensOldEnemies.ViewModel
                     Title = "Каюты – событие",
                     Description = Texts.a86,
                     Id = "/86",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Коридор «С»",
+                    Description = Texts.a139,
+                    Id = "/139",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Монтгомери",
+                    Description = Texts.a141,
+                    Id = "/141",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -792,8 +816,28 @@ namespace AliensOldEnemies.ViewModel
                 case "/28": return a28();
                 case "/29": return a29();
                 case "/32": return a32();
+                case "/60": return a60();
+                case "/139": return a139();
                 default: return "";
             }
+        }
+
+        public string a139()
+        {
+            string outevent = "<ul>";
+            if (ViewModelLocator.StatusStatic.FindInvItem("аптечка"))
+            {
+                outevent += "<li><a href=\"141\">Оказать ему медицинскую помощь чтобы поддержать его жизнь на пару минут (вам -1 аптечкa) – 141</a></li>";
+            }; 
+            outevent += "<li><a href=\"/60\">Оставить умирающего – 60</a></li>";
+            outevent += "<li><a href=\"/60\">Оставить умирающего – 60</a></li>";
+            if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
+            {
+                outevent += "<li><a href=\"142\">Если у вас есть рентген-аппарат, то вы можете проверить умирающего на наличие у него внутри зародыша Чужого. – 142</a></li>";
+            }; 
+            
+            outevent += "</ul>";
+            return outevent;
         }
 
         public string a32()
@@ -908,8 +952,40 @@ namespace AliensOldEnemies.ViewModel
                 case 2: outevent += "<a href='/64'>Событие многоразовое - 64</a>"; break;
                 case 3: outevent += "<a href='/65'>Событие многоразовое - 65</a>"; break;
                 case 4: outevent += "<a href='/66'>Событие многоразовое - 66</a>"; break;
-                case 5: outevent += "Нападение врага – Чужой-офицер – атакует сзади – атакует первым"; break;
-                case 6: outevent += "Нападение врага - Чужой-солдат – атакует сверху – вы атакуете первым."; break;
+                case 5: outevent += "Нападение врага – Чужой-офицер – атакует сзади – атакует первым"; 
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-офицер",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Kill,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = Miss,
+                        Attack = 1,
+                        Health = 5,
+                        MaxHealth = 5,
+                        AttackFirst=false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+
+                    break;
+                case 6: outevent += "Нападение врага - Чужой-солдат – атакует сверху – вы атакуете первым."; 
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst=false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+
+                    break;
             };
             outevent += "<br><b>Ваши дельнейшие действия?</b><br><ul>";
             outevent += "<li><a href='/20_time-1'>Остаться в отсеке – (-1 Время) – бросайте снова кубик на Событие;</a></li>";
@@ -937,8 +1013,73 @@ namespace AliensOldEnemies.ViewModel
                 case 2: outevent += "<a href='/85'>Событие только для первого посещения – 85</a>"; break;
                 case 3: outevent += "<a href='/86'>Событие только для первого посещения – 86</a>"; break;
                 case 4: outevent += "<a href='/87'>Событие многоразовое – 87</a>"; break;
-                case 5: outevent += "Нападение врага - Чужой-офицер – атакует сзади – атакует первым."; break;
-                case 6: outevent += "Нападение врага - Чужой-солдат – атакует сверху – атакует первым."; break;
+                case 5: outevent += "Нападение врага - Чужой-офицер – атакует сзади – атакует первым."; 
+                     ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-офицер",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Kill,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = Miss,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst=false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+                case 6: outevent += "Нападение врага - Чужой-солдат – атакует сверху – атакует первым."; 
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst=false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+            };
+            outevent += Texts.a19_select;
+
+            return outevent + "<br>";
+        }
+
+        private string a60()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "<a href='/135'>Событие многоразовое - 135</a>"; break;
+                case 2: outevent += "<a href='/136'>Событие многоразовое - 136</a>"; break;
+                case 3: outevent += "<a href='/137'>Событие многоразовое - 137</a>"; break;
+                case 4: outevent += "<a href='/138'>Событие многоразовое – 138</a>"; break;
+                case 5: outevent += "<a href='/139'>Событие только для первого посещения – 139</a>"; break;
+                case 6: outevent += "Нападение врага - Чужой-краб – атакует сверху – атакует первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst = false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
             };
             outevent += Texts.a19_select;
 
@@ -1035,7 +1176,22 @@ namespace AliensOldEnemies.ViewModel
                         default: outevent += "ничего."; break;
                     };
                     break;
-                case 5: outevent += "Нападение врага (Чужой-краб – атакует сзади– атакует первым)."; break;
+                case 5: outevent += "Нападение врага (Чужой-краб – атакует сзади – атакует первым)."; 
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Miss,
+                        attack5 = RunAway,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst=true
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
                 case 6: outevent += "Ничего"; break;
             };
 
@@ -1057,7 +1213,7 @@ namespace AliensOldEnemies.ViewModel
             Random random = new Random();
             int randomNumber = random.Next(1, 7);
             string outevent = "<br><b>События:</b><br>";
-            switch (5)
+            switch (randomNumber)
             {
                 case 1: outevent += "<a href='/2'>Событие только для первого посещения – 2</a>"; break;
                 case 2: outevent += "<a href='/3'>Событие только для первого посещения – 3</a>"; break;
@@ -1088,14 +1244,15 @@ namespace AliensOldEnemies.ViewModel
                         attack6 = RunAway,
                         Attack = 1,
                         Health = 1,
-                        MaxHealth = 1
+                        MaxHealth = 1,
+                        AttackFirst = true,
                     };
                     (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
                     break;
                 case 5: 
-                    outevent += "Нападение врага (Чужой-солдат – атакует спереди– вы атакуете первым)"; 
+                    outevent += "Нападение врага (Чужой-офицер – атакует спереди – вы атакуете первым)"; 
                     ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
-                        Name = "Чужой-солдат",
+                        Name = "Чужой-офицер",
                         attack1 = Hit,
                         attack2 = Hit,
                         attack3 = Hit,
@@ -1104,7 +1261,8 @@ namespace AliensOldEnemies.ViewModel
                         attack6 = Miss,
                         Attack = 1,
                         Health = 5,
-                        MaxHealth = 5
+                        MaxHealth = 5,
+                        AttackFirst=false
                     };
                     (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
                     break;
@@ -1150,8 +1308,39 @@ namespace AliensOldEnemies.ViewModel
                         default: outevent += "ничего."; break;
                     };
                     break;
-                case 5: outevent += "Нападение врага - Чужой-солдат – атакует спереди – вы атакуете первым."; break;
-                case 6: outevent += "Нападение врага - Чужой-краб – атакует сзади – вы стреляете первым."; break;
+                case 5: outevent += "Нападение врага - Чужой-солдат – атакует спереди – вы атакуете первым.";
+                     ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst=false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+                case 6: outevent += "Нападение врага - Чужой-краб – атакует сзади – вы стреляете первым."; 
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst=false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+
+                    break;
             };
 
             outevent += "<br><b>Ваше решение?</b><br>";
@@ -1197,7 +1386,23 @@ namespace AliensOldEnemies.ViewModel
                         default: outevent += "ничего."; break;
                     };
                     break;
-                case 5: outevent += "Нападение врага - Чужой-краб – атакует сзади – атакует первым."; break;
+                case 5: outevent += "Нападение врага - Чужой-краб – атакует сзади – атакует первым."; 
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem() {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst=true
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+
+                    break;
                 case 6: outevent += "Ничего."; break;
             };
 

@@ -280,6 +280,25 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
+        public ObservableCollection<PersonItem> AliveCrew
+        {
+            get
+            {
+                ObservableCollection<PersonItem> selectedCrew = new ObservableCollection<PersonItem>();
+                foreach (var item in AllCrew)
+                {
+                    if ((item.Selected == true) && (item.Dead==false))
+                    {
+                        selectedCrew.Add(item);
+                    };
+                };
+                return selectedCrew;
+            }
+            private set
+            {
+            }
+        }
+
         private ObservableCollection<InvItem> _invItems;
         public ObservableCollection<InvItem> InvItems
         {

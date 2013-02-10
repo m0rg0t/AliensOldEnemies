@@ -50,6 +50,8 @@ namespace AliensOldEnemies.ViewModel
                         this.Dead = true;
                     };
                 };
+                RaisePropertyChanged("Health");
+                RaisePropertyChanged("Dead");
             }
             get
             {
@@ -186,5 +188,7 @@ namespace AliensOldEnemies.ViewModel
                 return true;
             };
         }
+
+        public bool AttackFirst { get; set; }
     }
 }

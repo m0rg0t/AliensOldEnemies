@@ -144,6 +144,18 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы видите лежащего у стены мужчину. У него оторвана одна нога и изуродовано лицо. Он
+        ///еще жив. &lt;br&gt;На его бэйдже написано – &lt;b&gt;Монтгомери – (техник).&lt;/b&gt;
+        ///Он хочет вам что-то сказать, но силы покидают его.&lt;/p&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваше решение?&lt;/b&gt;&lt;br&gt;.
+        /// </summary>
+        public static string a139 {
+            get {
+                return ResourceManager.GetString("a139", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;b&gt;Технический отсек- Событие:&lt;/b&gt;&lt;br&gt;
         ///&lt;p&gt;Среди прочего мусора вы находите безжизненное серое тело Чужого-краба.  Его трупик
         ///выглядит окаменевшим.&lt;/p&gt;
@@ -152,6 +164,22 @@ namespace AliensOldEnemies {
         public static string a14 {
             get {
                 return ResourceManager.GetString("a14", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Монтгомери рассказывает – &lt;i&gt;«Твари напали на нас внезапно. Они были повсюду…
+        ///Капитану корабля, одному из офицеров и дипломату Харрисону удалось укрыться в
+        ///Рубке. Но будьте осторожны. В рубке есть стационарный пулемет «Защитник». Он
+        ///автоматически отрывает огонь по любому, кто туда сунется. Несколько членов
+        ///экипажа попыталось проникнуть в Рубку. Но они все были растеряны «Защитником»…
+        ///Систему управления безопасности можно отключить в Коридоре «В». Тогда пулемет не
+        ///будет стрелять…».&lt;/i&gt;&lt;br&gt;
+        ///Монтгоме [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a141 {
+            get {
+                return ResourceManager.GetString("a141", resourceCulture);
             }
         }
         
@@ -909,6 +937,30 @@ namespace AliensOldEnemies {
         public static string a57 {
             get {
                 return ResourceManager.GetString("a57", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Небольшой коридор между отсеками. Отсюда двери ведут в Каюты, Пищеблок, в Коридор «В».&lt;/p&gt;.
+        /// </summary>
+        public static string a60 {
+            get {
+                return ResourceManager.GetString("a60", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;br&gt;&lt;b&gt;Ваши дальнейшие действия?&lt;/b&gt;&lt;/br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/60_time-1&quot;&gt;Задержаться в этом отсеке и еще раз бросить кубик на событие (вам -1 Времени)&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/60_time-1&quot;&gt;Идти в Пищеблок – 17&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/60_time-1&quot;&gt;Идти в Коридор «В» - 150&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/60_time-1&quot;&gt;Идти в Каюты – 19&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a60_select {
+            get {
+                return ResourceManager.GetString("a60_select", resourceCulture);
             }
         }
         
