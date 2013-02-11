@@ -571,6 +571,22 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Биолог",
+                    Description = Texts.a55,
+                    Id = "/55",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Биолог",
+                    Description = Texts.a56,
+                    Id = "/56",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Чужой",
                     Description = Texts.a57,
                     Id = "/57",
@@ -579,9 +595,49 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Чужой",
+                    Description = "",
+                    Id = "/58",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Краб",
+                    Description = Texts.a59,
+                    Id = "/59",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "КОРИДОР «С»",
                     Description = Texts.a60,
                     Id = "/60",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = Texts.a61,
+                    Id = "/61",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = "",
+                    Id = "/62",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неизвестный",
+                    Description = Texts.a63,
+                    Id = "/63",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -635,6 +691,54 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Каюты",
+                    Description = Texts.a117,
+                    Id = "/117",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Оранжерея",
+                    Description = Texts.a121,
+                    Id = "/121",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Оранжерея",
+                    Description = Texts.a124,
+                    Id = "/124",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Коридор «D» - Событие",
+                    Description = Texts.a134,
+                    Id = "/134",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Коридор «С»",
+                    Description = Texts.a137,
+                    Id = "/137",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Коридор «С»",
+                    Description = Texts.a138,
+                    Id = "/138",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Коридор «С»",
                     Description = Texts.a139,
                     Id = "/139",
@@ -646,6 +750,30 @@ namespace AliensOldEnemies.ViewModel
                     Title = "Монтгомери",
                     Description = Texts.a141,
                     Id = "/141",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Арсенал",
+                    Description = Texts.a143,
+                    Id = "/143",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Арсенал",
+                    Description = Texts.a144,
+                    Id = "/144",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Арсенал",
+                    Description = Texts.a146,
+                    Id = "/146",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -872,10 +1000,162 @@ namespace AliensOldEnemies.ViewModel
                 case "/46": return a46();
                 case "/53": return a53();
                 case "/54": return a54();
+                case "/55": return a55();
+                case "/56": return a56();
+                case "/58": return a58();
+                case "/59": return a59();
+                case "/61": return a61();
+                case "/62": return a62();
+                case "/63": return a63();
+                case "/124": return a124();
+                case "/146": return a146();
                 default: return "";
             }
         }
         public bool Mission6 = false;
+
+        public string a146()
+        {
+            ViewModelLocator.StatusStatic.ChangeLifes(-1);
+            return "";
+        }
+
+        public string a124()
+        {
+            ViewModelLocator.StatusStatic.Ammo--;
+            return "";
+        }
+
+        public string a63()
+        {
+            string outevent = "";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            outevent += "<br><b>АТАКА НЕИЗВЕСТНОГО (1 Жизнь)</b><br>";
+            switch (randomNumber)
+            {
+                case 1: outevent += "Попал - вам (-1) Жизнь.";
+                    ViewModelLocator.StatusStatic.Crew.FirstOrDefault().Health -= 1;
+                    break;
+                case 2:
+                    outevent += "Попал - вам (-2) Жизнь.";
+                    ViewModelLocator.StatusStatic.Crew.FirstOrDefault().Health -= 2;
+                    break;
+                default: outevent += "он промахнулся."; break;
+            };
+            outevent += "<br><b>Ваше решение?</b><br><ul>";            
+            if (ViewModelLocator.StatusStatic.FindAbility("психолог"))
+            {
+                outevent += "<li><a href=\"70\"><li>Если у вас есть психолог – 70</a></li>";
+            };
+            outevent += "<li><a href=\"69\">Крикнуть ему, что вы группа спасения – 69</a></li>";
+            outevent += "<li><a href=\"68\">Стрелять в него – 68</a></li>";
+            outevent += "</ul>";
+            return outevent;
+        }
+
+        public string a62()
+        {
+            string outevent = "<p>Биолог отбросил краба в сторону и тварь, быстро перебирая своими многочисленными лапами, снова бросилась на вас. Деритесь! Чужой-краб атакует спереди, вы стреляете первым.</p>";
+            ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+            {
+                Name = "Чужой-краб",
+                attack1 = Suck,
+                attack2 = Suck,
+                attack3 = Suck,
+                attack4 = Miss,
+                attack5 = Miss,
+                attack6 = RunAway,
+                Attack = 1,
+                Health = 1,
+                MaxHealth = 1,
+                AttackFirst = true
+            };
+            outevent += "<br><a href=\"/17\">После боя идите на 17</a>";
+            return outevent;
+        }
+
+        public string a61()
+        {
+            string outevent = "<ul>";
+            ViewModelLocator.StatusStatic.Crew.LastOrDefault(c => c.Abilities.FirstOrDefault(a => a == "биолог") != null).Health--; 
+            if (ViewModelLocator.StatusStatic.CountInvItem("био-контейнер") > 0)
+            {
+                outevent += "<li><a href=\"17_mission6\"><li>У вас есть био-контейнер, вы можете посадить тварь в контейнер и отметить выполнение Миссии №6 – 17</a></li>";
+            };
+            outevent += "<li><a href=\"62\"><li>Вы можете приказать биологу отбросить тварь подальше в сторону, чтобы вы могли ее расстрелять с безопасного расстояния – 62</a></li>";
+            outevent += "</ul>";
+
+            return outevent;
+        }
+
+        public string a59()
+        {
+            string outevent = "<ul>";
+            if (ViewModelLocator.StatusStatic.Ammo > 0)
+            {
+                outevent += "<li><a href=\"17_ammo-1_biolog_dead\"><li>Расстрелять тварь вместе с биологом – вам (-1) боезапас. Вернитесь на – 17</a></li>";
+            };
+            if (ViewModelLocator.StatusStatic.Crew.Where(c => c.Abilities.FirstOrDefault(a => a == "биолог") != null).Count()>1)
+            {
+                outevent += "<li><a href=\"61\"><li>У вас в команде есть еще один специалист биолог – попытаться побыстрее снять краба с лица жертвы – 61</a></li>";
+            };
+            if (ViewModelLocator.StatusStatic.CountInvItem("шокер") > 0)
+            {
+                outevent += "<li><a href=\"58\"><li>У вас есть шоккер – ударить тварь разрядом тока – 58</a></li>";
+            };
+            outevent += "<li><a href=\"17\"><li>Оставить жертву и краба так как есть – 17</a></li>";
+            outevent += "</ul>";
+
+            return outevent;
+        }
+
+        public string a58()
+        {
+            string outevent = "<p>Тварь отпрыгнула в сторону и напала на вас. Деритесь! Чужой-краб – атакует спереди – он атакует первым.</p>";
+            ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+            {
+                Name = "Чужой-краб",
+                attack1 = Suck,
+                attack2 = Suck,
+                attack3 = Suck,
+                attack4 = Miss,
+                attack5 = Miss,
+                attack6 = RunAway,
+                Attack = 1,
+                Health = 1,
+                MaxHealth = 1,
+                AttackFirst = true
+            };
+            outevent += "<br><a href=\"/17\">После боя идите на 17</a>";
+            return outevent;
+        }
+
+        public string a55()
+        {
+            string outevent = "";
+            if (ViewModelLocator.StatusStatic.CountInvItem("шокер") > 0)
+            {
+                outevent += "<li><a href=\"58\"><li>У вас есть шоккер – ударить тварь разрядом тока – 58</a></li>";
+            }; 
+            outevent += "<li><a href=\"19\"><li>Ничего не делать. Позволить твари присосаться к биологу – 59</a></li>";
+            outevent += "</ul>";
+
+            return outevent;
+        }
+
+        public string a56()
+        {
+            string outevent = "<ul>";
+            if (ViewModelLocator.StatusStatic.CountInvItem("аптечка")>2)
+            {
+                outevent += "<li><a href=\"59_use_healthpack3\"><li>Потребуется использовать (-3) аптечки для заживления сильных ожогов раненого – 59</a></li>";
+            };
+                outevent += "<li><a href=\"17_biolog_dead\"><li>Оставить биолога умирать. Вернитесь на – 17</a></li>";
+            outevent += "</ul>";
+
+            return outevent;
+        }
 
         public bool a54_vagner_saved = false;
         public bool a54_vagner_send = false;
@@ -887,8 +1167,8 @@ namespace AliensOldEnemies.ViewModel
                 Mission6 = true;
                 MessageBox.Show("Вы сняли с жертвы тело Чужого и поместили его в контейнер – выполнение Миссии №6");
                 outevent = "<ul>";
-                outevent += "<a href=\"17\"><li>Оставить ее в бессознательном состоянии в этом отсеке. – 17</a></li>";
-                outevent += "<a href=\"17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
+                outevent += "<li><a href=\"17\"><li>Оставить ее в бессознательном состоянии в этом отсеке. – 17</a></li>";
+                outevent += "<li><a href=\"17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
                 outevent += "</ul>";
             }
             else
@@ -1275,6 +1555,7 @@ namespace AliensOldEnemies.ViewModel
             return outevent + "<br>";
         }
 
+        public bool a139_event = false;
         private string a60()
         {
             Random random = new Random();
@@ -1286,7 +1567,16 @@ namespace AliensOldEnemies.ViewModel
                 case 2: outevent += "<a href='/136'>Событие многоразовое - 136</a>"; break;
                 case 3: outevent += "<a href='/137'>Событие многоразовое - 137</a>"; break;
                 case 4: outevent += "<a href='/138'>Событие многоразовое – 138</a>"; break;
-                case 5: outevent += "<a href='/139'>Событие только для первого посещения – 139</a>"; break;
+                case 5:
+                    if (a139_event == false)
+                    {
+                        outevent += "<a href='/139_a139_event'>Событие только для первого посещения – 139</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
                 case 6: outevent += "Нападение врага - Чужой-краб – атакует сверху – атакует первым.";
                     ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
                     {

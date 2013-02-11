@@ -171,7 +171,7 @@ namespace AliensOldEnemies.ViewModel
             PossibleItems.Add(new InvItem() { Title = "кислородный баллон", Description = "(это запас для скафандра – если кто захочет погулять подольше в открытом космосе)" });
             PossibleItems.Add(new InvItem() { Title = "таблетки \"Антишок\"", Description = "для борьбы с паникой (своей или соседа)" });
             PossibleItems.Add(new InvItem() { Title = "био-контейнер", Description = "для погружения в него образца Чужого (так сказать, «апартаменты с климат-контролем»)" });
-            PossibleItems.Add(new InvItem() { Title = "Шоккер", Description = "(на всякий случай)" });
+            PossibleItems.Add(new InvItem() { Title = "шоккер", Description = "(на всякий случай)" });
             RaisePropertyChanged("PossibleItems");
         }
 
@@ -248,6 +248,19 @@ namespace AliensOldEnemies.ViewModel
                 };
             };
             return isFind;
+        }
+
+        public int CountInvItem(string InvItem)
+        {
+            int count = 0;
+            foreach (var item in this.InvItems)
+            {
+                if (InvItem == item.Title)
+                {
+                    count = count + 1;
+                };
+            };
+            return count;
         }
 
         public void DeleteInvItem(string InvItem)

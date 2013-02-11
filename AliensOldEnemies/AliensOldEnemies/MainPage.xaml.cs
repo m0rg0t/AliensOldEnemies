@@ -106,6 +106,13 @@ namespace AliensOldEnemies
                 item = item.Replace("_tauer_send", "");
             };
 
+            if (item.Contains("_mission6"))
+            {
+                MessageBox.Show("Вы поместили Чужого в контейнер – выполнение Миссии №6");
+                ViewModelLocator.MainStatic.Mission6 = true;                
+                item = item.Replace("_mission6", "");
+            };
+
             if (item.Contains("_vagner_send"))
             {
                 //54 - dfuyth d ifnk
@@ -168,12 +175,54 @@ namespace AliensOldEnemies
                 item = item.Replace("_chipplata", "");
             };
 
+            if (item.Contains("_ammo-1"))
+            {
+                ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo - 1;
+                item = item.Replace("_ammo-1", "");
+            };
+            if (item.Contains("_ammo-2"))
+            {
+                ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo - 2;
+                item = item.Replace("_ammo-2", "");
+            };
+            if (item.Contains("_ammo-3"))
+            {
+                ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo -3;
+                item = item.Replace("_ammo-3", "");
+            };
+            if (item.Contains("_ammo-4"))
+            {
+                ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo - 4;
+                item = item.Replace("_ammo-4", "");
+            };
+
+            if (item.Contains("_biolog_dead"))
+            {
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Abilities.FirstOrDefault(a => a == "биолог") != null).Dead = true;
+                item = item.Replace("_biolog_dead", "");
+            };
+
+            if (item.Contains("_a139_event"))
+            {
+                ViewModelLocator.MainStatic.a139_event = true;
+                item = item.Replace("_a139_event", "");
+            };
+            
+
             if (item.Contains("_use_healthpack"))
             {
                 ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c=>c.Title=="аптечка"));
                 item = item.Replace("_use_healthpack", "");
             };
 
+            if (item.Contains("_use_healthpack3"))
+            {
+                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c=>c.Title=="аптечка"));
+                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "аптечка"));
+                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "аптечка"));
+                item = item.Replace("_use_healthpack3", "");
+            };
+            
             
 
             ViewModelLocator.MainStatic.CurrentPageId = item;
