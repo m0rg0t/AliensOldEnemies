@@ -63,6 +63,11 @@ namespace AliensOldEnemies
                 ViewModelLocator.StatusStatic.ChangeLifes(-1);
                 item = item.Replace("_life_-1", "");
             };
+            if (item.Contains("_life_-2"))
+            {
+                ViewModelLocator.StatusStatic.ChangeLifes(-2);
+                item = item.Replace("_life_-2", "");
+            };
             if (item.Contains("_life_+1"))
             {
                 ViewModelLocator.StatusStatic.ChangeLifes(+1);
@@ -105,6 +110,85 @@ namespace AliensOldEnemies
                 };
                 item = item.Replace("_tauer_send", "");
             };
+
+            if (item.Contains("_save_mak_kolinz"))
+            {
+                ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                item = item.Replace("_save_mak_kolinz", "");
+            };
+
+            if (item.Contains("_add_mak_kolinz"))
+            {
+                ViewModelLocator.StatusStatic.AllCrew.Add(new PersonItem() { Name = "Мак Коллинз", 
+                    Image = "", Warior = false, MaxHealth = 1, Health = 1, Selected = true });
+                ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Мак Коллинз").Abilities.Add("техник");
+
+                ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                item = item.Replace("_add_mak_kolinz", "");
+            };
+
+            if (item.Contains("_save_livengaup"))
+            {
+                Random random = new Random();
+                int randomNumber = random.Next(1, 7);
+                switch (randomNumber)
+                {
+                    case 5:
+                        ViewModelLocator.MainStatic.livengaup_saved = false;
+                        MessageBox.Show("Ливенгауп погиб по пути к вашему шаттлу.");
+                        break;
+                    case 6:
+                        MessageBox.Show("Ливенгауп был убит по пути к вашему шаттлу.");
+                        ViewModelLocator.MainStatic.livengaup_saved = false;
+                        break;
+                    default:
+                        MessageBox.Show("Доктор Ливенгауп добрался до шаттла.");
+                        ViewModelLocator.MainStatic.livengaup_saved = true;
+                        break;
+                };
+                item = item.Replace("_save_livengaup", "");
+            };
+
+            if (item.Contains("_livengaup_add"))
+            {
+                ViewModelLocator.StatusStatic.AllCrew.Add(new PersonItem() 
+                    { Name = "Ливенгауп", Image = "", Warior=false, MaxHealth=1, Health=1, Selected=true});
+                ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Ливенгауп").Abilities.Add("доктор");
+
+                ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                item = item.Replace("_livengaup_add", "");
+            };
+
+            if (item.Contains("_hartman_add"))
+            {
+                ViewModelLocator.StatusStatic.AllCrew.Add(new PersonItem() { Name = "Хартман", Image = "", Warior = false, MaxHealth = 1, Health = 1, Selected = true });
+                ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Хартман").Abilities.Add("офицер безопасности");
+
+                ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                item = item.Replace("_hartman_add", "");
+            };
+            if (item.Contains("_hartman_send"))
+            {
+                Random random = new Random();
+                int randomNumber = random.Next(1, 7);
+                switch (randomNumber)
+                {
+                    case 5:
+                        ViewModelLocator.MainStatic.hartman_saved = false;
+                        MessageBox.Show("Хартман погиб по пути к вашему шаттлу.");
+                        break;
+                    case 6:
+                        MessageBox.Show("Хартман был убит по пути к вашему шаттлу.");
+                        ViewModelLocator.MainStatic.hartman_saved = false;
+                        break;
+                    default:
+                        MessageBox.Show("Хартман добрался до шаттла.");
+                        ViewModelLocator.MainStatic.hartman_saved = true;
+                        break;
+                };
+                item = item.Replace("_hartman_send", "");
+            };
+            
 
             if (item.Contains("_mission6"))
             {

@@ -354,6 +354,11 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
+        public void CrewChanged() {
+            RaisePropertyChanged("Crew");
+            RaisePropertyChanged("AllCrew");
+        }
+
         private int _time;
         public int Time
         {

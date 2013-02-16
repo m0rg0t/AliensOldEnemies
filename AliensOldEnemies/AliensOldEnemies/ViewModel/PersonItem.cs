@@ -73,6 +73,20 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
+        private bool _warior = true;
+        public bool Warior
+        {
+            get
+            {
+                return _warior;
+            }
+            set
+            {
+                _warior = value;
+                RaisePropertyChanged("Warior");
+            }
+        }
+
         private bool _away = false;
         public bool Away
         {

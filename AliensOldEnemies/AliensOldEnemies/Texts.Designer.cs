@@ -78,8 +78,7 @@ namespace AliensOldEnemies {
         /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
         ///&lt;li&gt;&lt;a href=&quot;/1_time_-1&quot;&gt;Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&apos;/6_time_-1_technik&apos;&gt;Использовать автопогрузчик, чтобы снять верхние контейнеры вниз и осмотреть их (вам (-1) Время) – требуется умение-техник. - 6&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&apos;/13&apos;&gt;Идти в Технический отсек - 13&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;.
+        ///&lt;li&gt;&lt;a href=&apos;/13&apos;&gt;Идти в Технический отсек - 13&lt;/a&gt;&lt;/li&gt;.
         /// </summary>
         public static string a1_select {
             get {
@@ -1239,6 +1238,136 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Инженерный отсек – Компьютер Пульта управления техническими системами показывает…&lt;/p&gt;.
+        /// </summary>
+        public static string a64 {
+            get {
+                return ResourceManager.GetString("a64", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Поломка Реактора – температура внутри корабля критически повышается. Всем
+        ///членам вашей команды (-1) Жизнь. Если не исправить Реактор, то корабль вскоре
+        ///может взорваться. Для ремонта Реактора требуется – проникнуть в отсек + иметь
+        ///умение техника или Инструкцию по ремонту реактора + иметь несколько чип-плат.&lt;/p&gt;.
+        /// </summary>
+        public static string a64_1 {
+            get {
+                return ResourceManager.GetString("a64_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Аварийная ситуация в Криогенном отсеке. Жидкий азот заполнил отсек и
+        ///проник в воздуховоды нижней палубы. С этого момента передвижение по
+        ///воздуховодам нижней палубы недопустимо (запишите эту информацию на
+        ///листике).&lt;/p&gt;.
+        /// </summary>
+        public static string a64_2 {
+            get {
+                return ResourceManager.GetString("a64_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Разгерметизация отсека – Коридор «D» - там сейчас вакуум. Пройти этот отсек
+        ///можно только в скафандрах. Скафандры должны иметь все члены вашей команды.
+        ///Если вы решите идти через отсек Коридора «D», но у вас не хватает на всех
+        ///скафандров, то лишних бойцов вы можете отправить, самим добираться до
+        ///спасательного шатла в отсек Ангара. Бросьте кубик за каждый отсек, который они
+        ///должны пройти до Ангара. За каждое выпадение (5 или 6) – погибает один боец.
+        ///Кто дошел – считается спасенным и находится до конца [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a64_3 {
+            get {
+                return ResourceManager.GetString("a64_3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Аварийная блокировка отсека Грузового лифта – необходимо перегрузить
+        ///программу управления лифтом. Требуется наличие умения – «программист» или
+        ///чип-ключ.&lt;/p&gt;.
+        /// </summary>
+        public static string a64_4 {
+            get {
+                return ResourceManager.GetString("a64_4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Авария в отсеке Регенерации воздуха – Кислород на корабле катастрофически
+        ///убывает. Отнимите на своем листе персонажа (-5) Времени. Однако, за каждый
+        ///имеющийся у вас баллон с кислородом восстановите (+1) Время.&lt;/p&gt;.
+        /// </summary>
+        public static string a64_5 {
+            get {
+                return ResourceManager.GetString("a64_5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Заблокированы Шлюзовые двери в отсеке Ангара – ваш спасательный шатл не
+        ///сможет теперь покинуть корабль. Разблокировать шлюзовые двери можно только в
+        ///Рубке на центральном компьютере (потребуется умение программист).&lt;p&gt;.
+        /// </summary>
+        public static string a64_6 {
+            get {
+                return ResourceManager.GetString("a64_6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Неожиданно вы слышите легкий шорох. Он раздается откуда-то сверху… Шорох все
+        ///громче. Кажется, это из воздуховода. Судя по звукам скрежета по металлической обшивке
+        ///- там кто-то есть. Шорохи снова возобновились и теперь их больше. Там лезут явно
+        ///несколько существ.&lt;br&gt;
+        ///Теперь вы вдруг слышите какой-то шум и снизу под решетками пола отсека. Неужели эти
+        ///твари могут пробираться по таким узким подпольным трубопроводам?
+        ///Всем становится очень жутко. Атмосфера буквально наэлектризована.
+        ///Проверьте ваших бо [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a65 {
+            get {
+                return ResourceManager.GetString("a65", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Вы слышите, как заработал лифт, ведущий из Инженерного отсека на нижнюю палубу.
+        ///Кто-то поднимается на лифте снизу наверх к вам…? Вы напряженно ждете….&lt;br&gt;
+        ///Лифт поднялся, но двери не открылись. Вы чувствуете, что там внутри лифта кто-то есть.
+        ///Напряжение в вашей команде растет. У всех нервы на пределе.&lt;br&gt;
+        ///&lt;b&gt;Ваше решение?&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/271&quot;&gt;Ждать – 271&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/272&quot;&gt;Самому подойти и открыть дверь лифта – 272&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_time-2&quot;&gt;Лезть в воздухопровод  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a66 {
+            get {
+                return ResourceManager.GetString("a66", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы делаете несколько метких очередей в сторону прячущегося неизвестного мужчины и
+        ///он падает замертво. Вы подходите к нему. На его бэйдже написано – Хартман – (офицер
+        ///безопасности).&lt;/p&gt;
+        ///&lt;p&gt;Вы обыскали его труп и нашли – боекомплект (+5) + чип-ключ от Арсенала и Коридора
+        ///«D».&lt;/p&gt;&lt;br&gt;
+        ///&lt;a href=&quot;/20&quot;&gt;Вернитесь на – 20&lt;/a&gt;.
+        /// </summary>
+        public static string a68 {
+            get {
+                return ResourceManager.GetString("a68", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Какие вопросы вы хотите задать Мак Коллинзу? (за каждый вопрос вам(-1) Время)&lt;/p&gt;
         ///&lt;br&gt;
         ///&lt;ul&gt;
@@ -1252,6 +1381,58 @@ namespace AliensOldEnemies {
         public static string a7 {
             get {
                 return ResourceManager.GetString("a7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Ваш психолог из-за укрытия кричит неизвестному мужчине – &lt;i&gt;«Успокойтесь. Все
+        ///кончилось. Тварей больше нет. Мы их всех убили. Мы группа спасения и пришли, чтобы
+        ///эвакуировать экипаж вашего корабля. Мы не сделаем вам ничего плохого. Не бойтесь».&lt;/i&gt;
+        ///Через пару секунд из-за ящиков настороженно вышел мужчина. Он приблизился к вам. На
+        ///его бэйдже написано – &lt;b&gt;Хартман – (офицер безопасности).&lt;/b&gt;&lt;/p&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/73&quot;&gt;Спросить его, что здесь произошло? – 73&lt;/a&gt;&lt;/li&gt;
+        ///&lt; [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a70 {
+            get {
+                return ResourceManager.GetString("a70", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;В отсеке хранится оружие, боеприпасы и амуниция. Из отсека две двери ведут – в отсек Кают и в Инженерный отсек.&lt;/p&gt;.
+        /// </summary>
+        public static string a71 {
+            get {
+                return ResourceManager.GetString("a71", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;b&gt;Ваши дальнейшие действия?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19&quot;&gt;Идти в отсек Кают – 19&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/20&quot;&gt;Идти в Инженерный отсек – 20&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a71_select {
+            get {
+                return ResourceManager.GetString("a71_select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Как только вы открыли дверь в отсек Арсенала по вам начал стрелять стационарный
+        ///пулемет «Защитник», который был установлен внутри отсека.
+        ///Все члены вашей команды теряют по (-2) Жизни. Вы успеваете быстро отскочить обратно
+        ///в Инженерный отсек.&lt;/p&gt;
+        ///&lt;br&gt;&lt;a href=&quot;/20_life-2&quot;&gt;Дверь в Арсенал автоматически закрывается. – 20&lt;/a&gt;.
+        /// </summary>
+        public static string a72 {
+            get {
+                return ResourceManager.GetString("a72", resourceCulture);
             }
         }
         
@@ -1277,6 +1458,23 @@ namespace AliensOldEnemies {
         public static string a74 {
             get {
                 return ResourceManager.GetString("a74", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;У Хартмана внутри есть зародыш Чужого.&lt;/p&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваше решение?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/79&quot;&gt;Пристрелить Хартмана – 79&lt;/a&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/70_add_hartman&quot;&gt;Оставить его пока живым в составе своей команды – 70&lt;/a&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/70_hartman_send&quot;&gt;Отправить его самому пробираться к шатлу. Бросьте кубик за каждый отсек на
+        ///пути до Ангара. Если выпадет хотя бы одна (5 или 6) – Хартман погиб по пути.
+        ///Если он дошел – он считается спасенным.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a75 {
+            get {
+                return ResourceManager.GetString("a75", resourceCulture);
             }
         }
         

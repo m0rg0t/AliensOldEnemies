@@ -52,7 +52,7 @@
 
                     <!--ContentPanel - place additional content here-->
                     <Grid x:Name="ContentGrid" Grid.Row="1">
-                        <msp:HTMLViewer Html="{Binding Description}" HyperlinkClick="HTMLViewer_HyperlinkClick"></msp:HTMLViewer>
+                        <msp:HTMLViewer Foreground="White" Html="{Binding Description}" HyperlinkClick="HTMLViewer_HyperlinkClick" FontSize="28"></msp:HTMLViewer>
                     </Grid>
                 </Grid>
             </controls:PanoramaItem>
