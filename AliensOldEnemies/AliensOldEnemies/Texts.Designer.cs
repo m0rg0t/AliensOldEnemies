@@ -703,6 +703,99 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;тест как для мужчин, так и для женщин – На корабле дальнего полета
+        ///сломалась криокамера. Все члены экипажа вышли из гипер-сна и теперь обречены целый
+        ///год лететь до цели в состоянии бодрствования.&lt;br&gt;
+        ///Команда заранее не рассчитана на психологическую совместимость экипажа и в команде
+        ///нет психолога для решения межличностных проблем. В замкнутом пространстве корабля
+        ///опасны любые конфликты.&lt;br&gt;
+        ///В команде 5 мужчин и одна женщина. Самый опасный конфликт – из-за женщины. Как вы
+        ///решите сексуальную проблему [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a251 {
+            get {
+                return ResourceManager.GetString("a251", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вопрос №4 (этот тест не для андроидов) – На вашем корабле в ходе полета выяснилось,
+        ///что ваш капитан корабля крайне жестокий человек. За малейшие нарушения он
+        ///подвергает членов экипажа физическим наказаниям и моральному унижению.&lt;br&gt;
+        ///Вас приглашают на тайное заседание экипажа. Многие обсуждают вопрос свержения
+        ///капитана с поста и отдание его под стражу до окончания рейса. Из десяти членов экипажа,
+        ///– 5 человек настроены решительно против капитана, 3 человека против свержения
+        ///капитана, 2 человека еще н [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a252 {
+            get {
+                return ResourceManager.GetString("a252", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – Вы и жена еще сможете родить ребенка. Род
+        ///человеческий не прервется.&lt;br&gt;
+        ///&lt;a href=&quot;/250&quot;&gt;Внимание! Ответьте на следующий вопрос – 250&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a253 {
+            get {
+                return ResourceManager.GetString("a253", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ ВЕРНЫЙ – Объяснение ответа – Вы и ваша дочка еще сможете произвести
+        ///потомство. Род человеческий не прервется.
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/250&quot;&gt;Внимание! Ответьте на следующий вопрос – 250&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a254 {
+            get {
+                return ResourceManager.GetString("a254", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Жена и дочка смогут выжить, но не смогут
+        ///воспроизвести потомство.
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/256&quot;&gt;Человеческий род угаснет. – идите на 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a255 {
+            get {
+                return ResourceManager.GetString("a255", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ВНИМАНИЕ! ТРЕВОГА!! – бесстрастным голосом объявил компьютер корабля –
+        ///ПРЕСЕЧЕН НЕСАНКЦИОНИРОВАННЫЙ КОНТАКТ ЧУЖОЙ РАСЫ.&lt;br&gt;
+        ///СИСТЕМА БЕЗОПАСНОСТИ КОРАБЛЯ АКТИВИЗИРУЕТСЯ ЧЕРЕЗ 10 секунд!!!&lt;br&gt;
+        ///ВСЕМ ЛЮДЯМ СРОЧНО ПОКИНУТЬ ОТСЕК!!&lt;br&gt;
+        ///Вы быстро выбегаете из отсека Рубки. За вашей спиной из потолочных плит выдвигаются
+        ///пулеметы «Защитник».
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/170&quot;&gt;Быстро идите в Коридор «А» - 170&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a256 {
+            get {
+                return ResourceManager.GetString("a256", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;ОТВЕТ НЕВЕРНЫЙ – Объяснение ответа – Никого не нужно ликвидировать. 
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/256&quot;&gt;Андроид для выживания не требует кислорода. – 256&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a257 {
+            get {
+                return ResourceManager.GetString("a257", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;&lt;a href=&quot;/18&quot;&gt;Мертвый доктор – Нет зародыша Чужого – 18&lt;/a&gt;&lt;/p&gt;.
         /// </summary>
         public static string a26 {

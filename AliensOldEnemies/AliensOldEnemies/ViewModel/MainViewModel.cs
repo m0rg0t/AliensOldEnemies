@@ -1076,8 +1076,56 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Вопрос №3",
+                    Description = Texts.a251,
+                    Id = "/251",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Вопрос №4",
+                    Description = Texts.a251,
+                    Id = "/251",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Верно",
+                    Description = Texts.a253,
+                    Id = "/253",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Верно",
+                    Description = Texts.a254,
+                    Id = "/254",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Неверно",
-                    Description = Texts.a260,
+                    Description = Texts.a255,
+                    Id = "/255",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Тревога",
+                    Description = Texts.a256,
+                    Id = "/256",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Неверно",
+                    Description = Texts.a257,
                     Id = "/257",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
@@ -1316,11 +1364,11 @@ namespace AliensOldEnemies.ViewModel
         {
             string outevent = Texts.a85_select;
             if (ViewModelLocator.StatusStatic.CountInvItem("аптечка")>1) {
-                outevent += "<li><a href=\"19_use_healthpack2\">Оказать ему медицинскую помощь (вам -2 аптечки). – 19</a></li>";
+                outevent += "<li><a href=\"/19_use_healthpack2\">Оказать ему медицинскую помощь (вам -2 аптечки). – 19</a></li>";
             };
             if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
             {
-                outevent += "<li><a href=\"111\">Проверить его на наличие в его теле зародыша Чужого (если у вас есть рентген-аппарат) – 111</a></li>";
+                outevent += "<li><a href=\"/111\">Проверить его на наличие в его теле зародыша Чужого (если у вас есть рентген-аппарат) – 111</a></li>";
             };
             outevent+="</ul>";
             return outevent;
@@ -1347,7 +1395,7 @@ namespace AliensOldEnemies.ViewModel
                         AttackFirst = true
                     };
                     (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
-            outevent+="<br><a href=\"71\">Вернитесь на – 71</a></li>";
+            outevent+="<br><a href=\"/71\">Вернитесь на – 71</a></li>";
             return outevent;
         }
 
@@ -1457,7 +1505,7 @@ namespace AliensOldEnemies.ViewModel
                 default:
                     break;
             };
-            outevent += "<br><a href=\"20\">Вернитесь на – 20</a>";
+            outevent += "<br><a href=\"/20\">Вернитесь на – 20</a>";
             return outevent;
         }
 
@@ -1621,7 +1669,7 @@ namespace AliensOldEnemies.ViewModel
             }
             else
             {
-                outevent += "<a href=\"72\">Если вы еще не отключили систему безопасности – то переходите на – 72</a>";
+                outevent += "<a href=\"/72\">Если вы еще не отключили систему безопасности – то переходите на – 72</a>";
             };
             outevent += "</ul>";
             return outevent;
@@ -1632,11 +1680,11 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "Негр заражен.<br>";
             if (ViewModelLocator.StatusStatic.FindInvItem("био-контейнер") && ViewModelLocator.StatusStatic.FindInvItem("лазерный резак") && ViewModelLocator.StatusStatic.FindAbility("доктор"))
             {
-                outevent += "<a href=\"29_mission6\">Вы вскрыли тело негра и заключить в био-контейнер зародыш Чужого. Отметьте на своей карточке персонажа, что вы выполнили Миссию №6.</a>";
+                outevent += "<a href=\"/29_mission6\">Вы вскрыли тело негра и заключить в био-контейнер зародыш Чужого. Отметьте на своей карточке персонажа, что вы выполнили Миссию №6.</a>";
             }
             else
             {
-                outevent += "<a href=\"29_ammo-1\">Расстреляйте этого зародыша Чужого (-1 боезапас).</a>";
+                outevent += "<a href=\"/29_ammo-1\">Расстреляйте этого зародыша Чужого (-1 боезапас).</a>";
             };
             outevent += "</ul>";
             return outevent;
@@ -1753,10 +1801,10 @@ namespace AliensOldEnemies.ViewModel
             outevent += "<br><b>Ваше решение?</b><br><ul>";            
             if (ViewModelLocator.StatusStatic.FindAbility("психолог"))
             {
-                outevent += "<li><a href=\"70\"><li>Если у вас есть психолог – 70</a></li>";
+                outevent += "<li><a href=\"/70\"><li>Если у вас есть психолог – 70</a></li>";
             };
-            outevent += "<li><a href=\"69\">Крикнуть ему, что вы группа спасения – 69</a></li>";
-            outevent += "<li><a href=\"68\">Стрелять в него – 68</a></li>";
+            outevent += "<li><a href=\"/69\">Крикнуть ему, что вы группа спасения – 69</a></li>";
+            outevent += "<li><a href=\"/68\">Стрелять в него – 68</a></li>";
             outevent += "</ul>";
             return outevent;
         }
@@ -1789,9 +1837,9 @@ namespace AliensOldEnemies.ViewModel
             ViewModelLocator.StatusStatic.Crew.LastOrDefault(c => c.Abilities.FirstOrDefault(a => a == "биолог") != null).Health--; 
             if (ViewModelLocator.StatusStatic.CountInvItem("био-контейнер") > 0)
             {
-                outevent += "<li><a href=\"17_mission6\"><li>У вас есть био-контейнер, вы можете посадить тварь в контейнер и отметить выполнение Миссии №6 – 17</a></li>";
+                outevent += "<li><a href=\"/17_mission6\"><li>У вас есть био-контейнер, вы можете посадить тварь в контейнер и отметить выполнение Миссии №6 – 17</a></li>";
             };
-            outevent += "<li><a href=\"62\"><li>Вы можете приказать биологу отбросить тварь подальше в сторону, чтобы вы могли ее расстрелять с безопасного расстояния – 62</a></li>";
+            outevent += "<li><a href=\"/62\"><li>Вы можете приказать биологу отбросить тварь подальше в сторону, чтобы вы могли ее расстрелять с безопасного расстояния – 62</a></li>";
             outevent += "</ul>";
 
             return outevent;
@@ -1802,17 +1850,17 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "<ul>";
             if (ViewModelLocator.StatusStatic.Ammo > 0)
             {
-                outevent += "<li><a href=\"17_ammo-1_biolog_dead\"><li>Расстрелять тварь вместе с биологом – вам (-1) боезапас. Вернитесь на – 17</a></li>";
+                outevent += "<li><a href=\"/17_ammo-1_biolog_dead\"><li>Расстрелять тварь вместе с биологом – вам (-1) боезапас. Вернитесь на – 17</a></li>";
             };
             if (ViewModelLocator.StatusStatic.Crew.Where(c => c.Abilities.FirstOrDefault(a => a == "биолог") != null).Count()>1)
             {
-                outevent += "<li><a href=\"61\"><li>У вас в команде есть еще один специалист биолог – попытаться побыстрее снять краба с лица жертвы – 61</a></li>";
+                outevent += "<li><a href=\"/61\"><li>У вас в команде есть еще один специалист биолог – попытаться побыстрее снять краба с лица жертвы – 61</a></li>";
             };
             if (ViewModelLocator.StatusStatic.CountInvItem("шокер") > 0)
             {
-                outevent += "<li><a href=\"58\"><li>У вас есть шоккер – ударить тварь разрядом тока – 58</a></li>";
+                outevent += "<li><a href=\"/58\"><li>У вас есть шоккер – ударить тварь разрядом тока – 58</a></li>";
             };
-            outevent += "<li><a href=\"17\"><li>Оставить жертву и краба так как есть – 17</a></li>";
+            outevent += "<li><a href=\"/17\"><li>Оставить жертву и краба так как есть – 17</a></li>";
             outevent += "</ul>";
 
             return outevent;
@@ -1845,9 +1893,9 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "";
             if (ViewModelLocator.StatusStatic.CountInvItem("шокер") > 0)
             {
-                outevent += "<li><a href=\"58\"><li>У вас есть шоккер – ударить тварь разрядом тока – 58</a></li>";
+                outevent += "<li><a href=\"/58\"><li>У вас есть шоккер – ударить тварь разрядом тока – 58</a></li>";
             }; 
-            outevent += "<li><a href=\"19\"><li>Ничего не делать. Позволить твари присосаться к биологу – 59</a></li>";
+            outevent += "<li><a href=\"/19\"><li>Ничего не делать. Позволить твари присосаться к биологу – 59</a></li>";
             outevent += "</ul>";
 
             return outevent;
@@ -1858,9 +1906,9 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "<ul>";
             if (ViewModelLocator.StatusStatic.CountInvItem("аптечка")>2)
             {
-                outevent += "<li><a href=\"59_use_healthpack3\"><li>Потребуется использовать (-3) аптечки для заживления сильных ожогов раненого – 59</a></li>";
+                outevent += "<li><a href=\"/59_use_healthpack3\"><li>Потребуется использовать (-3) аптечки для заживления сильных ожогов раненого – 59</a></li>";
             };
-                outevent += "<li><a href=\"17_biolog_dead\"><li>Оставить биолога умирать. Вернитесь на – 17</a></li>";
+                outevent += "<li><a href=\"/17_biolog_dead\"><li>Оставить биолога умирать. Вернитесь на – 17</a></li>";
             outevent += "</ul>";
 
             return outevent;
@@ -1876,20 +1924,20 @@ namespace AliensOldEnemies.ViewModel
                 Mission6 = true;
                 MessageBox.Show("Вы сняли с жертвы тело Чужого и поместили его в контейнер – выполнение Миссии №6");
                 outevent = "<ul>";
-                outevent += "<li><a href=\"17\"><li>Оставить ее в бессознательном состоянии в этом отсеке. – 17</a></li>";
-                outevent += "<li><a href=\"17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
+                outevent += "<li><a href=\"/17\"><li>Оставить ее в бессознательном состоянии в этом отсеке. – 17</a></li>";
+                outevent += "<li><a href=\"/17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
                 outevent += "</ul>";
             }
             else
             {
                 outevent = "<ul>";
-                outevent += "<a href=\"17\"><li>Расстрелять Чужого-краба вместе с женщиной – 17</a></li>";
-                outevent += "<a href=\"17\"><li>Оставить женщину и Чужого здесь – 17</a></li>";
+                outevent += "<a href=\"/17\"><li>Расстрелять Чужого-краба вместе с женщиной – 17</a></li>";
+                outevent += "<a href=\"/17\"><li>Оставить женщину и Чужого здесь – 17</a></li>";
                 if (ViewModelLocator.StatusStatic.FindAbility("биолог"))
                 {
-                    outevent += "<a href=\"55\"><li>Попытаться снять Чужого-краба с лица женщины – 55</a></li>";
+                    outevent += "<a href=\"/55\"><li>Попытаться снять Чужого-краба с лица женщины – 55</a></li>";
                 };
-                outevent += "<a href=\"17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
+                outevent += "<a href=\"/17_vagner_send\"><li>Отправить женщину вместе с одним из своих людей в отсек Ангара</a></li>";
                 outevent += "</ul>";
             };
             
@@ -1931,15 +1979,15 @@ namespace AliensOldEnemies.ViewModel
             int randomNumber = random.Next(1, 7);
             if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
             {
-                outevent += "<li><a href=\"47\">обследуйте мужчину на наличие в его теле Чужого – 47</a></li>";
+                outevent += "<li><a href=\"/47\">обследуйте мужчину на наличие в его теле Чужого – 47</a></li>";
             };
             if (ViewModelLocator.StatusStatic.FindInvItem("аптечка"))
             {
-                outevent += "<li><a href=\"48_use_healthpack\">Приведите его в чувство (-1 аптечка) – 48</a></li>";
+                outevent += "<li><a href=\"/48_use_healthpack\">Приведите его в чувство (-1 аптечка) – 48</a></li>";
             };
-            outevent += "<li><a href=\"17\">Оставить его здесь как есть – 17</a></li>";
-            outevent += "<li><a href=\"17_juzepe_send\">Отправить его в сопровождении с одним из своих людей в Ангар</a></li>";
-            outevent += "<li><a href=\"17_juzepe_add\">Присоединить его к своей команде – 17</a></li>";
+            outevent += "<li><a href=\"/17\">Оставить его здесь как есть – 17</a></li>";
+            outevent += "<li><a href=\"/17_juzepe_send\">Отправить его в сопровождении с одним из своих людей в Ангар</a></li>";
+            outevent += "<li><a href=\"/17_juzepe_add\">Присоединить его к своей команде – 17</a></li>";
             outevent += "</ul>";
             return outevent;
         }
@@ -1989,13 +2037,13 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "<ul>";
             if (ViewModelLocator.StatusStatic.FindInvItem("чип-ключ от грузового отсека"))
             {
-                outevent += "<li><a href=\"90\">Вы можете разблокировать дверь</a></li>";
+                outevent += "<li><a href=\"/90\">Вы можете разблокировать дверь</a></li>";
             };
-            outevent += "<li><a href=\"18\">в Лазарет – 18</a></li>";
-            outevent += "<li><a href=\"100\">в отсек Генератора – 100</a></li>";
-            outevent += "<li><a href=\"130\">в Коридор «Д» - 130</a></li>";
-            outevent += "<li><a href=\"120\">в Оранжерею – 120</a></li>";
-            outevent += "<li><a href=\"110\">в коридор «Е» - 110</a></li>";
+            outevent += "<li><a href=\"/18\">в Лазарет – 18</a></li>";
+            outevent += "<li><a href=\"/100\">в отсек Генератора – 100</a></li>";
+            outevent += "<li><a href=\"/130\">в Коридор «Д» - 130</a></li>";
+            outevent += "<li><a href=\"/120\">в Оранжерею – 120</a></li>";
+            outevent += "<li><a href=\"/110\">в коридор «Е» - 110</a></li>";
             outevent += "</ul>";
             return outevent;
         }
@@ -2009,11 +2057,11 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "<ul>";
             if (ViewModelLocator.StatusStatic.FindInvItem("аптечка"))
             {
-                outevent += "<li><a href=\"30_a30_tauer\">Перевязать Тауэра (вам -1 аптечка) – негру (+1) Жизнь.</a></li>";
+                outevent += "<li><a href=\"/30_a30_tauer\">Перевязать Тауэра (вам -1 аптечка) – негру (+1) Жизнь.</a></li>";
             };
             if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
             {
-                outevent += "<li><a href=\"34\">Проверить негра рентген-аппаратом на наличие в его теле зародыша Чужого – 34</a></li>";
+                outevent += "<li><a href=\"/34\">Проверить негра рентген-аппаратом на наличие в его теле зародыша Чужого – 34</a></li>";
             };
             outevent += "<li><a href=\"/35\">Расспросить негра о событиях на корабле – 35</a></li>";
             outevent += "<li><a href=\"/36\">Спросить негра не видел ли он дипломата – 36</a></li>";
@@ -2047,7 +2095,7 @@ namespace AliensOldEnemies.ViewModel
             outevent += "<li><a href=\"/60\">Оставить умирающего – 60</a></li>";
             if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
             {
-                outevent += "<li><a href=\"142\">Если у вас есть рентген-аппарат, то вы можете проверить умирающего на наличие у него внутри зародыша Чужого. – 142</a></li>";
+                outevent += "<li><a href=\"/142\">Если у вас есть рентген-аппарат, то вы можете проверить умирающего на наличие у него внутри зародыша Чужого. – 142</a></li>";
             }; 
             
             outevent += "</ul>";
@@ -2059,11 +2107,11 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "";
             if (ViewModelLocator.StatusStatic.FindInvItem("чип-ключ от отсека грузового лифта"))
             {
-                outevent += "<a href=\"33\">У вас есть чип-ключ от отсека Грузового лифта – переходите на – 33</a>";
+                outevent += "<a href=\"/33\">У вас есть чип-ключ от отсека Грузового лифта – переходите на – 33</a>";
             }
             else
             {
-                outevent += "<a href=\"23\">У вас нет чип-ключа – вернитесь на – 23</a>";
+                outevent += "<a href=\"/23\">У вас нет чип-ключа – вернитесь на – 23</a>";
             };
             return outevent;
         }
@@ -2101,13 +2149,13 @@ namespace AliensOldEnemies.ViewModel
             outevent += "<p>Вы обнаруживаете по рентген снимку, что женщина беременна (на 6-ом месяце). Человеческий зародыш живой. Значит и женщина жива. Но почему она в таком странном безжизненном состоянии – пока непонятно.</p><br>";
             if (ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Живодер")!=null)
             {
-                outevent += "<a href=\"125\">Перейдите на 125</a>";
+                outevent += "<a href=\"/125\">Перейдите на 125</a>";
             }
             else
             {
                 outevent += "<br><b>Ваши действия?</b><br>";
-                outevent += "<ul><li><a href=\"18\">Оставить женщину в лазарете как есть – вернитесь на – 18</a></li>";
-                outevent += "<ul><li><a href=\"18\">Отправить одного из своих бойцов вместе с женщиной назад к шатлу. Уберите карточку одного бойца и карточку женщины из своей команды. Бросьте кубик за каждый отсек на пути вашего бойца к Ангару с шатлом – если хотя бы на одном из кубиков выпадет (5 или 6) – боец и женщина погибли по пути.</a></li>";
+                outevent += "<ul><li><a href=\"/18\">Оставить женщину в лазарете как есть – вернитесь на – 18</a></li>";
+                outevent += "<ul><li><a href=\"/18\">Отправить одного из своих бойцов вместе с женщиной назад к шатлу. Уберите карточку одного бойца и карточку женщины из своей команды. Бросьте кубик за каждый отсек на пути вашего бойца к Ангару с шатлом – если хотя бы на одном из кубиков выпадет (5 или 6) – боец и женщина погибли по пути.</a></li>";
                 outevent += "</ul>";
             };
             return outevent;
@@ -2119,11 +2167,11 @@ namespace AliensOldEnemies.ViewModel
             outevent += "<p>Женщина – Нет зародыша Чужого.</p><br>";
             if (ViewModelLocator.StatusStatic.FindAbility("доктор"))
             {
-                outevent += "<a href=\"28\">У вас в команде есть персонаж с Умением - доктор, перейдите на - 28</a>";
+                outevent += "<a href=\"/28\">У вас в команде есть персонаж с Умением - доктор, перейдите на - 28</a>";
             }
             else
             {
-                outevent += "<a href=\"18\">Нет доктора, вернитесь на - 18</a>";
+                outevent += "<a href=\"/18\">Нет доктора, вернитесь на - 18</a>";
 
             };
             return outevent;
