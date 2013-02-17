@@ -96,6 +96,34 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Ваши бойцы предлагают поделить эти деньги между членами команды.&lt;br&gt;&lt;b&gt;Ваше решение?&lt;/b&gt;&lt;/p&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/103&quot;&gt;Согласится – 103&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/104&quot;&gt;Потребовать отдать эти деньги вам – 104&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;.
+        /// </summary>
+        public static string a101 {
+            get {
+                return ResourceManager.GetString("a101", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Ваши бойцы не на шутку собираются драться из-за этих денег. Они могут перестрелять
+        ///друг друга. Но в спор вмешивается ваш психолог и успокаивает спорщиков.
+        ///Психологу удается убедить всех в том, что эти деньги после окончания операции хозяева
+        ///будут искать и если выяснят, кто их взял, то всем не поздоровится.&lt;br&gt;
+        ///Вы объявляете всем членам своей команды, что вы лично получили задание изъять и
+        ///доставить «хозяевам» эти деньги. &lt;br&gt;
+        ///&lt;a href=&quot;/71&quot;&gt;С молчаливого согласия всех членов команды вы забираете все [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a102 {
+            get {
+                return ResourceManager.GetString("a102", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Ответ Мак Коллинза - &lt;br&gt;&lt;i&gt;«В каждом отсеке установлены коммуникаторы.  Но после того,  как все это началось.  Многие коммуникаторы вышли из строя.  Из криков,  которые были слышны через них,  я понял,  что произошло нападение каких-то инопланетных тварей.  Судя по переговорам экипажа,  это какие-то гигантские насекомые.  &lt;a href=&quot;/7&quot;&gt;Кажется, они плюются кислотой и их очень трудно убить».&lt;/i&gt; - 7&lt;/a&gt;&lt;/p&gt;.
         /// </summary>
         public static string a11 {
@@ -1910,12 +1938,65 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Если у вас в команде есть бойцы с характеристикой – «любит деньги», то они начинают
+        ///обыскивать шкафчики и личные вещи членов экипажа корабля в поисках денег или
+        ///дорогих вещей.&lt;br&gt;
+        ///&lt;b&gt;Ваше решение?&lt;/b&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/295&quot;&gt;Потребовать прекратить мародерство – 295&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/294&quot;&gt;Не вмешиваться - 294&lt;/a&gt;&lt;/li&gt;
+        ///&lt;/ul&gt;
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string a87 {
+            get {
+                return ResourceManager.GetString("a87", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Каюты – Вы расстреливаете двоих неизвестных вам мужчин. Вам (-1) боезапас.
+        ///На их бейджах написано – Райс – (навигатор) и Сайман – (андроид-техник-программист).&lt;br&gt;
+        ///&lt;a href=&quot;/19&quot;&gt;При обыске тел вы находите – (+3) боезапаса, шоккер, аптечку – 19&lt;/a&gt;
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string a88 {
+            get {
+                return ResourceManager.GetString("a88", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Каюты – Двое неизвестных мужчин настороженно подходят к вам. У одного из них в
+        ///руках пистолет. На их бэйджах написано – &lt;b&gt;Райс – (навигатор)&lt;/b&gt; и &lt;b&gt;Андроид Сайман –
+        ///техник-программист.&lt;/b&gt;&lt;/p&gt;
+        ///&lt;p&gt;Райс говорит вам - «Мы с Сайманом уже не надеялись выжить в этом ужасном месте. Я
+        ///жив благодаря Сайману. Твари, похожие на крабов почему-то не нападают на него. Мы
+        ///расстреляли нескольких мелких тварей. Но потом появились здоровые черные гады
+        ///похожие на яйцеголовых гигантских насекомых. Одного мы ранили  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a89 {
+            get {
+                return ResourceManager.GetString("a89", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Ответ Мак Коллинза - &lt;i&gt;«Вот схема воздуховодов. Она имеет выходы лишь в некоторых отсеках корабля.  По воздуховодам человек может пробраться только ползком.  Для каждого уровня-этажа существует отдельная система воздуховодов. &lt;br&gt; 
         ///&lt;a href=&quot;/7&quot;&gt;По воздуховоду верхнего уровня невозможно попасть на нижний уровень(см. схему)»&lt;/i&gt; - 7&lt;/a&gt;&lt;/p&gt;.
         /// </summary>
         public static string a9 {
             get {
                 return ResourceManager.GetString("a9", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;&lt;a href=&quot;/19_time-2&quot;&gt;Вы ждете, пока ваши люди обыщут каюту – вы теряете (-2) Время – 19&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a97 {
+            get {
+                return ResourceManager.GetString("a97", resourceCulture);
             }
         }
         

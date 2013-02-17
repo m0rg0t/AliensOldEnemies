@@ -835,6 +835,54 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Каюты",
+                    Description = Texts.a87,
+                    Id = "/87",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Каюты",
+                    Description = Texts.a88,
+                    Id = "/88",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Каюты",
+                    Description = Texts.a89,
+                    Id = "/89",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Обыск",
+                    Description = Texts.a97,
+                    Id = "/97",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Деньги",
+                    Description = Texts.a101,
+                    Id = "/101",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Деньги",
+                    Description = Texts.a102,
+                    Id = "/102",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Дипломат",
                     Description = Texts.a111,
                     Id = "/111",
@@ -1341,6 +1389,8 @@ namespace AliensOldEnemies.ViewModel
                 case "/81": return a81();
                 case "/82": return a82();
                 case "/85": return a85();
+                case "/88": return a88();
+                case "/89": return a89();
                 case "/124": return a124();
                 case "/146": return a146();
                 default: return "";
@@ -1359,6 +1409,25 @@ namespace AliensOldEnemies.ViewModel
         public bool security_system_central_computer_dispabled = false;
 
 
+        public string a89()
+        {
+            string outevent = "";
+            if (ViewModelLocator.StatusStatic.FindInvItem(""))
+            {
+                outevent += "<li><a href=\"/95\">Если у вас есть переносной рентген-аппарат – проверьте мужчин на наличие у них в теле зародышей Чужого – 95</a></li>";
+            };
+            outevent += "</ul>";
+            return outevent;
+        }
+
+        public string a88()
+        {
+            string outevent = "";
+            ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo + 3;
+            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title="аптечка"});
+            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "шоккер" });
+            return outevent;
+        }
 
         public string a85()
         {
