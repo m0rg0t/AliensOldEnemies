@@ -77,7 +77,7 @@ namespace AliensOldEnemies {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/1_time_-1&quot;&gt;Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/1_time-1&quot;&gt;Остаться в отсеке(вам(-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&apos;/13&apos;&gt;Идти в Технический отсек - 13&lt;/a&gt;&lt;/li&gt;.
         /// </summary>
         public static string a1_select {
@@ -172,11 +172,11 @@ namespace AliensOldEnemies {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/13_time_-1&quot;&gt;Остаться в отсеке (вам (-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/13_time-1&quot;&gt;Остаться в отсеке (вам (-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&quot;/17&quot;&gt;Идти в отсек Пищеблока- 17&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/18_time_-2&quot;&gt;Лезть в воздуховод – до отсека  Лазарет (-2 Времени) - 18&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/19_time_-4&quot;&gt;Лезть в воздуховод – до отсека Каюты (-4 Времени) – 19&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/20_time_-6&quot;&gt;Лезть в воздуховод – до Инженерного отсека(-6 Времени) – 20&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/18_time-2&quot;&gt;Лезть в воздуховод – до отсека  Лазарет (-2 Времени) - 18&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_time-4&quot;&gt;Лезть в воздуховод – до отсека Каюты (-4 Времени) – 19&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/20_time-6&quot;&gt;Лезть в воздуховод – до Инженерного отсека(-6 Времени) – 20&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Идти в отсек Ангара - 1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
         ///&lt;br&gt;.
         /// </summary>
@@ -375,6 +375,20 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Вы чувствуете, как температура в отсеке корабля сильно повысилась. Становится
+        ///нестерпимо жарко. Вы слышите по коммуникатору механический голос – &lt;i&gt;«Внимание!
+        ///Реактор корабля поврежден. Температура приближается к критической отметке!»&lt;/i&gt; -
+        ///Все члены вашей команды получают ущерб (-1) Жизнь.&lt;br&gt;
+        ///&lt;a href=&quot;/80&quot;&gt;Вернитесь на – 80&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a162 {
+            get {
+                return ResourceManager.GetString("a162", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Правильная последняя цифра кода это - 5.
         ///Вы отключили системы безопасности в Рубке корабля.
         ///&lt;br&gt;&lt;a href=&quot;/150&quot;&gt;Вернитесь на – 150&lt;/a&gt;&lt;/p&gt;.
@@ -382,6 +396,36 @@ namespace AliensOldEnemies {
         public static string a165 {
             get {
                 return ResourceManager.GetString("a165", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Чанг-Фу рассказывает – &lt;i&gt;«Когда напали эти твари, капитан, офицер безопасности и
+        ///дипломат Харрисон закрылись в Рубке. Я тоже бросился туда. Но капитан уже включил
+        ///систему безопасности и пулемет «Защитник», – расстрелял нескольких наших.
+        ///Мне пришлось вернуться и отбиваться от этих тварей. Сначала нас было несколько
+        ///человек, но потом они все погибли, и я остался один».&lt;/i&gt;
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/150&quot;&gt;Вернитесь на – 150&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a166 {
+            get {
+                return ResourceManager.GetString("a166", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы слышите, как заработал Грузовой Лифт. Он спускается с верхней палубы на ваш
+        ///нижний уровень. Судя по всему, кто-то едет на лифте и сейчас может открыться дверь из
+        ///лифта в ваш отсек. По мере приближения лифта вы начинаете слышать через переборки
+        ///двери какие-то крики. Вы приготовились и готовы атаковать.&lt;br&gt;
+        ///Лифт останавливается. Дверь открывается!!&lt;br&gt;
+        ///На вас обрушивается лавина хаоса движения тел и криков. Огромная черно-матовая
+        ///членистоногая тварь рвет на части бьющегося в агонии тело человека.  [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a169 {
+            get {
+                return ResourceManager.GetString("a169", resourceCulture);
             }
         }
         
@@ -397,7 +441,7 @@ namespace AliensOldEnemies {
         
         /// <summary>
         ///   Looks up a localized string similar to &lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/17_time_-1&quot;&gt;Остаться в этом отсеке- (вам (-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/17_time-1&quot;&gt;Остаться в этом отсеке- (вам (-1) Время) – еще раз бросать кубик на событие.&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&apos;/13&apos;&gt;Идти в Технический отсек – 13&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&apos;/60&apos;&gt;Идти в Коридор «С» – 60&lt;/a&gt;&lt;/li&gt;
         ///&lt;li&gt;&lt;a href=&apos;/18&apos;&gt;Идти в Лазарет - 18&lt;/a&gt;&lt;/li&gt;
@@ -406,6 +450,62 @@ namespace AliensOldEnemies {
         public static string a17_select {
             get {
                 return ResourceManager.GetString("a17_select", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Механический голос продолжал неумолимо отсчитывать секунды&lt;br&gt;
+        ///&lt;a href=&quot;/156&quot;&gt;Попробуйте еще – 156&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a171 {
+            get {
+                return ResourceManager.GetString("a171", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Правильно! Механический голос в динамике смолк. Пулемет тихо задвинулся обратно в
+        ///потолочную панель отсека.
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/156&quot;&gt;Вернитесь на – 156&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a174 {
+            get {
+                return ResourceManager.GetString("a174", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Механический голос продолжал неумолимо отсчитывать секунды «…9…8…6…»
+        ///Ваше решение? Все!! Времени осталось мало! У вас осталась последняя попытка!! Срочно
+        ///решайте что делать:&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/60&quot;&gt;бежать назад в отсек, из которого вы сюда пришли – Вернутся в отсек Коридор «С»
+        ///- 60&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/170&quot;&gt;вернутся в отсек Коридор «А» - 170&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/188_ammo-3&quot;&gt;Расстрелять из своего оружия пульт управления системой безопасности (-3 боезапаса) – 188&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/160 [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a176 {
+            get {
+                return ResourceManager.GetString("a176", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Механический голос продолжал неумолимо отсчитывать секунды «4…3…2…!!!»
+        ///Это конец!!!! Вы обреченно закрываете глаза и прислонившись мокрой от пота спиной к
+        ///стене отсека – медленно сползаете вниз. «Как глупо!» – думаете, вы про себя – «Не нужно
+        ///было так рисковать. На моей совести останутся смерти всех членов команды. А ведь
+        ///они доверились мне!...» - За всеми своими мыслями вы не заметили, как механический
+        ///голос прекратил отсчет и не произнес последней роковой цифры. Что произошло?
+        ///Вы открываете гла [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a179 {
+            get {
+                return ResourceManager.GetString("a179", resourceCulture);
             }
         }
         
@@ -1371,12 +1471,12 @@ namespace AliensOldEnemies {
         ///   Looks up a localized string similar to &lt;p&gt;Какие вопросы вы хотите задать Мак Коллинзу? (за каждый вопрос вам(-1) Время)&lt;/p&gt;
         ///&lt;br&gt;
         ///&lt;ul&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/8_time_-1&quot;&gt;Где находится дипломат Артур Харрисон? – 8&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/9_time_-1&quot;&gt;Как проходит система воздуховодов на корабле? - 9&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/10_time_-1&quot;&gt;Почему на корабле высокая температура? – 10&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/11_time_-1&quot;&gt;Что происходит на корабле? – 11&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/12_time_-1&quot;&gt;Откуда могли взяться на корабле Чужие? – 12&lt;/a&gt;&lt;/li&gt;
-        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Больше [rest of string was truncated]&quot;;.
+        ///&lt;li&gt;&lt;a href=&quot;/8_time-1&quot;&gt;Где находится дипломат Артур Харрисон? – 8&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/9_time-1&quot;&gt;Как проходит система воздуховодов на корабле? - 9&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/10_time-1&quot;&gt;Почему на корабле высокая температура? – 10&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/11_time-1&quot;&gt;Что происходит на корабле? – 11&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/12_time-1&quot;&gt;Откуда могли взяться на корабле Чужие? – 12&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/1&quot;&gt;Больше вопр [rest of string was truncated]&quot;;.
         /// </summary>
         public static string a7 {
             get {
@@ -1488,12 +1588,87 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы выпускаете в упор очередь в раненого Чужого. Он испускает громкие предсмертные
+        ///визги, царапая своими когтями, стальные плиты пола и наконец-то подыхает. Вы
+        ///удовлетворенно отворачиваетесь от безжизненного кипящего желтой кислотой тела.
+        ///Внезапно изо рта трупа выскакивает Краб-Чужой. Быстро перебирая своими восемью
+        ///ногами, – он бросается на вас.&lt;br&gt;
+        ///Атака сзади. Краб атакует первым. Деритесь!&lt;/p&gt;.
+        /// </summary>
+        public static string a77 {
+            get {
+                return ResourceManager.GetString("a77", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Ваш ксено-психолог присел на корточки возле раненого Чужого и закрыв глаза замер на
+        ///месте. Долго ничего не происходило (вам -1 Время). Затем неожиданно ксено-психолог
+        ///встал и сказал присутствующим – &lt;i&gt;«Я проник в его разум. Королева-Мать находится в
+        ///отсеке Бассейна или в отсеке Утилизации. Эти отсеки как-то связаны между собой».&lt;/i&gt;
+        ///&lt;br&gt;
+        ///&lt;a href=&quot;/71_time-1&quot;&gt;Вернитесь на – 71&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a78 {
+            get {
+                return ResourceManager.GetString("a78", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы собрались расстрелять Хартмана, но он в последнюю секунду разгадал ваше
+        ///намерение и успел выстрелить в одного из ваших бойцов. (-2) Жизни одному из ваших
+        ///бойцов.&lt;br&gt;
+        ///Вы обыскали тело Хартмана и нашли у него – Бросьте кубик:
+        ///&lt;/p&gt;&lt;br&gt;.
+        /// </summary>
+        public static string a79 {
+            get {
+                return ResourceManager.GetString("a79", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Ответ Мак Коллинза- &lt;i&gt;«Дипломат Артур Харрисон проживал в отсеке Кают.  Но он так же был допущен и в командную Рубку.&lt;br&gt;
         ///&lt;a href=&quot;/7&quot;&gt;Вполне возможно,  что в момент,  когда все началось, он находился в отсеке Пищеблока»&lt;/i&gt; - 7&lt;/a&gt;&lt;/p&gt;&lt;br&gt;.
         /// </summary>
         public static string a8 {
             get {
                 return ResourceManager.GetString("a8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;В этом отсеке хранятся контейнеры с
+        ///различным грузом. Небольшой
+        ///автопогрузчик стоит у стены. Несколько
+        ///стеллажей и шкафов с инструментами и
+        ///запчастями.&lt;br&gt;
+        ///Из отсека одна дверь ведет в отсек
+        ///Утилизации, другая в Лабораторию и есть
+        ///выход воздуховода под потолком.
+        ///&lt;/p&gt;.
+        /// </summary>
+        public static string a80 {
+            get {
+                return ResourceManager.GetString("a80", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;br&gt;&lt;b&gt;Ваши дельнейшие действия?&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/230&quot;&gt;Идти в отсек Утилизации – 230&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/91&quot;&gt;Идти в Лабораторию – 91&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/91_time-1&quot;&gt;Лезть в воздуховод (если нет аварии в отсеке Криокамер) и ползти до
+        ///Лаборатории (-1 Время) – 91&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/110_time-5&quot;&gt;до Коридора «Е» (-5 Времени) - 110&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/200_time-6&quot;&gt;до Криокамер (-6 Времени) – 200&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/210_time-7&quot;&gt;до отсека Регенерации воздуха (-7 Времени) – 210&lt;/a&gt;&lt;/li [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string a80_select {
+            get {
+                return ResourceManager.GetString("a80_select", resourceCulture);
             }
         }
         

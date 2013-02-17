@@ -178,7 +178,24 @@ namespace AliensOldEnemies.ViewModel
         public void ChangeLifes(int life) {
             foreach (var item in Crew)
             {
-                item.Health = item.Health + life;
+                if ((item.Health + life <= item.MaxHealth) && (life>0))
+                {
+                    item.Health = item.Health + life;
+                };
+                if ((item.Health + life > 0) && (life < 0))
+                {
+                    item.Health = item.Health + life;
+                }
+                else
+                {
+                    if (life < 0)
+                    {
+                        item.Dead = true;
+                        item.Health = 0;
+                        RaisePropertyChanged("Crew");
+                    };
+                };
+
             };
         }
 
@@ -311,6 +328,12 @@ namespace AliensOldEnemies.ViewModel
             {
             }
         }
+
+        public void CrewUpdated() {
+            RaisePropertyChanged("AliveCrew");
+            RaisePropertyChanged("Crew");
+        }
+
 
         private ObservableCollection<InvItem> _invItems;
         public ObservableCollection<InvItem> InvItems

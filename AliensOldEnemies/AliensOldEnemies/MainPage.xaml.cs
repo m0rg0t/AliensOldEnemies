@@ -18,60 +18,67 @@ namespace AliensOldEnemies
         {
             string item = e.NavigationUri.OriginalString.ToString();
 
-            if (item.Contains("_time_-1")) {
+            if (item.Contains("_time-1")) {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-1","");
+                item = item.Replace("_time-1","");
             };
-            if (item.Contains("_time_-2"))
+            if (item.Contains("_time-2"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 2;
                 item = item.Replace("_time_-2", "");
             };
-            if (item.Contains("_time_-3"))
+            if (item.Contains("_time-3"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-3", "");
+                item = item.Replace("_time-3", "");
             };
-            if (item.Contains("_time_-4"))
+            if (item.Contains("_time-4"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-4", "");
+                item = item.Replace("_time-4", "");
             };
-            if (item.Contains("_time_-5"))
+            if (item.Contains("_time-5"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-5", "");
+                item = item.Replace("_time-5", "");
             };
-            if (item.Contains("_time_-6"))
+            if (item.Contains("_time-6"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-6", "");
+                item = item.Replace("_time-6", "");
             };
-            if (item.Contains("_time_-7"))
+            if (item.Contains("_time-7"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-7", "");
+                item = item.Replace("_time-7", "");
             };
-            if (item.Contains("_time_-8"))
+            if (item.Contains("_time-8"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 1;
-                item = item.Replace("_time_-8", "");
+                item = item.Replace("_time-8", "");
             };
 
-            if (item.Contains("_life_-1"))
+            if (item.Contains("_life-1"))
             {
                 ViewModelLocator.StatusStatic.ChangeLifes(-1);
-                item = item.Replace("_life_-1", "");
+                item = item.Replace("_life-1", "");
             };
-            if (item.Contains("_life_-2"))
-            {
-                ViewModelLocator.StatusStatic.ChangeLifes(-2);
-                item = item.Replace("_life_-2", "");
-            };
-            if (item.Contains("_life_+1"))
+
+            if (item.Contains("_life+1"))
             {
                 ViewModelLocator.StatusStatic.ChangeLifes(+1);
-                item = item.Replace("_life_+1", "");
+                item = item.Replace("_life+1", "");
+            };
+
+            if (item.Contains("_life-2"))
+            {
+                ViewModelLocator.StatusStatic.ChangeLifes(-2);
+                item = item.Replace("_life-2", "");
+            };
+            if (item.Contains("_life+2"))
+            {
+                ViewModelLocator.StatusStatic.ChangeLifes(+1);
+                item = item.Replace("_life+2", "");
             };
 
             if (item.Contains("_a30_tauer"))
@@ -271,7 +278,7 @@ namespace AliensOldEnemies
             };
             if (item.Contains("_ammo-3"))
             {
-                ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo -3;
+                ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo - 3;
                 item = item.Replace("_ammo-3", "");
             };
             if (item.Contains("_ammo-4"))
@@ -306,9 +313,9 @@ namespace AliensOldEnemies
                 ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "аптечка"));
                 item = item.Replace("_use_healthpack3", "");
             };
-            
-            
 
+
+            ViewModelLocator.StatusStatic.CrewUpdated();
             ViewModelLocator.MainStatic.CurrentPageId = item;
         }
 

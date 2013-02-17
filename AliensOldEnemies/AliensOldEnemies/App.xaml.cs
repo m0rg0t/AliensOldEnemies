@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using AliensOldEnemies.ViewModel;
+using BugSense;
 
 namespace AliensOldEnemies
 {
@@ -32,8 +33,11 @@ namespace AliensOldEnemies
         // Constructor
         public App()
         {
+            BugSenseHandler.Instance.Init(this, "ce7fa184");
+
             // Global handler for uncaught exceptions. 
-            UnhandledException += Application_UnhandledException;
+            //UnhandledException += Application_UnhandledException;
+            BugSenseHandler.Instance.UnhandledException += Application_UnhandledException; 
 
             // Standard Silverlight initialization
             InitializeComponent();
