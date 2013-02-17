@@ -105,6 +105,44 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;&lt;a href=&quot;/107&quot;&gt;В теле дипломата нет зародыша Чужого. – 107&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a111 {
+            get {
+                return ResourceManager.GetString("a111", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Дипломат - &lt;i&gt;«Я не знаю, откуда они появились. &lt;a href=&quot;/109&quot;&gt;Может быть из отсека по Утилизации…
+        ///Не знаю!»&lt;/i&gt; – 109&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a112 {
+            get {
+                return ResourceManager.GetString("a112", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Дипломат – &lt;i&gt;&lt;a href=&quot;/109&quot;&gt;«Я не стану отвечать на ваши вопросы. Эта секретная информация»&lt;/i&gt; – 109&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a113 {
+            get {
+                return ResourceManager.GetString("a113", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Ваш психолог подходит к вам и тихо говорит вам на ухо – &lt;i&gt;&lt;a href=&quot;/109&quot;&gt;«Этот дипломат что-то
+        ///недоговаривает. Все что он сейчас нам говорит – это ложь»&lt;/i&gt; – 109&lt;/a&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a115 {
+            get {
+                return ResourceManager.GetString("a115", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;p&gt;Вы расстреливаете останки тела Чужого. Брызги желтой кислоты начинают быстро
         ///разъедать керамопластик и трубопроводы нижней переборки корабля. Образовалась
         ///довольно большая дыра. И вы можете спуститься на нижний уровень в отсек Реактора. 
@@ -1673,6 +1711,45 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;
+        ///Вы можете вскрыть сейф, если у вас есть умение Программиста и если вы решите Задачу
+        ///подбора правильного кода замка:&lt;br&gt;
+        ///&lt;Image src=&quot;/Images/a81_image.png&quot;/&gt;&lt;br&gt;&lt;/p&gt;
+        ///&lt;br&gt;&lt;b&gt;чтобы посмотреть, что находится
+        ///внутри сейфа&lt;/b&gt;&lt;br&gt;
+        ///&lt;ul&gt;.
+        /// </summary>
+        public static string a81 {
+            get {
+                return ResourceManager.GetString("a81", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;li&gt;&lt;a href=&quot;/71&quot;&gt;Cекретноe кодовоe число - 20&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/71&quot;&gt;Cекретноe кодовоe число - 12&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/93&quot;&gt;Cекретноe кодовоe число - 3&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/71&quot;&gt;Cекретноe кодовоe число - 1&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/71&quot;&gt;Cекретноe кодовоe число - 4&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/71&quot;&gt;Cекретноe кодовоe число - 22&lt;/a&gt;&lt;/li&gt;.
+        /// </summary>
+        public static string a81_variants {
+            get {
+                return ResourceManager.GetString("a81_variants", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вам удалось оторвать тварь от лица жертвы. Вы отбросили Краба к противоположной
+        ///стене. Деритесь! Краб атакует сзади. Вы атакуете первым.&lt;/p&gt;.
+        /// </summary>
+        public static string a82 {
+            get {
+                return ResourceManager.GetString("a82", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;a href=&quot;/71&quot;&gt;Вам не удалось оторвать тварь от лица жертвы. Вернитесь на – 71&lt;/a&gt;.
         /// </summary>
         public static string a83 {
@@ -1694,6 +1771,32 @@ namespace AliensOldEnemies {
         public static string a84 {
             get {
                 return ResourceManager.GetString("a84", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;p&gt;Вы видите в углу отсека небольшую баррикаду, из-за которой выглядывает какой-то
+        ///человек. Вся его голова неумело перевязана окровавленными бинтами. Виден лишь один
+        ///глаз и пол лица. У него в руках пистолет. Помедлив пару секунд, он прихрамывая выходит
+        ///к вам. На его бэйдже написано &lt;b&gt;Артур Харрисон – (дипломат).&lt;/b&gt;
+        ///&lt;br&gt;&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;br&gt;&lt;/p&gt;.
+        /// </summary>
+        public static string a85 {
+            get {
+                return ResourceManager.GetString("a85", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;ul&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/116&quot;&gt;Пристрелить его – 116&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/107_time-1&quot;&gt;Расспросить его (вам -1 Время) – 107&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_add_harison&quot;&gt;Присоединить его к своей команде. – 19&lt;/a&gt;&lt;/li&gt;
+        ///&lt;li&gt;&lt;a href=&quot;/19_save_harison&quot;&gt;Отправить его к шатлу самого или в сопровождении со своим бойцом. – 19&lt;/a&gt;&lt;/li&gt;.
+        /// </summary>
+        public static string a85_select {
+            get {
+                return ResourceManager.GetString("a85_select", resourceCulture);
             }
         }
         

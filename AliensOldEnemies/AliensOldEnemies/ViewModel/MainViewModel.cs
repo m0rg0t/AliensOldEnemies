@@ -787,6 +787,22 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Сейф",
+                    Description = Texts.a81,
+                    Id = "/81",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Чужой",
+                    Description = Texts.a82,
+                    Id = "/82",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Неудача",
                     Description = Texts.a83,
                     Id = "/83",
@@ -803,9 +819,49 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Дипломат",
+                    Description = Texts.a85,
+                    Id = "/85",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
                     Title = "Каюты – событие",
                     Description = Texts.a86,
                     Id = "/86",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a111,
+                    Id = "/111",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a112,
+                    Id = "/112",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a113,
+                    Id = "/113",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a115,
+                    Id = "/115",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -1234,6 +1290,9 @@ namespace AliensOldEnemies.ViewModel
                 case "/71": return a71();
                 case "/79": return a79();
                 case "/80": return a80();
+                case "/81": return a81();
+                case "/82": return a82();
+                case "/85": return a85();
                 case "/124": return a124();
                 case "/146": return a146();
                 default: return "";
@@ -1251,6 +1310,63 @@ namespace AliensOldEnemies.ViewModel
         public bool hartman_saved = false;
         public bool security_system_central_computer_dispabled = false;
 
+
+
+        public string a85()
+        {
+            string outevent = Texts.a85_select;
+            if (ViewModelLocator.StatusStatic.CountInvItem("аптечка")>1) {
+                outevent += "<li><a href=\"19_use_healthpack2\">Оказать ему медицинскую помощь (вам -2 аптечки). – 19</a></li>";
+            };
+            if (ViewModelLocator.StatusStatic.FindInvItem("портативный рентген-аппарат"))
+            {
+                outevent += "<li><a href=\"111\">Проверить его на наличие в его теле зародыша Чужого (если у вас есть рентген-аппарат) – 111</a></li>";
+            };
+            outevent+="</ul>";
+            return outevent;
+        }
+
+        public string a82()
+        {
+            string outevent = "";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Miss,
+                        attack5 = RunAway,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst = true
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+            outevent+="<br><a href=\"71\">Вернитесь на – 71</a></li>";
+            return outevent;
+        }
+
+        public string a81()
+        {
+            string outevent = "";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            if (ViewModelLocator.StatusStatic.FindAbility("программист"))
+            {
+                outevent += Texts.a81_variants;
+            }
+            else
+            {
+                outevent += "<li>У вас нет программиста в команде.</li>";
+            };
+            outevent += "<li><a href=\"/71\">Если вы не смогли подобрать шифр к этому кодовому замку – вернитесь на – 71</a></li></ul>";
+            return outevent;
+        }
 
         public string a80() {
             string outevent = "";

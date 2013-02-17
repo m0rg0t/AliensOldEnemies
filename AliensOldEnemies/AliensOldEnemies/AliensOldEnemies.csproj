@@ -173,6 +173,7 @@
     <Content Include="Background.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Images\a81_image.png" />
     <Content Include="Images\angar.jpg" />
     <Content Include="Images\appbar.next.rest.png" />
     <Content Include="Images\Dok.jpg" />

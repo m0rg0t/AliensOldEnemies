@@ -1145,4 +1145,53 @@
 Кто отключил систему безопасности? Это остается для вас загадкой.&lt;br&gt;
 &lt;a href="/150"&gt;Вернитесь на – 150&lt;/a&gt;&lt;/p&gt;</value>
   </data>
+  <data name="a111" xml:space="preserve">
+    <value>&lt;p&gt;&lt;a href="/107"&gt;В теле дипломата нет зародыша Чужого. – 107&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="a112" xml:space="preserve">
+    <value>&lt;p&gt;Дипломат - &lt;i&gt;«Я не знаю, откуда они появились. &lt;a href="/109"&gt;Может быть из отсека по Утилизации…
+Не знаю!»&lt;/i&gt; – 109&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="a113" xml:space="preserve">
+    <value>&lt;p&gt;Дипломат – &lt;i&gt;&lt;a href="/109"&gt;«Я не стану отвечать на ваши вопросы. Эта секретная информация»&lt;/i&gt; – 109&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="a115" xml:space="preserve">
+    <value>&lt;p&gt;Ваш психолог подходит к вам и тихо говорит вам на ухо – &lt;i&gt;&lt;a href="/109"&gt;«Этот дипломат что-то
+недоговаривает. Все что он сейчас нам говорит – это ложь»&lt;/i&gt; – 109&lt;/a&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="a81" xml:space="preserve">
+    <value>&lt;p&gt;
+Вы можете вскрыть сейф, если у вас есть умение Программиста и если вы решите Задачу
+подбора правильного кода замка:&lt;br&gt;
+&lt;Image src="/Images/a81_image.png"/&gt;&lt;br&gt;&lt;/p&gt;
+&lt;br&gt;&lt;b&gt;чтобы посмотреть, что находится
+внутри сейфа&lt;/b&gt;&lt;br&gt;
+&lt;ul&gt;</value>
+  </data>
+  <data name="a81_variants" xml:space="preserve">
+    <value>&lt;li&gt;&lt;a href="/71"&gt;Cекретноe кодовоe число - 20&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/71"&gt;Cекретноe кодовоe число - 12&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/93"&gt;Cекретноe кодовоe число - 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/71"&gt;Cекретноe кодовоe число - 1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/71"&gt;Cекретноe кодовоe число - 4&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/71"&gt;Cекретноe кодовоe число - 22&lt;/a&gt;&lt;/li&gt;</value>
+  </data>
+  <data name="a82" xml:space="preserve">
+    <value>&lt;p&gt;Вам удалось оторвать тварь от лица жертвы. Вы отбросили Краба к противоположной
+стене. Деритесь! Краб атакует сзади. Вы атакуете первым.&lt;/p&gt;</value>
+  </data>
+  <data name="a85" xml:space="preserve">
+    <value>&lt;p&gt;Вы видите в углу отсека небольшую баррикаду, из-за которой выглядывает какой-то
+человек. Вся его голова неумело перевязана окровавленными бинтами. Виден лишь один
+глаз и пол лица. У него в руках пистолет. Помедлив пару секунд, он прихрамывая выходит
+к вам. На его бэйдже написано &lt;b&gt;Артур Харрисон – (дипломат).&lt;/b&gt;
+&lt;br&gt;&lt;b&gt;Ваши действия?&lt;/b&gt;&lt;br&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="a85_select" xml:space="preserve">
+    <value>&lt;ul&gt;
+&lt;li&gt;&lt;a href="/116"&gt;Пристрелить его – 116&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/107_time-1"&gt;Расспросить его (вам -1 Время) – 107&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/19_add_harison"&gt;Присоединить его к своей команде. – 19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/19_save_harison"&gt;Отправить его к шатлу самого или в сопровождении со своим бойцом. – 19&lt;/a&gt;&lt;/li&gt;</value>
+  </data>
 </root>

@@ -25,7 +25,7 @@ namespace AliensOldEnemies
             if (item.Contains("_time-2"))
             {
                 ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time - 2;
-                item = item.Replace("_time_-2", "");
+                item = item.Replace("_time-2", "");
             };
             if (item.Contains("_time-3"))
             {
@@ -304,6 +304,14 @@ namespace AliensOldEnemies
             {
                 ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c=>c.Title=="аптечка"));
                 item = item.Replace("_use_healthpack", "");
+            };
+
+            if (item.Contains("_use_healthpack2"))
+            {
+                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "аптечка"));
+                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "аптечка"));
+               
+                item = item.Replace("_use_healthpack2", "");
             };
 
             if (item.Contains("_use_healthpack3"))
