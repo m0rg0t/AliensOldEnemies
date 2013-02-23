@@ -164,7 +164,7 @@ namespace AliensOldEnemies.ViewModel
             PossibleItems.Add(new InvItem() { Title = "лазерный резак", Description = "(режет биомассу и пластик)" });
             PossibleItems.Add(new InvItem() { Title = "портативный рентген-аппарат", Description = "(доктору виднее!)" });
             PossibleItems.Add(new InvItem() { Title = "чип-плата", Description = "(для ремонта всяких систем)" });
-            PossibleItems.Add(new InvItem() { Title = "пенно-керамо-спрей", Description = "(для заделывания небольших пробоин в обшивке корабля; на случай диареи тоже сгодится)" });
+            PossibleItems.Add(new InvItem() { Title = "пено-керамо-спрей", Description = "(для заделывания небольших пробоин в обшивке корабля; на случай диареи тоже сгодится)" });
             PossibleItems.Add(new InvItem() { Title = "аптечка", Description = "(повышает Жизнь на (+1) – жаль потенцию не повышает)" });
             PossibleItems.Add(new InvItem() { Title = "комплект из пяти скафандров", Description = "(для выхода в космос – а вы думали для чего?)" });
             PossibleItems.Add(new InvItem() { Title = "портативный сварочный аппарат", Description = "(вдруг пригодится?)" });
@@ -181,10 +181,12 @@ namespace AliensOldEnemies.ViewModel
                 if ((item.Health + life <= item.MaxHealth) && (life>0))
                 {
                     item.Health = item.Health + life;
+                    RaisePropertyChanged("Crew");
                 };
                 if ((item.Health + life > 0) && (life < 0))
                 {
                     item.Health = item.Health + life;
+                    RaisePropertyChanged("Crew");
                 }
                 else
                 {
@@ -195,7 +197,6 @@ namespace AliensOldEnemies.ViewModel
                         RaisePropertyChanged("Crew");
                     };
                 };
-
             };
         }
 

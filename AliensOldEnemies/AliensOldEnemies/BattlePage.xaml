@@ -25,7 +25,7 @@
 
     <Grid x:Name="LayoutRoot" Loaded="LayoutRoot_Loaded">
         <Grid.Background>
-            <ImageBrush ImageSource="/images/The_Darkness_of_Space_by_qaz2008.jpg" Stretch="None" />
+            <ImageBrush ImageSource="/AliensOldEnemies;component/Images/battle_background.png" Stretch="None" AlignmentY="Top" />
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />

@@ -80,46 +80,50 @@ namespace AliensOldEnemies.ViewModel
                 Random random = new Random();
                 int randomNumber = random.Next(1, 7);
 
-                if (currentCrew > (ViewModelLocator.StatusStatic.AliveCrew.Count() - 1))
+                if (ViewModelLocator.StatusStatic.AliveCrew.Count() > 0)
                 {
-                    currentCrew = 0;
-                };
-                PersonItem crew = ViewModelLocator.StatusStatic.AliveCrew[currentCrew];
 
-                string attackAction1 = "";
-                string attackAction2 = "";
-                switch (randomNumber)
-                {
-                    case 1: attackAction1 = crew.attack1; break;
-                    case 2: attackAction1 = crew.attack2; break;
-                    case 3: attackAction1 = crew.attack3; break;
-                    case 4: attackAction1 = crew.attack4; break;
-                    case 5: attackAction1 = crew.attack5; break;
-                    case 6: attackAction1 = crew.attack6; break;
-                };
+                    if (currentCrew > (ViewModelLocator.StatusStatic.AliveCrew.Count() - 1))
+                    {
+                        currentCrew = 0;
+                    };
+                    PersonItem crew = ViewModelLocator.StatusStatic.AliveCrew[currentCrew];
 
-                switch (randomNumber)
-                {
-                    case 1: attackAction2 = CurrentEnemy.attack1; break;
-                    case 2: attackAction2 = CurrentEnemy.attack2; break;
-                    case 3: attackAction2 = CurrentEnemy.attack3; break;
-                    case 4: attackAction2 = CurrentEnemy.attack4; break;
-                    case 5: attackAction2 = CurrentEnemy.attack5; break;
-                    case 6: attackAction2 = CurrentEnemy.attack6; break;
-                };
+                    string attackAction1 = "";
+                    string attackAction2 = "";
+                    switch (randomNumber)
+                    {
+                        case 1: attackAction1 = crew.attack1; break;
+                        case 2: attackAction1 = crew.attack2; break;
+                        case 3: attackAction1 = crew.attack3; break;
+                        case 4: attackAction1 = crew.attack4; break;
+                        case 5: attackAction1 = crew.attack5; break;
+                        case 6: attackAction1 = crew.attack6; break;
+                    };
 
-                if (enemyFirstAttack == true)
-                {
-                    EnemyAttack(crew, attackAction2);
-                    crewAttack(crew, attackAction1);
-                }
-                else
-                {
-                    crewAttack(crew, attackAction1);
-                    EnemyAttack(crew, attackAction2);                    
-                };
+                    switch (randomNumber)
+                    {
+                        case 1: attackAction2 = CurrentEnemy.attack1; break;
+                        case 2: attackAction2 = CurrentEnemy.attack2; break;
+                        case 3: attackAction2 = CurrentEnemy.attack3; break;
+                        case 4: attackAction2 = CurrentEnemy.attack4; break;
+                        case 5: attackAction2 = CurrentEnemy.attack5; break;
+                        case 6: attackAction2 = CurrentEnemy.attack6; break;
+                    };
 
-                currentCrew++;
+                    if (enemyFirstAttack == true)
+                    {
+                        EnemyAttack(crew, attackAction2);
+                        crewAttack(crew, attackAction1);
+                    }
+                    else
+                    {
+                        crewAttack(crew, attackAction1);
+                        EnemyAttack(crew, attackAction2);
+                    };
+
+                    currentCrew++;
+                };
                 RaisePropertyChanged("BattleStatus");
         }
 

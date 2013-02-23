@@ -20,7 +20,7 @@
                             d:DesignWidth="480"
                             d:DesignHeight="696"
                             shell:SystemTray.IsVisible="True"
-                            DataContext="{Binding Main, Source={StaticResource Locator}}">
+                            DataContext="{Binding Main, Source={StaticResource Locator}}" Loaded="PhoneApplicationPage_Loaded">
 
 	<!--LayoutRoot contains the root grid where all other page content is placed-->
 	<Grid x:Name="LayoutRoot">

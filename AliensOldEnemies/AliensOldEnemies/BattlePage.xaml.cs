@@ -19,6 +19,18 @@ namespace AliensOldEnemies
 
         private void LayoutRoot_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
+            try
+            {
+                if (NavigationService.CanGoBack)
+                {
+                    while (NavigationService.RemoveBackEntry() != null)
+                    {
+                        NavigationService.RemoveBackEntry();
+                    };
+                };
+            }
+            catch { };
+
             ViewModelLocator.BattleStatic.BattleStatus = new ObservableCollection<string>();
             this.BattleReport.ItemsSource = ViewModelLocator.BattleStatic.BattleStatus;
             ViewModelLocator.BattleStatic.Battle = true;

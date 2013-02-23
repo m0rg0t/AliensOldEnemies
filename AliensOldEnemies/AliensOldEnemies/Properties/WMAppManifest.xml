@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
-  <App xmlns="" ProductID="{86523bc5-cc43-4485-82bb-d3723d6a922f}" Title="AliensOldEnemies" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="AliensOldEnemies author" Description="Sample description" Publisher="AliensOldEnemies publisher">
+  <App xmlns="" BitsPerPixel="32" ProductID="{86523bc5-cc43-4485-82bb-d3723d6a922f}" Title="AliensOldEnemies" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="AliensOldEnemies author" Description="Sample description" Publisher="AliensOldEnemies publisher">
     <IconPath IsRelative="true" IsResource="false">ApplicationIcon.jpg</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_GAMERSERVICES"/>

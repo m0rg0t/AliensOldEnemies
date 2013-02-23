@@ -176,6 +176,7 @@
     <Resource Include="Images\a81_image.png" />
     <Content Include="Images\angar.jpg" />
     <Content Include="Images\appbar.next.rest.png" />
+    <Resource Include="Images\battle_background.png" />
     <Content Include="Images\Dok.jpg" />
     <Content Include="Images\Golem.jpg" />
     <Content Include="Images\Kriogen.jpg" />

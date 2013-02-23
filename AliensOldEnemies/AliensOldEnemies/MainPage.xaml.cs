@@ -62,6 +62,12 @@ namespace AliensOldEnemies
             {
                 ViewModelLocator.StatusStatic.ChangeLifes(-1);
                 item = item.Replace("_life-1", "");
+            };           
+
+            if (item.Contains("_delete_record"))
+            {
+                ViewModelLocator.MainStatic.delete_record = true;
+                item = item.Replace("_delete_record", "");
             };
 
             if (item.Contains("_life+1"))
@@ -174,6 +180,7 @@ namespace AliensOldEnemies
                 ViewModelLocator.MainStatic.mak_kolinz_saved = true;
                 item = item.Replace("_hartman_add", "");
             };
+
             if (item.Contains("_hartman_send"))
             {
                 Random random = new Random();
@@ -195,13 +202,28 @@ namespace AliensOldEnemies
                 };
                 item = item.Replace("_hartman_send", "");
             };
-            
+
+            if (item.Contains("_harrison_add"))
+            {
+                ViewModelLocator.StatusStatic.AllCrew.Add(new PersonItem() { Name = "Артур Харрисон", Image = "", Warior = false, MaxHealth = 1, Health = 1, Selected = true });
+                ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Артур Харрисон").Abilities.Add("дипломат");
+
+                ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                item = item.Replace("_harrison_add", "");
+            };
 
             if (item.Contains("_mission6"))
             {
                 MessageBox.Show("Вы поместили Чужого в контейнер – выполнение Миссии №6");
                 ViewModelLocator.MainStatic.Mission6 = true;                
                 item = item.Replace("_mission6", "");
+            };
+
+            if (item.Contains("_mission8"))
+            {
+                MessageBox.Show("Выполнение Миссии №8");
+                ViewModelLocator.MainStatic.Mission8 = true;
+                item = item.Replace("_mission8", "");
             };
 
             if (item.Contains("_vagner_send"))
@@ -337,6 +359,21 @@ namespace AliensOldEnemies
                     break;
                 default: break;
             }
+        }
+
+        private void PhoneApplicationPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (NavigationService.CanGoBack)
+                {
+                    while (NavigationService.RemoveBackEntry() != null)
+                    {
+                        NavigationService.RemoveBackEntry();
+                    };
+                };
+            }
+            catch { };
         }
     }
 }
