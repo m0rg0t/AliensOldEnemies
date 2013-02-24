@@ -24,6 +24,7 @@ namespace AliensOldEnemies.ViewModel
         const string Miss = "Мимо";
         const string Panic = "Паника";
         const string Reload = "Перезарядить";
+        const string Sleep = "Парализован";
 
         /// <summary>
         /// Initializes a new instance of the StatusViewModel class.
@@ -142,6 +143,7 @@ namespace AliensOldEnemies.ViewModel
             });
 
             AllCrew.FirstOrDefault(c => c.Name=="Силикон").Abilities.Add("программист");
+            AllCrew.FirstOrDefault(c => c.Name == "Силикон").Abilities.Add("андройд");
             AllCrew.FirstOrDefault(c => c.Name == "Силикон").Abilities.Add("техник");
             AllCrew.FirstOrDefault(c => c.Name == "Живодер").Abilities.Add("любит деньги");
             AllCrew.FirstOrDefault(c => c.Name == "Святоша").Abilities.Add("биолог");
@@ -394,6 +396,34 @@ namespace AliensOldEnemies.ViewModel
             get
             {
                 return _time;
+            }
+        }
+
+        private bool _gameover;
+        public bool GameOver
+        {
+            set
+            {
+                _gameover = value;
+                RaisePropertyChanged("GameOver");
+            }
+            get
+            {
+                return _gameover;
+            }
+        }
+
+        private int _money = 0;
+        public int Money
+        {
+            set
+            {
+                _money = value;
+                RaisePropertyChanged("Money");
+            }
+            get
+            {
+                return _money;
             }
         }
 

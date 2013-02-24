@@ -58,6 +58,12 @@ namespace AliensOldEnemies
                 item = item.Replace("_time-8", "");
             };
 
+            if (item.Contains("_time+5"))
+            {
+                ViewModelLocator.StatusStatic.Time = ViewModelLocator.StatusStatic.Time + 5;
+                item = item.Replace("_time+5", "");
+            };
+
             if (item.Contains("_life-1"))
             {
                 ViewModelLocator.StatusStatic.ChangeLifes(-1);
@@ -128,6 +134,39 @@ namespace AliensOldEnemies
             {
                 ViewModelLocator.MainStatic.mak_kolinz_saved = true;
                 item = item.Replace("_save_mak_kolinz", "");
+            };
+
+            if (item.Contains("_unblock_angar"))
+            {
+                ViewModelLocator.MainStatic.unblock_angar = true;
+                item = item.Replace("_unblock_angar", "");
+            };
+            if (item.Contains("_generator_on"))
+            {
+                ViewModelLocator.MainStatic.generator_on = true;
+                item = item.Replace("_generator_on", "");
+            };
+            if (item.Contains("_unblock_doors"))
+            {
+                ViewModelLocator.MainStatic.unblock_doors = true;
+                item = item.Replace("_unblock_doors", "");
+            };
+            if (item.Contains("_reactor_fixed"))
+            {
+                ViewModelLocator.MainStatic.reactor_fixed = true;
+                item = item.Replace("_reactor_fixed", "");
+            };
+            if (item.Contains("_uncorrect"))
+            {
+                MessageBox.Show("Неверный код. Вы потеряли -5 времени.");
+                ViewModelLocator.StatusStatic.Time -= 5;
+                item = item.Replace("_uncorrect", "");
+            };
+            if (item.Contains("_ucorrectdead"))
+            {
+                MessageBox.Show("Неверный код. Вас выбросило в космос... И вы умерли.");
+                ViewModelLocator.StatusStatic.GameOver = false;
+                item = item.Replace("_ucorrectdead", "");
             };
 
             if (item.Contains("_add_mak_kolinz"))

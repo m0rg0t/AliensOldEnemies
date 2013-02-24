@@ -72,6 +72,7 @@ namespace AliensOldEnemies.ViewModel
         const string Reload = "Перезарядить";
         const string RunAway = "Убежал";
         const string Suck = "Присосался";
+        const string Sleep = "Парализован";
 
         private int currentCrew = 0;
 
@@ -145,6 +146,10 @@ namespace AliensOldEnemies.ViewModel
                 case Panic:
                     crew.Panic = true;
                     ViewModelLocator.BattleStatic.BattleStatus.Add(crew.Name + " в панике!");
+                    break;
+                case Sleep:
+                    crew.Panic = true;
+                    ViewModelLocator.BattleStatic.BattleStatus.Add(crew.Name + " парализован!");
                     break;
                 case Reload:
                     ViewModelLocator.StatusStatic.Ammo = ViewModelLocator.StatusStatic.Ammo - 1;

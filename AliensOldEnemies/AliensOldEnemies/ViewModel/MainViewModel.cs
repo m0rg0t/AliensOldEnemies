@@ -1621,6 +1621,471 @@ namespace AliensOldEnemies.ViewModel
 
                 Pages.Add(new PageItem
                 {
+                    Title = "Событие",
+                    Description = Texts.a193,
+                    Id = "/193",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a194,
+                    Id = "/194",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a195,
+                    Id = "/195",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a196,
+                    Id = "/196",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Тонель",
+                    Description = Texts.a197,
+                    Id = "/197",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Тонель",
+                    Description = Texts.a198,
+                    Id = "/198",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Тонель",
+                    Description = Texts.a199,
+                    Id = "/199",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Криокамеры",
+                    Description = Texts.a200,
+                    Id = "/200",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Генератор",
+                    Description = Texts.a201,
+                    Id = "/201",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Генератор",
+                    Description = Texts.a202,
+                    Id = "/202",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Генератор",
+                    Description = Texts.a203,
+                    Id = "/203",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Генератор",
+                    Description = Texts.a204,
+                    Id = "/204",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Бассейн",
+                    Description = Texts.a205,
+                    Id = "/205",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Найден",
+                    Description = Texts.a206,
+                    Id = "/206",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Охлаждение",
+                    Description = Texts.a207,
+                    Id = "/207",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Бассейн",
+                    Description = Texts.a208,
+                    Id = "/208",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Отдых",
+                    Description = Texts.a209,
+                    Id = "/209",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Отсек регенерации воздуха",
+                    Description = Texts.a210,
+                    Id = "/210",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Ремонт",
+                    Description = Texts.a211,
+                    Id = "/211",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Ремонт",
+                    Description = Texts.a212,
+                    Id = "/212",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Ремонт",
+                    Description = Texts.a213,
+                    Id = "/213",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Взрыв",
+                    Description = Texts.a214,
+                    Id = "/214",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Ремонт",
+                    Description = Texts.a215,
+                    Id = "/215",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Найден",
+                    Description = Texts.a216,
+                    Id = "/216",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Авария",
+                    Description = Texts.a217,
+                    Id = "/217",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Бассейн",
+                    Description = Texts.a218,
+                    Id = "/218",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Бассейн",
+                    Description = Texts.a219,
+                    Id = "/219",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Рубка",
+                    Description = Texts.a220,
+                    Id = "/220",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a221,
+                    Id = "/221",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a222,
+                    Id = "/222",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Реактор",
+                    Description = Texts.a223,
+                    Id = "/223",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Реактор",
+                    Description = Texts.a224,
+                    Id = "/224",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Реактор",
+                    Description = Texts.a225,
+                    Id = "/225",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Самоликвидация",
+                    Description = Texts.a226,
+                    Id = "/226",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Реактор",
+                    Description = Texts.a227,
+                    Id = "/227",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Стыковка",
+                    Description = Texts.a228,
+                    Id = "/228",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Реактор",
+                    Description = Texts.a229,
+                    Id = "/229",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Отсек утилизации",
+                    Description = Texts.a230,
+                    Id = "/230",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Капитан",
+                    Description = Texts.a231,
+                    Id = "/231",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Дипломат",
+                    Description = Texts.a232,
+                    Id = "/232",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Рубка",
+                    Description = Texts.a233,
+                    Id = "/233",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Фалко",
+                    Description = Texts.a234,
+                    Id = "/234",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Отключение",
+                    Description = Texts.a235,
+                    Id = "/235",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Осмотр",
+                    Description = Texts.a236,
+                    Id = "/236",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a237,
+                    Id = "/237",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a238,
+                    Id = "/238",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Событие",
+                    Description = Texts.a239,
+                    Id = "/239",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Находка",
+                    Description = "",
+                    Id = "/240",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Атака",
+                    Description = Texts.a241,
+                    Id = "/241",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Трубопровод",
+                    Description = Texts.a242,
+                    Id = "/242",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Трубопровод",
+                    Description = Texts.a243,
+                    Id = "/243",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Трубопровод",
+                    Description = Texts.a244,
+                    Id = "/244",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Правильно",
+                    Description = Texts.a245,
+                    Id = "/245",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Правильно",
+                    Description = Texts.a246,
+                    Id = "/246",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Убит",
+                    Description = Texts.a247,
+                    Id = "/247",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Компютер",
+                    Description = Texts.a248,
+                    Id = "/248",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Тест",
+                    Description = Texts.a249,
+                    Id = "/249",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Вопрос 2",
+                    Description = Texts.a250,
+                    Id = "/250",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+                
+                Pages.Add(new PageItem
+                {
                     Title = "Вопрос №3",
                     Description = Texts.a251,
                     Id = "/251",
@@ -1630,8 +2095,8 @@ namespace AliensOldEnemies.ViewModel
                 Pages.Add(new PageItem
                 {
                     Title = "Вопрос №4",
-                    Description = Texts.a251,
-                    Id = "/251",
+                    Description = Texts.a252,
+                    Id = "/252",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
 
@@ -1770,6 +2235,16 @@ namespace AliensOldEnemies.ViewModel
                     Id = "/269",
                     Music = "/Music/Bent_and_Broken.mp3"
                 });
+
+                Pages.Add(new PageItem
+                {
+                    Title = "Быстро",
+                    Description = Texts.a270,
+                    Id = "/270",
+                    Music = "/Music/Bent_and_Broken.mp3"
+                });
+
+
 
                 Pages.Add(new PageItem
                 {
@@ -2042,6 +2517,42 @@ namespace AliensOldEnemies.ViewModel
                 case "/189": return a189();
                 case "/190": return a190();
                 case "/192": return a192();
+                case "/193": return a193();
+                case "/196": return a196();
+                case "/198": return a198();
+                case "/200": return a200();
+                case "/201": return a201();
+                case "/202": return a202();
+                case "/203": return a203();
+                case "/204": return a204();
+                case "/209": return a209();
+                case "/210": return a210();
+                case "/211": return a211();
+                case "/212": return a212();
+                case "/213": return a213();
+                case "/214": return a214();
+                case "/215": return a215();
+                case "/216": return a216();
+                case "/217": return a217();
+                case "/218": return a218();
+                case "/219": return a219();
+                case "/221": return a221();
+                case "/222": return a222();
+                case "/224": return a224();
+                case "/226": return a226();
+                case "/228": return a228();
+                case "/229": return a229();
+                case "/230": return a230();
+                case "/232": return a232();
+                case "/233": return a233();
+                case "/234": return a234();
+                case "/236": return a236();
+                case "/238": return a238();
+                case "/239": return a239();
+                case "/240": return a240();
+                case "/241": return a241();
+                case "/244": return a244();
+                case "/247": return a247();
                 case "/287": return a287();
                 case "/290": return a290();
                 case "/293": return a293();
@@ -2070,10 +2581,929 @@ namespace AliensOldEnemies.ViewModel
         public bool generator_off = false; //147 генератор выключен
         public bool service_lift_off = false; //148 - испорчен грузовой лифт
         public bool repelent_get = false; //287 - получен репелент от чужих
-        public bool a141_security_system = false; //141
+        public bool security_system = false; //141
+        public bool generator_on = false; //201 генератор включен
+        public bool crio_problem = false;
+        public bool unblock_angar = false;
+        public bool unblock_doors = false;
+
+        public bool trash_ejected = false; //236 - выброс мусора
+        public bool a228_troopers = false; //a228
 
 
 
+
+        public string a247()
+        {
+            string outstr = "";
+            try
+            {
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Силикон").Health = 0;
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Силикон").Dead = true;
+            }
+            catch { };
+
+            try
+            {
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Безумный Макс").Selected = false;
+            }
+            catch { };
+            return outstr;
+        }
+
+        public string a244()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.ChangeLifes(-1);
+            return outstr;
+        }
+
+        public string a241()
+        {
+            string outstr = "";
+            ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+            {
+                Name = "Королева Чужих",
+                attack1 = Hit,
+                attack2 = Hit,
+                attack3 = Kill,
+                attack4 = Kill,
+                attack5 = Miss,
+                attack6 = Sleep,
+                Attack = 1,
+                Health = 10,
+                MaxHealth = 10,
+                AttackFirst = false
+            };
+            (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+            return outstr;
+        }
+
+        public string a240()
+        {
+            string outstr = "";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            switch (randomNumber)
+            {
+                case 1:
+                    Mission5 = true;
+                    outstr += Texts.a240_1;
+                    break;
+                case 2:
+                    Mission5 = true;
+                    outstr += Texts.a240_1;
+                    break;
+                case 3:
+                    Mission5 = true;
+                    outstr += Texts.a240_2;
+                    break;
+                case 4:
+                    Mission5 = true;
+                    outstr += Texts.a240_2;
+                    break;
+                case 5:
+                    Mission5 = true;
+                    outstr += Texts.a240_3;
+                    break;
+                case 6:
+                    Mission5 = true;
+                    outstr += Texts.a240_3;
+                    break;
+                default: break;
+            };
+            return outstr;
+        }
+
+        public string a239()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindInvItem("чип-ключ от отсека утилизации"))
+            {
+                outstr += "<a href=\"/80\">Если у вас есть чип-ключ от отсека Утилизации – переходите на – 80</a><br>";
+            }
+            else
+            {
+                if (ViewModelLocator.StatusStatic.FindInvItem("программист"))
+                {
+                    outstr += Texts.a239_2;
+                }
+                else
+                {
+                    outstr += Texts.a239_3;
+                    int countdead = ViewModelLocator.StatusStatic.Crew.Count() - 3;
+                    if (countdead > 0)
+                    {
+                        while (countdead > 0)
+                        {
+                            countdead--;
+                            try
+                            {
+                                Random random = new Random();
+                                int randomNumber = random.Next(0, ViewModelLocator.StatusStatic.Crew.Count() - 1);
+                                ViewModelLocator.StatusStatic.Crew[randomNumber].Health=0;
+                                ViewModelLocator.StatusStatic.Crew[randomNumber].Dead = true;
+                            }
+                            catch { };
+                        };
+                    };
+
+                };
+            };
+            return outstr;
+        }
+
+        public string a238()
+        {
+            string outstr = "";
+            Mission5 = true;
+            return outstr;
+        }
+
+        public string a236()
+        {
+            string outstr = "";
+            if (trash_ejected==false)
+            {
+                outstr += "<br><a href=\"/240\">Если вы ранее не включали в Рубке приказ [«сбросить мусор» из отсека Утилизации], то вы можете сейчас обыскать отсек – переходите на – 240</a>";
+            };
+            outstr += "<br><a href=\"/230\">Вернитесь на – 230</a>";
+            return outstr;
+        }
+
+        public string a234()
+        {
+            Mission5 = true;
+            string outstr = "";
+            int vote_yes = 0;
+            vote_yes+=ViewModelLocator.StatusStatic.Crew.Where(c => c.Abilities.FirstOrDefault(a=>a=="андроид")!=null).Count();
+            vote_yes += ViewModelLocator.StatusStatic.Crew.Where(c => c.Abilities.FirstOrDefault(a => a == "программист") != null).Count();
+            vote_yes += ViewModelLocator.StatusStatic.Crew.Where(c => c.Abilities.FirstOrDefault(a => a == "техник") != null).Count();
+            if (vote_yes >= (ViewModelLocator.StatusStatic.Crew.Count() - vote_yes))
+            {
+                ViewModelLocator.StatusStatic.AllCrew.Add(new PersonItem()
+                {
+                    Name = "Фалько",
+                    Image = "",
+                    Warior = false,
+                    MaxHealth = 1,
+                    Health = 1,
+                    Selected = true
+                });
+                ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Фалько").Abilities.Add("андройд");
+                ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Фалько").Abilities.Add("навигатор");
+            };
+            return outstr;
+        }
+
+        public string a233()
+        {
+            Mission5 = true;
+            Mission7 = true;
+            string outstr = "";
+            /*if (ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Силикон") != null)
+            {
+                outstr += "<li><a href=\"/247\">Тут же убить андроида-Силикона – перейдите на – 247</a></li>";
+                outstr += "<li><a href=\"/220\">Оставить андроида-Силикона в составе своей команды – 220</a></li>";
+            }*/
+            return outstr;
+        }
+
+        public string a232()
+        {
+            Mission5 = true;
+            string outstr = "<ul>";
+            if (ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Силикон") != null)
+            {
+                outstr+="<li><a href=\"/247\">Тут же убить андроида-Силикона – перейдите на – 247</a></li>";
+                outstr += "<li><a href=\"/220\">Оставить андроида-Силикона в составе своей команды – 220</a></li>";
+            }
+            else
+            {
+                outstr += "<li><a href=\"/220\">Далее - на 220</a></li>";
+            };
+            outstr+="</ul>";
+            return outstr;
+        }
+
+        private string a230()
+        {
+            string outevent = "";
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            outevent += "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1:
+                    outevent += "<a href='/236'>Событие многоразовое – 236</a>";
+                    break;
+                case 2:
+                    outevent += "<a href='/237'>Событие многоразовое – 237</a>";
+                    break;
+                case 3:
+                    outevent += "<a href='/238'>Событие многоразовое – 238</a>";
+                    break;
+                case 4:
+                    outevent += "<a href='/239'>Событие многоразовое – 239</a>";
+                    break;
+                case 5:
+                    outevent += "Нападение врага – Атака Чужого-солдат – атакует спереди – вы атакуете первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst = false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+                case 6:
+                    outevent += "Нападение врага – Атака Чужого-краба – атакует сзади – вы атакуете первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst = false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+            };
+            outevent += "<br><b>Ваши дальнейшие действия?</b><br><ul>";
+            outevent += "<li><a href=\"/170\">Задержаться здесь в отсеке и снова бросить кубик (вам -1 Времени).</a></li>";
+            outevent += "<li><a href=\"/80\">Идти в отсек Мастерских – 80</a></li></ul>";
+            return outevent + "<br>";
+        }
+
+        public string a229()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.Time += 5;
+            return outstr;
+        }
+
+        public string a228()
+        {
+            string outstr = "";
+            a228_troopers = true;
+            return outstr;
+        }
+
+        public string a226()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("программист"))
+            {
+                outstr += "<li><a href=\"/235\">Если у вас в команде есть программист, то вы можете попытаться отключить систему самоликвидации корабля – перейдите на – 235</a></li>";
+            };
+            outstr += "</ul>";
+            return outstr;
+        }
+
+        public string a224()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.CountInvItem("скафандр") >= ViewModelLocator.StatusStatic.Crew.Count())
+            {
+            }
+            else
+            {
+                int dead_people = ViewModelLocator.StatusStatic.Crew.Count() - ViewModelLocator.StatusStatic.CountInvItem("скафандр");
+                foreach (var item in ViewModelLocator.StatusStatic.Crew)
+                {
+                    if ((item.Abilities.FirstOrDefault(c => c == "андройд") == null) && (dead_people > 0))
+                    {
+                        ViewModelLocator.StatusStatic.Crew.Remove(item);
+                        dead_people--;
+                    };
+                };
+            };
+            return outstr;
+        }
+
+        private int a220_select = 0;
+        private bool a220_first_vistit1 = false;
+        private bool a220_226 = false;
+        private bool a220_227 = false;
+        private bool a220_228 = false;
+        private bool a220_229 = false;
+        private string a220()
+        {
+            string outevent = "";
+            if (security_system)
+            {
+                outevent += "Если вы ранее отключили систему безопасности корабля, то<br>";
+            }
+            else
+            {
+                MessageBox.Show("Если вы еще не отключили систему безопасности корабля, то когда вы вошли в Рубку, вас встретил непрерывный огонь пулемета «Защитник». Вы и все ваши бойцы убиты. Конец Игры!");
+                ViewModelLocator.StatusStatic.GameOver = true;
+            };
+            int randomNumber2 = a220_select;
+            if (a220_first_vistit1 == false)
+            {
+                Random random2 = new Random();
+                randomNumber2 = random2.Next(1, 7);
+                a220_select = randomNumber2;
+                a220_first_vistit1 = true;
+            } else {
+                randomNumber2 = a220_select;
+            };
+                switch (randomNumber2)
+                {
+                    case 1:
+                        outevent += "<a href='/231'>вы нашли в Рубке живого капитана корабля Морисона и труп навигатора Фалько – идите на – 231</a>";
+                        break;
+                    case 2:
+                        outevent += "<a href='/232'>вы нашли в Рубке живого дипломата Харрисона и трупы капитана Морисона и навигатора Фалько – идите на – 232</a>";
+                        break;
+                    case 3:
+                        outevent += "<a href='/233'>вы нашли в Рубке живого капитана корабля Морисона, дипломата Харрисона и труп навигатора Фалько – идите на – 233</a>";
+                        break;
+                    case 4:
+                        outevent += "<a href='/234'>вы нашли вы нашли в Рубке живого капитана корабля Морисона, дипломата Харрисона и навигатора Фалько – идите на – 234</a>";
+                        break;
+                    case 5:
+                        outevent += "<a href=\"/235\">вы нашли живого навигатора Фалько и трупы капитана Морисона и дипломата Харрисона – 235</a>";
+
+                        break;
+                    case 6:
+                        outevent += "В Рубке никого нет. На полу в нескольких местах засохшие лужи крови, а на стене в нескольких местах дырки от пуль.";
+                        break;
+                };
+                outevent += "<br>";
+                
+            
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);            
+            outevent += "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1:
+                    if ((a220_226 == false) && (a220_first_vistit1 = true))
+                    {
+                        a220_226 = true;
+                        outevent += "<a href='/226'>Событие только для первого посещения отсека – 226</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 2:
+                    if ((a220_227 == false) && (a220_first_vistit1 = true))
+                    {
+                        a220_227 = true;
+                        outevent += "<a href='/227'>Событие только для первого посещения отсека – 227</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 3:
+                    if ((a220_228 == false) && (a220_first_vistit1 = true))
+                    {
+                        a220_228 = true;
+                        outevent += "<a href='/228'>Событие только для первого посещения отсека – 228</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 4:
+                    if ((a220_229 == false) && (a220_first_vistit1 = true))
+                    {
+                        a220_229 = true;
+                        outevent += "<a href='/229'>Событие только для первого посещения отсека – 229</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 5:
+                    outevent += "Нападение врага – Атака Чужого-солдат – атакует спереди – вы атакуете первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst = false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+                case 6:
+                    outevent += "Нападение врага – Атака Чужого-краба – атакует сзади – вы атакуете первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Hit,
+                        attack5 = Hit,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst = false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+            };
+            outevent += "<br><b>Ваши дельнейшие действия?</b><br><ul>";
+            outevent += Texts.a220_select;
+            if ((ViewModelLocator.StatusStatic.CountInvItem("чип-плата")>1) 
+                && (ViewModelLocator.StatusStatic.FindAbility("программист"))) {
+                outevent +=Texts.a220_select_2;
+            };
+            outevent += "<li><a href=\"/170\">Идти в коридор «А» - 170</a></li></ul>";
+            return outevent + "<br>";
+        }
+
+        public string a222()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "инструкция по ремонту генератора" });
+            return outstr;
+        }
+
+        public string a221()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "инструкция по ремонту криогенных установок" });
+            return outstr;
+        }
+
+        public string a219()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.Ammo -= 8;
+            return outstr;
+        }
+
+        public string a218()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.CountInvItem("таблетки \"Антишок\"") >= ViewModelLocator.StatusStatic.Crew.Count())
+            {
+                outstr += "Если вы потратите на каждого своего бойца по 1 таблетке «Анти-шок», <a href=\"/119\">то можете остаться в отсеке и ждать дальше - 119</a>";
+                foreach (var item in ViewModelLocator.StatusStatic.Crew)
+                {
+                    ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "таблетки \"Антишок\""));
+                };
+            }
+            else
+            {
+                outstr += "<a href=\"/120\">Ваши бойцы впадают в замешательство и в панике, толкая друг друга, бегут, в Оранжерею – 120;</a>";
+            };
+            return outstr;
+        }
+
+        public string a217()
+        {
+            string outstr = "";
+            crio_problem = true;
+            return outstr;
+        }
+
+        public string a216()
+        {
+            string outstr = "";            
+            return outstr;
+        }
+
+        public string a215()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") &&
+                ViewModelLocator.StatusStatic.FindInvItem("сварочный аппарат"))
+            {
+                ViewModelLocator.StatusStatic.Time += 3;
+            }
+            else
+            {
+                ViewModelLocator.StatusStatic.Time -= 3;
+            };
+            return outstr;
+        }
+
+        public string a214()
+        {
+            string outstr = "";
+            try
+            {
+                Random random = new Random();
+                int randomNumber = random.Next(0, ViewModelLocator.StatusStatic.Crew.Count() - 1);
+                ViewModelLocator.StatusStatic.Crew[randomNumber].Health-=2;                          
+            }
+            catch { };
+            ViewModelLocator.StatusStatic.Time -= 4;
+            return outstr;
+        }
+
+        public string a213()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") &&
+                ViewModelLocator.StatusStatic.FindInvItem("чип-плата") &&
+                ViewModelLocator.StatusStatic.FindInvItem("пено-керамо-спрей")
+                && ViewModelLocator.StatusStatic.FindInvItem("лазерный резак"))
+            {
+                ViewModelLocator.StatusStatic.Time += 8;
+            }
+            else
+            {
+                ViewModelLocator.StatusStatic.Time -= 3;
+            };
+            return outstr;
+        }
+
+        public string a212()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") && 
+                ViewModelLocator.StatusStatic.FindInvItem("чип-плата") &&
+                ViewModelLocator.StatusStatic.FindInvItem("пено-керамо-спрей"))
+            {
+                ViewModelLocator.StatusStatic.Time += 4;
+            }
+            else
+            {
+                ViewModelLocator.StatusStatic.Time -= 3;
+            };
+            return outstr;
+        }
+
+        public string a211()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") && ViewModelLocator.StatusStatic.FindInvItem("чип-плата"))
+            {
+                ViewModelLocator.StatusStatic.Time += 3;
+            }
+            else
+            {
+                ViewModelLocator.StatusStatic.Time -= 3;
+            };
+            return outstr;
+        }
+
+        private bool a210_211 = false;
+        private bool a210_212 = false;
+        private bool a210_213 = false;
+        private bool a210_214 = false;
+        private string a210()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "";
+            outevent += "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1:
+                    if (a210_211 == false)
+                    {
+                        a210_211 = true;
+                        outevent += "<a href='/211'>Событие только для первого посещения отсека – 211</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 2:
+                    if (a210_212 == false)
+                    {
+                        a210_212 = true;
+                        outevent += "<a href='/212'>Событие только для первого посещения отсека – 212</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 3:
+                    if (a210_213 == false)
+                    {
+                        a210_213 = true;
+                        outevent += "<a href='/213'>Событие только для первого посещения отсека – 213</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 4:
+                    if (a210_214 == false)
+                    {
+                        a210_214 = true;
+                        outevent += "<a href='/214'>Событие только для первого посещения отсека – 214</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };                    
+                    break;
+                case 5:
+                    outevent += "Нападение врага – Атака Чужого-солдат – атакует спереди – вы атакуете первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-солдат",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Hit,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 3,
+                        MaxHealth = 3,
+                        AttackFirst = false
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+                case 6:
+                    outevent += "Нападение врага – Атака Чужого-краба – атакует сзади – вы атакуете первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-краб",
+                        attack1 = Suck,
+                        attack2 = Suck,
+                        attack3 = Suck,
+                        attack4 = Hit,
+                        attack5 = Hit,
+                        attack6 = RunAway,
+                        Attack = 1,
+                        Health = 1,
+                        MaxHealth = 1,
+                        AttackFirst = true
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+            };
+            outevent += Texts.a210_select;
+
+            return outevent + "<br>";
+        }
+
+        //fix it fully
+        public string a209()
+        {
+            /*Ваши бойцы требуют у вас минуту отдыха. Бойцы начинают обсуждать между собой
+            ситуацию, которая сложилась на данный момент. Начинаются споры и ругань в адрес
+            командования, которое бросило их в эту «мясорубку».
+            Возникли следующие межличностные ситуации:
+            · Если на данный момент у вас есть раненный боец Лола и кроме нее в команде
+            есть Док или Малыш, - то они решают оставить вашу команду и пробиваться
+            назад к Шатлу. Уберите их из игры.
+            · Если у вас в команде есть бойцы Безумный Макс и Голлем, то они бросились в
+            драку друг с другом. Безумный Макс в этой драке теряет (-1) Жизнь. На этом
+            потасовка заканчивается.
+            · Если у вас в команде есть оба бойца, - Васаби и Живодер, то они требуют от вас
+            немедленно прекратить операцию. В противном случае они грозят вас пристрелить.
+            Вы вынуждены поставить их на место и объяснить – «кто здесь главный». Вы
+            наносите им несколько сильных ударов в челюсть и в пах. После этого «аргумента»
+            они успокаиваются. Но каждый из них теряет по (-1) Жизни.
+            · Среди команды возник полный разлад и паника. Бросьте кубик по карточкам тех
+            бойцов, у которых есть эффект «Паника». Если на кубике выпадет именно этот
+            эффект, то этот боец бросается прочь в поисках выхода из этого корабля. Отложите
+            временно карточку этого бойца в сторону. Возможно, вы еще встретите его по ходу
+            миссии.
+            Вернитесь на - 190*/
+            string outstr = "";
+            if ((ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c=>c.Name=="Безумный Макс")!=null) &&
+                (ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Голем")!=null))
+            {
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Безумный Макс").Health--;
+            };
+            if ((ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Васаби") != null) &&
+    (ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Живодер") != null))
+            {
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Васаби").Health--;
+                ViewModelLocator.StatusStatic.Crew.FirstOrDefault(c => c.Name == "Живодер").Health--;
+            };
+
+            return outstr;
+        }
+
+        public string a204()
+        {
+            string outstr = "";
+            try
+            {
+                Random random = new Random();
+                int randomNumber = random.Next(0, ViewModelLocator.StatusStatic.Crew.Count() - 1);
+                ViewModelLocator.StatusStatic.Crew[randomNumber].Health = 0;
+                ViewModelLocator.StatusStatic.Crew[randomNumber].Dead = true;
+            }
+            catch { };
+            return outstr;
+        }
+
+        public string a202()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") && ViewModelLocator.StatusStatic.FindInvItem("сварочный аппарат"))
+            {
+                generator_on = true;
+                generator_off = false;
+            };
+            return outstr;
+        }
+
+        public string a203()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") && ViewModelLocator.StatusStatic.FindInvItem("лазерный резак")
+                && ViewModelLocator.StatusStatic.FindInvItem("пено-керамо-спрей")
+                && ViewModelLocator.StatusStatic.FindInvItem("чип-плата"))
+            {
+                generator_on = true;
+                generator_off = false;
+            };
+            return outstr;
+        }
+
+        public string a201()
+        {
+            string outstr = "";
+            if (ViewModelLocator.StatusStatic.FindAbility("техник") && (ViewModelLocator.StatusStatic.CountInvItem("чип-плата")>1))
+            {
+                generator_on = true;
+                generator_off = false;
+            };
+            return outstr;
+        }
+
+        private bool a200_215 = true;
+        private bool a200_216 = true;
+        private bool a200_217 = true;
+        private string a200()
+        {
+            Random random = new Random();
+            int randomNumber = random.Next(1, 7);
+            string outevent = "";
+
+            outevent += "<br><b>События:</b><br>";
+            switch (randomNumber)
+            {
+                case 1:
+                    if (a200_215 == false)
+                    {
+                        a200_215 = true;
+                        outevent += "<a href='/215'>Событие только для первого посещения отсека – 215</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 2:
+                    if (a200_216 == false)
+                    {
+                        a200_216 = true;
+                        outevent += "<a href='/216'>Событие только для первого посещения отсека – 216</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 3:
+                    if (a200_217 == false)
+                    {
+                        a200_217 = true;
+                        outevent += "<a href='/217'>Событие только для первого посещения отсека – 217</a>";
+                    }
+                    else
+                    {
+                        outevent += "Ничего";
+                    };
+                    break;
+                case 4:
+                    Random random2 = new Random();
+                    int randomItem2 = random2.Next(1, 7);
+                    switch (randomItem2)
+                    {
+
+                        case 1: outevent += "аптечку.";
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "аптечка" }); break;                        
+                        case 3: outevent += "чип-плату";
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "чип-плата" }); break;
+                        case 2: outevent += "таблетки \"Антишок\"";
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "таблетки \"Антишок\"" }); break;
+                        default: 
+                            outevent += "кислородный балон.";
+                            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "кислородный балон" });
+                            break;
+                    };
+                    break;
+                case 5:
+                    outevent += "Нападение врага – Атака Чужого-офицера – атакует спереди – атакует первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-офицер",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Kill,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = Miss,
+                        Attack = 1,
+                        Health = 5,
+                        MaxHealth = 5,
+                        AttackFirst = true
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+                case 6:
+                    outevent += "Нападение врага – Атака Чужого-офицера – атакует сзади – атакует первым.";
+                    ViewModelLocator.BattleStatic.CurrentEnemy = new PersonItem()
+                    {
+                        Name = "Чужой-офицер",
+                        attack1 = Hit,
+                        attack2 = Hit,
+                        attack3 = Kill,
+                        attack4 = Miss,
+                        attack5 = Miss,
+                        attack6 = Miss,
+                        Attack = 1,
+                        Health = 5,
+                        MaxHealth = 5,
+                        AttackFirst = true
+                    };
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+                    break;
+            };
+            outevent += Texts.a200_select;
+
+            return outevent + "<br>";
+        }
+
+        public string a198()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.ChangeLifes(-1);
+            return outstr;
+        }
+
+        public string a196()
+        {
+            string outstr = "";
+            int count = 0;
+            foreach (var item in ViewModelLocator.StatusStatic.Crew)
+            {
+                if ((item.Name == "Малыш") || (item.Name == "Живодер") || (item.Name == "Тамагочи")
+                     || (item.Name == "Безумный Макс") || (item.Name == "Лола") || (item.Name == "Васаби"))
+                {
+                    count++;
+                    item.Health += 1;
+                };
+            };
+            if  (count>0) {
+                ViewModelLocator.StatusStatic.Time -= 2;
+            };
+            return outstr;
+        }
+
+        public string a194()
+        {
+            string outstr = "";
+            ViewModelLocator.StatusStatic.Money += 10000;
+            return outstr;
+        }
+
+        public string a193()
+        {
+            string outstr = "";
+            Mission6 = true;
+            ViewModelLocator.StatusStatic.InvItems.Add(new InvItem() { Title = "Орфей" });
+            return outstr;
+        }
 
         public string a192()
         {
@@ -2367,7 +3797,7 @@ namespace AliensOldEnemies.ViewModel
         public string a152()
         {
             string outstr="";
-            if (security_system_central_computer_disabled==true) {
+            if (security_system==true) {
                 outstr+=Texts.a152_1;
             } else {
                 outstr += Texts.a152_2;
@@ -2388,7 +3818,7 @@ namespace AliensOldEnemies.ViewModel
             Random random = new Random();
             int randomNumber = random.Next(1, 7);
             string outevent = "";
-            if ((a141_security_system == true) && (ViewModelLocator.StatusStatic.FindAbility("программист")))
+            if ((security_system == true) && (ViewModelLocator.StatusStatic.FindAbility("программист")))
             {
                 outevent+="<a href=\"/153\">Если вы ранее разговаривали с техником Монтгомери и у вас есть компьютерщик – переходите на – 153</a><br>";
             };
@@ -2479,7 +3909,7 @@ namespace AliensOldEnemies.ViewModel
 
         public string a141()
         {
-            a141_security_system = true;
+            security_system = true;
             return "";
         }
 
@@ -3658,7 +5088,7 @@ namespace AliensOldEnemies.ViewModel
         public string a67()
         {
             string outevent = "";
-            if (security_system_central_computer_disabled == true)
+            if (security_system == true)
             {
                 outevent += "<a href=\"/71\">Если вы уже отключили Систему безопасности на центральном компьютере корабля – то переходите на – 71</a>";
             }
@@ -4531,6 +5961,8 @@ namespace AliensOldEnemies.ViewModel
         const string Reload = "Перезарядить";
         const string RunAway = "Убежал";
         const string Suck = "Присосался";
+        const string Sleep = "Парализован";
+
 
 
         public bool a1_2 = false;
