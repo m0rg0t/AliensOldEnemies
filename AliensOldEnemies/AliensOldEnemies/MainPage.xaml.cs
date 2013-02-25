@@ -3,6 +3,7 @@ using AliensOldEnemies.ViewModel;
 using System.Windows;
 using System;
 using System.Linq;
+using System.Collections.Generic;
 
 namespace AliensOldEnemies
 {
@@ -366,6 +367,35 @@ namespace AliensOldEnemies
                 ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c=>c.Title=="аптечка"));
                 item = item.Replace("_use_healthpack", "");
             };
+
+            if (item.Contains("_use_oxigen"))
+            {
+                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == "балон с кислородом"));
+                item = item.Replace("_use_oxigen", "");
+            };
+
+            if (item.Contains("_throw_item_to_save_in_space"))
+            {
+                try
+                {
+                    List<string> items_throw = new List<string>() { "подойдет сварочный аппарат", "лазерный резак", "рентген-аппарат", "ремонтный комплект", "баллон с кислородом" };
+                    bool throwItem = false;
+                    foreach (var elem_throw in items_throw)
+                    {
+                        if (throwItem == false)
+                        {
+                            if (ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == elem_throw) != null)
+                            {
+                                throwItem = true;
+                                ViewModelLocator.StatusStatic.InvItems.Remove(ViewModelLocator.StatusStatic.InvItems.FirstOrDefault(c => c.Title == elem_throw));
+                            };
+                        };
+                    };
+                }
+                catch { };
+                //ViewModelLocator.StatusStatic.InvItems.Remove
+                item = item.Replace("_throw_item_to_save_in_space", "");
+            };           
 
             if (item.Contains("_use_healthpack2"))
             {
