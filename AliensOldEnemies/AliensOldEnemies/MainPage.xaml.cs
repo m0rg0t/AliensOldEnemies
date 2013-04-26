@@ -126,6 +126,7 @@ namespace AliensOldEnemies
                     default:
                         MessageBox.Show("Техник Тауэр добрался до шаттла.");
                         ViewModelLocator.MainStatic.a30_tauer_saved = true;
+                        ViewModelLocator.MainStatic.Mission1 = true;
                         break;
                 };
                 item = item.Replace("_tauer_send", "");
@@ -134,6 +135,7 @@ namespace AliensOldEnemies
             if (item.Contains("_save_mak_kolinz"))
             {
                 ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                ViewModelLocator.MainStatic.Mission1 = true;
                 item = item.Replace("_save_mak_kolinz", "");
             };
 
@@ -154,6 +156,7 @@ namespace AliensOldEnemies
             };
             if (item.Contains("_reactor_fixed"))
             {
+                ViewModelLocator.MainStatic.Mission3 = true;
                 ViewModelLocator.MainStatic.reactor_fixed = true;
                 item = item.Replace("_reactor_fixed", "");
             };
@@ -177,6 +180,7 @@ namespace AliensOldEnemies
                 ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Мак Коллинз").Abilities.Add("техник");
 
                 ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                ViewModelLocator.MainStatic.Mission1 = true;
                 item = item.Replace("_add_mak_kolinz", "");
             };
 
@@ -196,6 +200,7 @@ namespace AliensOldEnemies
                         break;
                     default:
                         MessageBox.Show("Доктор Ливенгауп добрался до шаттла.");
+                        ViewModelLocator.MainStatic.Mission1 = true;
                         ViewModelLocator.MainStatic.livengaup_saved = true;
                         break;
                 };
@@ -209,6 +214,7 @@ namespace AliensOldEnemies
                 ViewModelLocator.StatusStatic.AllCrew.FirstOrDefault(c => c.Name == "Ливенгауп").Abilities.Add("доктор");
 
                 ViewModelLocator.MainStatic.mak_kolinz_saved = true;
+                ViewModelLocator.MainStatic.Mission1 = true;
                 item = item.Replace("_livengaup_add", "");
             };
 
@@ -237,6 +243,7 @@ namespace AliensOldEnemies
                         break;
                     default:
                         MessageBox.Show("Хартман добрался до шаттла.");
+                        ViewModelLocator.MainStatic.Mission2 = true;
                         ViewModelLocator.MainStatic.hartman_saved = true;
                         break;
                 };
@@ -284,6 +291,7 @@ namespace AliensOldEnemies
                         break;
                     default:
                         MessageBox.Show("Джоанна Вагнер добралась до шаттла.");
+                        ViewModelLocator.MainStatic.Mission1 = true;
                         ViewModelLocator.MainStatic.a54_vagner_saved = true;
                         break;
                 };
@@ -315,6 +323,7 @@ namespace AliensOldEnemies
                         break;
                     default:
                         MessageBox.Show("Джузеппе (повар) добрался до шаттла.");
+                        ViewModelLocator.MainStatic.Mission1 = true;
                         ViewModelLocator.MainStatic.a46_juzepe_saved = true;
                         break;
                 };
@@ -425,6 +434,7 @@ namespace AliensOldEnemies
             {
                 case "аптечка":
                     MessageBox.Show("Вы использовали аптечку.");
+                    ViewModelLocator.StatusStatic.ChangeLifes(1);
                     break;
                 default: break;
             }
@@ -444,5 +454,35 @@ namespace AliensOldEnemies
             }
             catch { };
         }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/FinishGame.xaml", UriKind.Relative));
+        }
+
+        private void ApplicationBarIconButton_Click_1(object sender, EventArgs e)
+        {
+            ViewModelLocator.StatusStatic.Volume = 0.5;
+        }
+
+        private void MediaElement_MediaOpened(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void ApplicationBarIconButton_Click_2(object sender, EventArgs e)
+        {
+            ViewModelLocator.StatusStatic.Volume = 0;
+        }
+
+        private void about_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                NavigationService.Navigate(new Uri("/AboutPage.xaml", UriKind.Relative));
+            }
+            catch { };
+        }
+
+
     }
 }

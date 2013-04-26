@@ -18,7 +18,7 @@
                             DataContext="{Binding Main, Source={StaticResource Locator}}">
 
     <phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar>
+        <shell:ApplicationBar  BackgroundColor="Black" ForegroundColor="White">
             <shell:ApplicationBarIconButton IconUri="/Images/appbar.next.rest.png" Text="Далее" Click="ApplicationBarIconButton_Click" />
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
@@ -36,10 +36,10 @@
         <StackPanel x:Name="TitlePanel"
                     Grid.Row="0"
                     Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle"
+            <TextBlock x:Name="ApplicationTitle" Foreground="White"
                        Text="{Binding ApplicationTitle}"
                        Style="{StaticResource PhoneTextNormalStyle}" />
-            <TextBlock x:Name="PageName"
+            <TextBlock x:Name="PageName" Foreground="White"
                        Text="Выбор отряда"
                        Margin="9,-7,0,0"
                        Style="{StaticResource PhoneTextTitle1Style}" />
@@ -50,11 +50,11 @@
               Grid.Row="1"
               Margin="12,0,12,0">
             <StackPanel>
-            <TextBlock Text="Вы офицер военного спецподразделения.  Вам поручено набрать команду бойцов, снарядить ее и отправится на выполнение боевого задания." TextWrapping="Wrap"/>
+                <TextBlock Foreground="White" Text="Вы офицер военного спецподразделения.  Вам поручено набрать команду бойцов, снарядить ее и отправится на выполнение боевого задания." TextWrapping="Wrap"/>
             <telerikPrimitives:RadDataBoundListBox x:Name="AllCrew" 
                                                    ItemsSource="{Binding Path=AllCrew, Mode=TwoWay}"
                                                    DataContext="{Binding Status, Source={StaticResource Locator}}"
-                                                   VerticalContentAlignment="Top" Height="420">
+                                                   VerticalContentAlignment="Top" Height="420" ItemTap="AllCrew_ItemTap">
                 <telerikPrimitives:RadDataBoundListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid Margin="10,10,0,0">
@@ -66,8 +66,8 @@
                             <CheckBox Grid.Column="0" IsChecked="{Binding Selected, Mode=TwoWay}"/>
                             <Image Grid.Column="1" Source="{Binding Image}"/>
                             <StackPanel Grid.Column="2" Margin="10,0,0,0">
-                                <TextBlock Text="{Binding Name}" TextWrapping="Wrap"/>
-                                <TextBlock Text="{Binding AllAbilities}" TextWrapping="Wrap"/>
+                                    <TextBlock Foreground="White" Text="{Binding Name}" TextWrapping="Wrap"/>
+                                    <TextBlock Foreground="White" Text="{Binding AllAbilities}" TextWrapping="Wrap"/>
                             </StackPanel>                                                        
                         </Grid>
                     </DataTemplate>

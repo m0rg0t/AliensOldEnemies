@@ -37,7 +37,8 @@ namespace AliensOldEnemies
 
             // Global handler for uncaught exceptions. 
             //UnhandledException += Application_UnhandledException;
-            BugSenseHandler.Instance.UnhandledException += Application_UnhandledException; 
+            //BugSenseHandler.Instance.UnhandledException += Application_UnhandledException;
+            BugSenseHandler.Instance.UnhandledException += Application_UnhandledException;
 
             // Standard Silverlight initialization
             InitializeComponent();

@@ -61,13 +61,13 @@ namespace AliensOldEnemies {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;img src=&quot;/Images/angar.jpg&quot;/&gt;
+        ///   Looks up a localized string similar to &lt;img src=&quot;/Images/BSG_75_Hangar_Bay_by_3DPORTFOLIO.jpg&quot;/&gt;
         ///&lt;br&gt;
         ///&lt;p&gt;Темно. В тусклом свете аварийного освещения был виден большой квадратный ангар с высоким потолком.  Вдоль стены штабелями стоят несколько больших контейнеров.  В дальнем углу ангара находится автопогрузчик.&lt;/p&gt;
         ///&lt;p&gt;В боковой стене дверь,  ведущая в
         ///соседний Технический отсек.&lt;/p&gt;
         ///&lt;p&gt;Никого из обслуживающего персонала корабля не видно.  Хотя согласно правилам,  прибывших пассажиров должны
-        ///встречать–  инженер технической службы и офицер безопасности.  Жарко.  Темпер [rest of string was truncated]&quot;;.
+        ///встречать–  инженер технической службы и офицер бе [rest of string was truncated]&quot;;.
         /// </summary>
         public static string a1 {
             get {

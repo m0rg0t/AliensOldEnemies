@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="a1" xml:space="preserve">
-    <value>&lt;img src="/Images/angar.jpg"/&gt;
+    <value>&lt;img src="/Images/BSG_75_Hangar_Bay_by_3DPORTFOLIO.jpg"/&gt;
 &lt;br&gt;
 &lt;p&gt;Темно. В тусклом свете аварийного освещения был виден большой квадратный ангар с высоким потолком.  Вдоль стены штабелями стоят несколько больших контейнеров.  В дальнем углу ангара находится автопогрузчик.&lt;/p&gt;
 &lt;p&gt;В боковой стене дверь,  ведущая в
@@ -2064,7 +2064,7 @@
 &lt;b&gt;Ваше решение?&lt;/b&gt;&lt;br&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href="/120"&gt;Быстро покинуть отсек и идти в Оранжерею – 120&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/218"&gt;Остаться и ждать - 218&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/210"&gt;Расстрелять воду в бассейне в надежде попасть в тварь под водой - 219&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/219"&gt;Расстрелять воду в бассейне в надежде попасть в тварь под водой - 219&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/91_time-1"&gt;Если нет аварии в Криокамерах, можно полезть в воздуховод и ползти – до
 Лаборатории (-1 Время) - 91;&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="/210_time-2"&gt;до отсека Регенерации воздуха (-2 Времени) - 210;&lt;/a&gt;&lt;/li&gt;

@@ -28,13 +28,32 @@ namespace AliensOldEnemies
                     {
                         if (item.Selected == true)
                         {
-                            selected_items.Add(item);
+                            if (item.Title == "комплект из пяти скафандров")
+                            {
+                                selected_items.Add(new InvItem() { Title="скафандр"});
+                            }
+                            else
+                            {
+                                selected_items.Add(item);
+                            };
                         };                        
                     }
                     ViewModelLocator.StatusStatic.InvItems = selected_items;
                     NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
             }
             catch { };
+        }
+
+        private void PossibleItems_ItemTap(object sender, Telerik.Windows.Controls.ListBoxItemTapEventArgs e)
+        {
+            if ((PossibleItems.SelectedItem as InvItem).Selected == true)
+            {
+                (PossibleItems.SelectedItem as InvItem).Selected = false;
+            }
+            else
+            {
+                (PossibleItems.SelectedItem as InvItem).Selected = true;
+            };            
         }
     }
 }

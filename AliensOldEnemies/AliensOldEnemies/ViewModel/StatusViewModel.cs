@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Collections.ObjectModel;
+using System;
+using Microsoft.Phone.Controls;
+using System.Windows;
 
 namespace AliensOldEnemies.ViewModel
 {
@@ -304,6 +307,10 @@ namespace AliensOldEnemies.ViewModel
                         selectedCrew.Add(item);
                     };
                 };
+                if (selectedCrew.Count()<1)
+                {
+                    GameOver = true;
+                };
                 return selectedCrew;
             }
             private set
@@ -323,7 +330,11 @@ namespace AliensOldEnemies.ViewModel
                     if ((item.Selected == true) && (item.Dead==false))
                     {
                         selectedCrew.Add(item);
-                    };
+                    };                    
+                };
+                if (selectedCrew.Count() < 1)
+                {
+                    GameOver = true;
                 };
                 return selectedCrew;
             }
@@ -385,13 +396,16 @@ namespace AliensOldEnemies.ViewModel
             RaisePropertyChanged("AllCrew");
         }
 
-        private int _time;
+        private int _time = 40;
         public int Time
         {
             set
-            {
-                _time = value;
+            {                
+                _time = value;                
                 RaisePropertyChanged("Time");
+                if (_time<1) {
+                    GameOver = true;
+                };
             }
             get
             {
@@ -399,13 +413,31 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
-        private bool _gameover;
+        private double _volume = 0.5;
+        public double Volume
+        {
+            set
+            {
+                _volume = value;
+                RaisePropertyChanged("Volume");
+            }
+            get
+            {
+                return _volume;
+            }
+        }
+
+        private bool _gameover = false;
         public bool GameOver
         {
             set
             {
                 _gameover = value;
                 RaisePropertyChanged("GameOver");
+                if (_gameover == true)
+                {
+                    (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/GameOver.xaml", UriKind.Relative));
+                };
             }
             get
             {

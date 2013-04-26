@@ -35,5 +35,17 @@ namespace AliensOldEnemies
             }
             catch { };
         }
+
+        private void AllCrew_ItemTap(object sender, Telerik.Windows.Controls.ListBoxItemTapEventArgs e)
+        {
+            if ((AllCrew.SelectedItem as PersonItem).Selected == true)
+            {
+                (AllCrew.SelectedItem as PersonItem).Selected = false;
+            }
+            else
+            {
+                (AllCrew.SelectedItem as PersonItem).Selected = true;
+            };  
+        }
     }
 }

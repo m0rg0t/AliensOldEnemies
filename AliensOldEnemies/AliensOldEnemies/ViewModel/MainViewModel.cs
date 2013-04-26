@@ -2706,14 +2706,141 @@ namespace AliensOldEnemies.ViewModel
             }
         }
 
-        public bool Mission8 = false;
-        public bool Mission7 = false;
-        public bool Mission6 = false;
-        public bool Mission5 = false;
-        public bool Mission4 = false;
-        public bool Mission3 = false;
-        public bool Mission2 = false;
-        public bool Mission1 = false;
+        private bool _mission1 = false;
+        public bool Mission1
+        {
+            get
+            {
+                return _mission1;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission1 = value;
+                    ViewModelLocator.StatusStatic.Money += 5000;
+                };
+            }
+        }
+
+        private bool _mission2 = false;
+        public bool Mission2
+        {
+            get
+            {
+                return _mission2;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission2 = value;
+                    ViewModelLocator.StatusStatic.Money += 20000;
+                };
+            }
+        }
+
+        private bool _mission3 = false;
+        public bool Mission3
+        {
+            get
+            {
+                return _mission3;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission3 = value;
+                    ViewModelLocator.StatusStatic.Money += 50000;
+                };
+            }
+        }
+
+        private bool _mission4 = false;
+        public bool Mission4
+        {
+            get
+            {
+                return _mission4;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission4 = value;
+                    ViewModelLocator.StatusStatic.Money += 20000;
+                };
+            }
+        }
+
+        private bool _mission5 = false;
+        public bool Mission5
+        {
+            get
+            {
+                return _mission5;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission5 = value;
+                    ViewModelLocator.StatusStatic.Money += 5000;
+                };
+            }
+        }
+
+        private bool _mission6 = false;
+        public bool Mission6
+        {
+            get
+            {
+                return _mission6;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission6 = value;
+                    ViewModelLocator.StatusStatic.Money += 10000;
+                };
+            }
+        }
+
+        private bool _mission7 = false;
+        public bool Mission7
+        {
+            get
+            {
+                return _mission7;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission7 = value;
+                    ViewModelLocator.StatusStatic.Money += 5000;
+                };
+            }
+        }
+
+        private bool _mission8 = false;
+        public bool Mission8
+        {
+            get
+            {
+                return _mission8;
+            }
+            set
+            {
+                if (value == true)
+                {
+                    _mission8 = value;
+                    ViewModelLocator.StatusStatic.Money += 10000;
+                };
+            }
+        }
 
         public bool mak_kolinz_saved = false;
         public bool livengaup_saved = false;
@@ -3077,6 +3204,7 @@ namespace AliensOldEnemies.ViewModel
                 AttackFirst = false
             };
             (Application.Current.RootVisual as PhoneApplicationFrame).Navigate(new Uri("/BattlePage.xaml", UriKind.Relative));
+            Mission4 = true;
             return outstr;
         }
 
@@ -4807,7 +4935,7 @@ namespace AliensOldEnemies.ViewModel
                     break;
                 default: outevent += ""; break;
             };
-            outevent += "<br><a href=\"19\">Переходите на – 19</a>";
+            outevent += "<br><a href=\"/19\">Переходите на – 19</a>";
             return outevent;
         }
 
@@ -5955,7 +6083,7 @@ namespace AliensOldEnemies.ViewModel
             string outevent = "<ul>";
             if (ViewModelLocator.StatusStatic.FindInvItem("аптечка"))
             {
-                outevent += "<li><a href=\"141\">Оказать ему медицинскую помощь чтобы поддержать его жизнь на пару минут (вам -1 аптечкa) – 141</a></li>";
+                outevent += "<li><a href=\"/141_use_healthpack\">Оказать ему медицинскую помощь чтобы поддержать его жизнь на пару минут (вам -1 аптечкa) – 141</a></li>";
             }; 
             outevent += "<li><a href=\"/60\">Оставить умирающего – 60</a></li>";
             outevent += "<li><a href=\"/60\">Оставить умирающего – 60</a></li>";

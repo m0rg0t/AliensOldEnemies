@@ -1,6 +1,7 @@
 ﻿using Microsoft.Phone.Controls;
 using AliensOldEnemies.ViewModel;
 using System.Collections.ObjectModel;
+using System;
 
 namespace AliensOldEnemies
 {
@@ -19,7 +20,7 @@ namespace AliensOldEnemies
 
         private void LayoutRoot_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
-            try
+            /*try
             {
                 if (NavigationService.CanGoBack)
                 {
@@ -29,7 +30,7 @@ namespace AliensOldEnemies
                     };
                 };
             }
-            catch { };
+            catch { };*/
 
             ViewModelLocator.BattleStatic.BattleStatus = new ObservableCollection<string>();
             this.BattleReport.ItemsSource = ViewModelLocator.BattleStatic.BattleStatus;
@@ -47,6 +48,7 @@ namespace AliensOldEnemies
             {
                 try
                 {
+                    //NavigationService.Navigate(new Uri("/MainPage.xaml", UriKind.Relative));
                     NavigationService.GoBack();
                 }
                 catch
