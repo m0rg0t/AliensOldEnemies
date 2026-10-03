@@ -147,7 +147,7 @@ namespace AliensOldEnemies.ViewModel
             }
             set
             {
-                if ((ViewModelLocator.StatusStatic.CountSelectedCrew() < 4) && (value==true))
+                if ((_selected || ViewModelLocator.StatusStatic.CountSelectedCrew() < 4) && (value==true))
                 {
                     _selected = true;
                 } else {
@@ -169,7 +169,7 @@ namespace AliensOldEnemies.ViewModel
                 string out_abl = "";
                 foreach (var item in Abilities)
                 {
-                    out_abl = item + ", ";
+                    out_abl += item + ", ";
                 };
                 return out_abl.TrimEnd().TrimEnd(',');
             }
