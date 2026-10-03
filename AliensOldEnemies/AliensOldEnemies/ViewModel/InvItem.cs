@@ -56,7 +56,7 @@ namespace AliensOldEnemies.ViewModel
             }
             set
             {
-                if ((ViewModelLocator.StatusStatic.CountSelectedPossibleItems() < 5) && (value == true))
+                if ((_selected || ViewModelLocator.StatusStatic.CountSelectedPossibleItems() < 5) && (value == true))
                 {
                     _selected = true;
                 }
